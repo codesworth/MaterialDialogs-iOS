@@ -10,7 +10,7 @@ import UIKit
 
 internal class BaseDialog:UIView{
     
-    private var nativeFrame: CGRect = {
+    internal var nativeFrame: CGRect = {
         return UIScreen.main.bounds
     }()
     

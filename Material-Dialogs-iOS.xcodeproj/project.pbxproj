@@ -15,6 +15,10 @@
 		3873BF6E2216E028007FE7D2 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF6D2216E028007FE7D2 /* MaterialView.swift */; };
 		3873BF702216E1DE007FE7D2 /* BasicDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF6F2216E1DE007FE7D2 /* BasicDialog.swift */; };
 		3873BF722216E25D007FE7D2 /* HeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF712216E25D007FE7D2 /* HeaderLabel.swift */; };
+		3873BF742216E45E007FE7D2 /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF732216E45E007FE7D2 /* FooterView.swift */; };
+		3873BF7722171141007FE7D2 /* Strings+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF7622171141007FE7D2 /* Strings+Extensions.swift */; };
+		3873BF7922171237007FE7D2 /* Fonts+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF7822171237007FE7D2 /* Fonts+Extension.swift */; };
+		3873BF7B221759F8007FE7D2 /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF7A221759F8007FE7D2 /* CGRect+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +43,10 @@
 		3873BF6D2216E028007FE7D2 /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		3873BF6F2216E1DE007FE7D2 /* BasicDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDialog.swift; sourceTree = "<group>"; };
 		3873BF712216E25D007FE7D2 /* HeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderLabel.swift; sourceTree = "<group>"; };
+		3873BF732216E45E007FE7D2 /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		3873BF7622171141007FE7D2 /* Strings+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Strings+Extensions.swift"; sourceTree = "<group>"; };
+		3873BF7822171237007FE7D2 /* Fonts+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+Extension.swift"; sourceTree = "<group>"; };
+		3873BF7A221759F8007FE7D2 /* CGRect+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,7 @@
 		3873BF662216D63C007FE7D2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3873BF752217112D007FE7D2 /* Extensions */,
 				3873BF682216D69A007FE7D2 /* Core */,
 				3873BF672216D67E007FE7D2 /* MaterialDialog */,
 			);
@@ -121,8 +130,19 @@
 				3873BF6D2216E028007FE7D2 /* MaterialView.swift */,
 				3873BF6F2216E1DE007FE7D2 /* BasicDialog.swift */,
 				3873BF712216E25D007FE7D2 /* HeaderLabel.swift */,
+				3873BF732216E45E007FE7D2 /* FooterView.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		3873BF752217112D007FE7D2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3873BF7622171141007FE7D2 /* Strings+Extensions.swift */,
+				3873BF7822171237007FE7D2 /* Fonts+Extension.swift */,
+				3873BF7A221759F8007FE7D2 /* CGRect+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,10 +254,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3873BF7B221759F8007FE7D2 /* CGRect+Extension.swift in Sources */,
 				3873BF6E2216E028007FE7D2 /* MaterialView.swift in Sources */,
 				3873BF6C2216DB7E007FE7D2 /* MaterialDialog.swift in Sources */,
+				3873BF7922171237007FE7D2 /* Fonts+Extension.swift in Sources */,
 				3873BF722216E25D007FE7D2 /* HeaderLabel.swift in Sources */,
+				3873BF742216E45E007FE7D2 /* FooterView.swift in Sources */,
 				3873BF702216E1DE007FE7D2 /* BasicDialog.swift in Sources */,
+				3873BF7722171141007FE7D2 /* Strings+Extensions.swift in Sources */,
 				3873BF6A2216DAE2007FE7D2 /* BaseDialog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
