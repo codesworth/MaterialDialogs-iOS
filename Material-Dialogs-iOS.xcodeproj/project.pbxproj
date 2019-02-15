@@ -10,6 +10,8 @@
 		3873BF562216D617007FE7D2 /* Material_Dialogs_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3873BF4C2216D617007FE7D2 /* Material_Dialogs_iOS.framework */; };
 		3873BF5B2216D617007FE7D2 /* Material_Dialogs_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF5A2216D617007FE7D2 /* Material_Dialogs_iOSTests.swift */; };
 		3873BF5D2216D617007FE7D2 /* Material_Dialogs_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 3873BF4F2216D617007FE7D2 /* Material_Dialogs_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3873BF6A2216DAE2007FE7D2 /* BaseDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF692216DAE2007FE7D2 /* BaseDialog.swift */; };
+		3873BF6C2216DB7E007FE7D2 /* MaterialDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF6B2216DB7E007FE7D2 /* MaterialDialog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		3873BF552216D617007FE7D2 /* Material-Dialogs-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Material-Dialogs-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3873BF5A2216D617007FE7D2 /* Material_Dialogs_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Material_Dialogs_iOSTests.swift; sourceTree = "<group>"; };
 		3873BF5C2216D617007FE7D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3873BF692216DAE2007FE7D2 /* BaseDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDialog.swift; sourceTree = "<group>"; };
+		3873BF6B2216DB7E007FE7D2 /* MaterialDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialDialog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		3873BF4E2216D617007FE7D2 /* Material-Dialogs-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				3873BF662216D63C007FE7D2 /* Sources */,
 				3873BF4F2216D617007FE7D2 /* Material_Dialogs_iOS.h */,
 				3873BF502216D617007FE7D2 /* Info.plist */,
 			);
@@ -84,6 +89,31 @@
 				3873BF5C2216D617007FE7D2 /* Info.plist */,
 			);
 			path = "Material-Dialogs-iOSTests";
+			sourceTree = "<group>";
+		};
+		3873BF662216D63C007FE7D2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3873BF682216D69A007FE7D2 /* Core */,
+				3873BF672216D67E007FE7D2 /* MaterialDialog */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3873BF672216D67E007FE7D2 /* MaterialDialog */ = {
+			isa = PBXGroup;
+			children = (
+				3873BF6B2216DB7E007FE7D2 /* MaterialDialog.swift */,
+			);
+			path = MaterialDialog;
+			sourceTree = "<group>";
+		};
+		3873BF682216D69A007FE7D2 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3873BF692216DAE2007FE7D2 /* BaseDialog.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +178,7 @@
 				TargetAttributes = {
 					3873BF4B2216D617007FE7D2 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					3873BF542216D617007FE7D2 = {
 						CreatedOnToolsVersion = 10.1;
@@ -194,6 +225,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3873BF6C2216DB7E007FE7D2 /* MaterialDialog.swift in Sources */,
+				3873BF6A2216DAE2007FE7D2 /* BaseDialog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +374,7 @@
 		3873BF612216D617007FE7D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -357,6 +391,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.codesworth.Material-Dialogs-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +400,7 @@
 		3873BF622216D617007FE7D2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -389,6 +425,7 @@
 		3873BF642216D617007FE7D2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Material-Dialogs-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +443,7 @@
 		3873BF652216D617007FE7D2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Material-Dialogs-iOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
