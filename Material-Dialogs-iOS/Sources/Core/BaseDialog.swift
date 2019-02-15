@@ -11,7 +11,7 @@ import UIKit
 internal class BaseDialog:UIView{
     
     internal var nativeFrame: CGRect = {
-        return UIScreen.main.bounds
+        return .nativeFrame
     }()
     
     private var allowableSize:CGSize{

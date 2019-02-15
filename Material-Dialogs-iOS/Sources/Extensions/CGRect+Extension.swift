@@ -10,3 +10,9 @@ import Foundation
 
 
 
+extension CGRect{
+    
+    static var nativeFrame:CGRect{
+        return UIScreen.main.bounds
+    }
+}

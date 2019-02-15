@@ -23,10 +23,9 @@ public class MaterialDialog{
     }
     
     class func basicDialogue(_ title:String = "",body:String,negativeActionTitle:String,positiveActionTitle:String? = nil)->MaterialDialog{
-        let base = BaseDialog()
-        let height = body.height(withConstrainedWidth: nativeFrame.width, font: .body) + 70
+        let height = body.height(withConstrainedWidth: CGRect.nativeFrame.width, font: .body) + 70
         
-        let frame = CGRect(origin: .zero, size: CGSize(width: nativeFrame.width, height: height))
+        let frame = CGRect(origin: .zero, size: CGSize(width: CGRect.nativeFrame.width, height: height))
         let dialog = BasicDialog(frame: frame)
         dialog.customView.text = body
         dialog.headerlable.text = title
@@ -38,7 +37,17 @@ public class MaterialDialog{
     
     
     public func show(){
+        let base = BaseDialog()
+        base.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = true
+        NSLayoutConstraint.activate([
+            view.centerXAnchor.constraint(equalTo: base.centerXAnchor),
+            view.centerYAnchor.constraint(equalTo: base.centerYAnchor)
+        ])
         
+        OperationQueue.main.addOperation {
+            UIApplication.shared.keyWindow?.addSubview(base)
+        }
     }
     
     
