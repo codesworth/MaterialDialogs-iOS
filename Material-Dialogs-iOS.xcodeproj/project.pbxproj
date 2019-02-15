@@ -12,6 +12,9 @@
 		3873BF5D2216D617007FE7D2 /* Material_Dialogs_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 3873BF4F2216D617007FE7D2 /* Material_Dialogs_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3873BF6A2216DAE2007FE7D2 /* BaseDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF692216DAE2007FE7D2 /* BaseDialog.swift */; };
 		3873BF6C2216DB7E007FE7D2 /* MaterialDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF6B2216DB7E007FE7D2 /* MaterialDialog.swift */; };
+		3873BF6E2216E028007FE7D2 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF6D2216E028007FE7D2 /* MaterialView.swift */; };
+		3873BF702216E1DE007FE7D2 /* BasicDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF6F2216E1DE007FE7D2 /* BasicDialog.swift */; };
+		3873BF722216E25D007FE7D2 /* HeaderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF712216E25D007FE7D2 /* HeaderLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,9 @@
 		3873BF5C2216D617007FE7D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3873BF692216DAE2007FE7D2 /* BaseDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDialog.swift; sourceTree = "<group>"; };
 		3873BF6B2216DB7E007FE7D2 /* MaterialDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialDialog.swift; sourceTree = "<group>"; };
+		3873BF6D2216E028007FE7D2 /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		3873BF6F2216E1DE007FE7D2 /* BasicDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDialog.swift; sourceTree = "<group>"; };
+		3873BF712216E25D007FE7D2 /* HeaderLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				3873BF692216DAE2007FE7D2 /* BaseDialog.swift */,
+				3873BF6D2216E028007FE7D2 /* MaterialView.swift */,
+				3873BF6F2216E1DE007FE7D2 /* BasicDialog.swift */,
+				3873BF712216E25D007FE7D2 /* HeaderLabel.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -225,7 +234,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3873BF6E2216E028007FE7D2 /* MaterialView.swift in Sources */,
 				3873BF6C2216DB7E007FE7D2 /* MaterialDialog.swift in Sources */,
+				3873BF722216E25D007FE7D2 /* HeaderLabel.swift in Sources */,
+				3873BF702216E1DE007FE7D2 /* BasicDialog.swift in Sources */,
 				3873BF6A2216DAE2007FE7D2 /* BaseDialog.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

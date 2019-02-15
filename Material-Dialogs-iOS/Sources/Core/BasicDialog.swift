@@ -1,5 +1,5 @@
 //
-//  MaterialDialog.swift
+//  BasicDialog.swift
 //  Material-Dialogs-iOS
 //
 //  Created by Shadrach Mensah on 15/02/2019.
@@ -9,16 +9,12 @@
 import UIKit
 
 
-
-public class MaterialDialog{
+internal class BasicDialog:MaterialView{
     
-    var base:BaseDialog = {
-        return BaseDialog()
-    }()
     
-    public func show()->MaterialDialog{
-        
+    
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
     }
 }
-
-
