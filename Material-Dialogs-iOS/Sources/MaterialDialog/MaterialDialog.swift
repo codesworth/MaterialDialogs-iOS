@@ -22,7 +22,7 @@ public class MaterialDialog{
         view = dialog
     }
     
-    class func basicDialogue(_ title:String = "",body:String,negativeActionTitle:String,positiveActionTitle:String? = nil)->MaterialDialog{
+    public class func basicDialogue(_ title:String = "",body:String,negativeActionTitle:String,positiveActionTitle:String? = nil)->MaterialDialog{
         let height = body.height(withConstrainedWidth: CGRect.nativeFrame.width, font: .body) + 70
         
         let frame = CGRect(origin: .zero, size: CGSize(width: CGRect.nativeFrame.width, height: height))

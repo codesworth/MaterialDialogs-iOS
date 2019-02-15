@@ -38,9 +38,6 @@ internal class BaseDialog:UIView{
         addSubview(overlay)
     }
     
-    override func addSubview(_ view: UIView) {
-        fatalError("Cannot add subview to this, Use defined method")
-    }
     
 
     
