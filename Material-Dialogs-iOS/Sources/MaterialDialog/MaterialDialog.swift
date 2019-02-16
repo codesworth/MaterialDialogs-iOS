@@ -38,7 +38,7 @@ public class MaterialDialog{
     public func show(){
         let base = BaseDialog()
         base.addSubview(view)
-        view.center = base.center
+        view.center = base.center.offsetY(100)
         base.bringSubviewToFront(view)
 //        view.translatesAutoresizingMaskIntoConstraints = false
 //        NSLayoutConstraint.activate([
@@ -54,6 +54,15 @@ public class MaterialDialog{
     }
     
     
+}
+
+
+
+extension CGPoint{
+    
+    func offsetY(_ value:CGFloat)->CGPoint{
+        return CGPoint(x: x, y: y - value)
+    }
 }
 
 

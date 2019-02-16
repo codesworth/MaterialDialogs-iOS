@@ -54,10 +54,9 @@ internal class BasicDialog:MaterialView{
             cancelbutton.setTitle(title, for: .normal)
             cancelbutton.isHidden = false
             cancelbutton.isEnabled = true
-            return
+            
         }
-        cancelbutton.isHidden = true
-        cancelbutton.isEnabled = false
+
     }
     
     
