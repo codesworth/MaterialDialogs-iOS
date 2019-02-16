@@ -28,9 +28,17 @@ internal class BasicDialog:MaterialView{
         return label
     }()
     
+    var cancelbutton:UIButton = {
+        let butt = UIButton()
+        butt.setTitle("Dismiss", for: .normal)
+        butt.setTitleColor(.green, for: .normal)
+        return butt
+    }()
+    
     
     internal init(frame: CGRect,actiontitles:FooterActions) {
         super.init(frame: frame)
+        clipsToBounds = true
         footer = FooterView(cancelTitle: actiontitles.cancel, actionTitle: actiontitles.action)
     }
     
@@ -39,10 +47,11 @@ internal class BasicDialog:MaterialView{
         backgroundColor = .white
         addSubview(headerlable)
         addSubview(customView)
-        addSubview(footer)
+        addSubview(cancelbutton)
+        
         customView.translatesAutoresizingMaskIntoConstraints = false
         headerlable.translatesAutoresizingMaskIntoConstraints = false
-        footer.translatesAutoresizingMaskIntoConstraints = false
+        cancelbutton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             headerlable.heightAnchor.constraint(equalToConstant: 20),
             headerlable.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
@@ -51,10 +60,10 @@ internal class BasicDialog:MaterialView{
             customView.topAnchor.constraint(equalTo: headerlable.bottomAnchor, constant: 8),
             customView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
             customView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
-            footer.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 8),
-            footer.leadingAnchor.constraint(equalTo: leadingAnchor),
-            footer.trailingAnchor.constraint(equalTo: trailingAnchor, constant:-16),
-            footer.heightAnchor.constraint(equalToConstant: 30)
+            cancelbutton.bottomAnchor.constraint(equalTo:bottomAnchor, constant: 0),
+            cancelbutton.widthAnchor.constraint(equalToConstant: 80),
+            cancelbutton.trailingAnchor.constraint(equalTo: trailingAnchor, constant:-16),
+            cancelbutton.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
     

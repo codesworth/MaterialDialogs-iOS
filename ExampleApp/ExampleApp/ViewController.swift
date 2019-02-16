@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
             
             let body = "Helklo man Doen said he could hardd. Let him wash it out. You coipod try to nbe amore adecnet herl biy just hamen to what toy beop on man is just weakj asjk "
             

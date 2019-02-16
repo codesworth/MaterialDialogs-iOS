@@ -23,7 +23,7 @@ public class MaterialDialog{
     }
     
     public class func basicDialogue(_ title:String = "",body:String,cancelActionTitle:String,actionTitle:String? = nil)->MaterialDialog{
-        let height = body.height(withConstrainedWidth: CGRect.nativeFrame.width, font: .body) + 76
+        let height = body.height(withConstrainedWidth: CGRect.nativeFrame.width, font: .body) + 100
         
         let frame = CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: height))
         let dialog = BasicDialog(frame: frame, actiontitles: (cancelActionTitle,actionTitle))

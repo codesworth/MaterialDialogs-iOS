@@ -44,8 +44,8 @@ internal class FooterView:UIView{
     
     var cancelbutton:UIButton = {
         let butt = UIButton()
-        butt.setTitle("", for: .normal)
-        butt.setTitleColor(.primary, for: .normal)
+        butt.setTitle("Dismiss", for: .normal)
+        butt.setTitleColor(.green, for: .normal)
         return butt
     }()
     
