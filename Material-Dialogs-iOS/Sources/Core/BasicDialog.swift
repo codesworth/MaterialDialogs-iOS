@@ -93,13 +93,13 @@ internal class BasicDialog:MaterialView{
             customView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
             customView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
             cancelbutton.bottomAnchor.constraint(equalTo:bottomAnchor, constant: 0),
-            cancelbutton.widthAnchor.constraint(equalToConstant: cancelwidth),
+            cancelbutton.widthAnchor.constraint(equalToConstant: 80),
             cancelbutton.trailingAnchor.constraint(equalTo: trailingAnchor, constant:-16),
             cancelbutton.heightAnchor.constraint(equalToConstant: 40),
-            actionButton.bottomAnchor.constraint(equalTo:bottomAnchor, constant: 0),
-            actionButton.widthAnchor.constraint(equalToConstant: actionwidth),
-            actionButton.trailingAnchor.constraint(equalTo: cancelbutton.leadingAnchor, constant:8),
-            actionButton.heightAnchor.constraint(equalToConstant: 40)
+//            actionButton.bottomAnchor.constraint(equalTo:bottomAnchor, constant: 0),
+//            actionButton.widthAnchor.constraint(equalToConstant: actionwidth),
+//            actionButton.trailingAnchor.constraint(equalTo: cancelbutton.leadingAnchor, constant:8),
+//            actionButton.heightAnchor.constraint(equalToConstant: 40)
             
         ])
     }
