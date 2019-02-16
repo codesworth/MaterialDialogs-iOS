@@ -15,4 +15,9 @@ extension CGRect{
     static var nativeFrame:CGRect{
         return UIScreen.main.bounds
     }
+    
+    static var fixedWidth:CGFloat{
+        return nativeFrame.width * 0.9
+    }
 }
+

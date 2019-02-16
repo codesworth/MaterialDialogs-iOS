@@ -10,7 +10,7 @@ import UIKit
 
 internal class FooterView:UIView{
     
-    var positiveButton:UIButton = {
+    var actionButton:UIButton = {
         let butt = UIButton()
         butt.setTitle("", for: .normal)
         butt.backgroundColor = .primary
@@ -18,9 +18,32 @@ internal class FooterView:UIView{
     }()
     
     
+    func setCancel(title:String?){
+        if let title = title{
+            cancelbutton.setTitle(title, for: .normal)
+            cancelbutton.isHidden = false
+            cancelbutton.isEnabled = true
+            return
+        }
+        cancelbutton.isHidden = true
+        cancelbutton.isEnabled = false
+    }
     
     
-    var negativeButton:UIButton = {
+    func setAction(title:String?){
+        if let title = title{
+            cancelbutton.setTitle(title, for: .normal)
+            cancelbutton.isHidden = false
+            cancelbutton.isEnabled = true
+            return
+        }
+        cancelbutton.isHidden = true
+        cancelbutton.isEnabled = false
+    }
+    
+    
+    
+    var cancelbutton:UIButton = {
         let butt = UIButton()
         butt.setTitle("", for: .normal)
         butt.backgroundColor = .primary
@@ -31,23 +54,29 @@ internal class FooterView:UIView{
         super.init(frame: frame)
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setup()
+        
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     func setup(){
-        let stack = UIStackView(arrangedSubviews: [positiveButton,negativeButton])
-        
-        stack.alignment = .trailing
-        stack.axis = .horizontal
-        stack.spacing = 8
-        stack.distribution = .fillEqually
-        addSubview(stack)
-        stack.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(cancelbutton)
+        addSubview(actionButton)
+        actionButton.translatesAutoresizingMaskIntoConstraints = false
+        cancelbutton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            stack.heightAnchor.constraint(equalToConstant: 40),
-            stack.trailingAnchor.constraint(equalTo: trailingAnchor),
-            stack.leadingAnchor.constraint(equalTo: leadingAnchor, constant: frame.width * 0.1)
+           cancelbutton.trailingAnchor.constraint(equalTo: trailingAnchor),
+            cancelbutton.bottomAnchor.constraint(equalTo: bottomAnchor),
+            cancelbutton.heightAnchor.constraint(equalToConstant: 30),
+            actionButton.trailingAnchor.constraint(equalTo: cancelbutton.leadingAnchor),
+            actionButton.bottomAnchor.constraint(equalTo: bottomAnchor),
+            actionButton.heightAnchor.constraint(equalToConstant: 30)
+            
         ])
     }
 }

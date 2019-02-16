@@ -27,16 +27,19 @@ internal class BaseDialog:UIView{
     
     
     init(){
-        super.init(frame: nativeFrame)
-        self.frame = nativeFrame
+        super.init(frame: .nativeFrame)
+        self.frame = .nativeFrame
         self.backgroundColor = .clear
+        addSubview(overlay)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        overlay.frame = nativeFrame
-        addSubview(overlay)
+        overlay.frame = .nativeFrame
+        
     }
+    
+    
     
     
 

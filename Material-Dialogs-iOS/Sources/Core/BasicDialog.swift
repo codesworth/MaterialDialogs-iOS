@@ -16,20 +16,21 @@ internal class BasicDialog:MaterialView{
         
     }()
     
+
     
     var footer:FooterView = {
         let foot = FooterView(frame: .zero)
-        foot.positiveButton.isHidden = true
-        
         return foot
     }()
     
     
     var customView:UILabel = {
         let label = UILabel(frame: .zero)
-        label.textColor = .lightText
+        label.textColor = .lightGray
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         label.textAlignment = .left
+        label.numberOfLines = 0
+        label.lineBreakMode = .byTruncatingMiddle
         return label
     }()
     
@@ -40,22 +41,25 @@ internal class BasicDialog:MaterialView{
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        headerlable.text = "DISMISS"
+        backgroundColor = .white
         addSubview(headerlable)
         addSubview(customView)
         addSubview(footer)
         customView.translatesAutoresizingMaskIntoConstraints = false
         headerlable.translatesAutoresizingMaskIntoConstraints = false
+        footer.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            headerlable.heightAnchor.constraint(equalToConstant: 30),
-            headerlable.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
+            headerlable.heightAnchor.constraint(equalToConstant: 20),
+            headerlable.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
+            headerlable.topAnchor.constraint(equalTo: topAnchor, constant: 8),
+            headerlable.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             customView.topAnchor.constraint(equalTo: headerlable.bottomAnchor, constant: 8),
             customView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
             customView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
-            footer.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 0),
+            footer.bottomAnchor.constraint(equalTo: bottomAnchor, constant: 8),
             footer.leadingAnchor.constraint(equalTo: leadingAnchor),
-            footer.trailingAnchor.constraint(equalTo: trailingAnchor),
-            footer.heightAnchor.constraint(equalToConstant: 40)
+            footer.trailingAnchor.constraint(equalTo: trailingAnchor, constant:-16),
+            footer.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
     
