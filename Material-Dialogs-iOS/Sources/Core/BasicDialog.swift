@@ -11,19 +11,13 @@ import UIKit
 
 internal class BasicDialog:MaterialView{
     
+    typealias FooterActions = (cancel:String?,action:String?)
     var headerlable:HeaderLabel = {
         return HeaderLabel(frame: .zero)
         
     }()
     
-
-    
-    var footer:FooterView = {
-        let foot = FooterView(frame: .zero)
-        return foot
-    }()
-    
-    
+    var footer:FooterView!
     var customView:UILabel = {
         let label = UILabel(frame: .zero)
         label.textColor = .lightGray
@@ -35,8 +29,9 @@ internal class BasicDialog:MaterialView{
     }()
     
     
-    override init(frame: CGRect) {
+    internal init(frame: CGRect,actiontitles:FooterActions) {
         super.init(frame: frame)
+        footer = FooterView(cancelTitle: actiontitles.cancel, actionTitle: actiontitles.action)
     }
     
     override func layoutSubviews() {

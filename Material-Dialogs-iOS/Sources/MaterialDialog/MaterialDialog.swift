@@ -26,11 +26,10 @@ public class MaterialDialog{
         let height = body.height(withConstrainedWidth: CGRect.nativeFrame.width, font: .body) + 76
         
         let frame = CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: height))
-        let dialog = BasicDialog(frame: frame)
+        let dialog = BasicDialog(frame: frame, actiontitles: (cancelActionTitle,actionTitle))
         dialog.customView.text = body
         dialog.headerlable.text = title
-        dialog.footer.setCancel(title:cancelActionTitle)
-        dialog.footer.setAction(title: actionTitle)
+        
         return MaterialDialog(dialog: dialog)
         
     }

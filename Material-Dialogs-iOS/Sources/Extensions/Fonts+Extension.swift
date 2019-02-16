@@ -14,4 +14,8 @@ extension UIFont{
     class var body:UIFont{
         return UIFont.systemFont(ofSize: 16, weight: .regular)
     }
+    
+    class var buttons:UIFont{
+        return .systemFont(ofSize: 16, weight: .medium)
+    }
 }

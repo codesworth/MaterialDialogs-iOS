@@ -12,13 +12,12 @@ internal class FooterView:UIView{
     
     var actionButton:UIButton = {
         let butt = UIButton()
-        butt.setTitle("", for: .normal)
-        butt.backgroundColor = .primary
+        butt.setTitleColor(.primary, for: .normal)
         return butt
     }()
     
     
-    func setCancel(title:String?){
+    private func setCancel(title:String?){
         if let title = title{
             cancelbutton.setTitle(title, for: .normal)
             cancelbutton.isHidden = false
@@ -30,7 +29,7 @@ internal class FooterView:UIView{
     }
     
     
-    func setAction(title:String?){
+    private func setAction(title:String?){
         if let title = title{
             cancelbutton.setTitle(title, for: .normal)
             cancelbutton.isHidden = false
@@ -46,12 +45,14 @@ internal class FooterView:UIView{
     var cancelbutton:UIButton = {
         let butt = UIButton()
         butt.setTitle("", for: .normal)
-        butt.backgroundColor = .primary
+        butt.setTitleColor(.primary, for: .normal)
         return butt
     }()
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    internal init(cancelTitle:String? = "Dismiss", actionTitle:String? = nil){
+        super.init(frame: .zero)
+        setCancel(title: cancelTitle)
+        setAction(title: actionTitle)
     }
     
     override func layoutSubviews() {
@@ -67,15 +68,19 @@ internal class FooterView:UIView{
     func setup(){
         addSubview(cancelbutton)
         addSubview(actionButton)
+        let cancelwidth = (cancelbutton.title(for: .normal) != nil) ? cancelbutton.title(for: .normal)!.width(withConstrainedHeight: 30, font: .buttons) + 10 : CGFloat(0)
+        let actionwidth = (actionButton.title(for: .normal) != nil) ? actionButton.title(for: .normal)!.width(withConstrainedHeight: 30, font: .buttons) + 10 : CGFloat(0)
         actionButton.translatesAutoresizingMaskIntoConstraints = false
         cancelbutton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
            cancelbutton.trailingAnchor.constraint(equalTo: trailingAnchor),
             cancelbutton.bottomAnchor.constraint(equalTo: bottomAnchor),
+            cancelbutton.widthAnchor.constraint(equalToConstant: cancelwidth),
             cancelbutton.heightAnchor.constraint(equalToConstant: 30),
             actionButton.trailingAnchor.constraint(equalTo: cancelbutton.leadingAnchor),
             actionButton.bottomAnchor.constraint(equalTo: bottomAnchor),
-            actionButton.heightAnchor.constraint(equalToConstant: 30)
+            actionButton.heightAnchor.constraint(equalToConstant: 30),
+            actionButton.widthAnchor.constraint(equalToConstant: actionwidth)
             
         ])
     }
