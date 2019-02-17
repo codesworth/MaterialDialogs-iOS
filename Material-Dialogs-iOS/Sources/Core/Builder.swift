@@ -24,4 +24,17 @@ internal class Builder{
         
         return mat
     }
+    
+    
+    class func textInputDialog(title:String,placeholder:String?,cancelActionTitle:String,actionTitle:String? = nil, completion:MaterialDialog.MaterialAction?)->MaterialDialog{
+        let frame = CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: 45))
+        let inputDialog = TextInputDialog(frame: frame, placeholder: placeholder)
+        let mat = MaterialDialog(dialog: inputDialog)
+        mat.header.text = title
+        let footer = FooterView(cancelTitle: cancelActionTitle, actionTitle: actionTitle)
+        mat.footer = footer
+        mat.completion = completion
+        mat.build()
+        return mat
+    }
 }

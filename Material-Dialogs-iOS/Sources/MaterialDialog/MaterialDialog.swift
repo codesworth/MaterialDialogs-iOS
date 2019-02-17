@@ -43,13 +43,6 @@ public class MaterialDialog{
        contentView = dialog
     }
     
-    
-    public class func basicDialogue(_ title:String,body:String,cancelActionTitle:String,actionTitle:String? = nil, completion:MaterialAction?)->MaterialDialog{
-        return Builder.basicDialogue(_:title,body:body,cancelActionTitle:cancelActionTitle,actionTitle:actionTitle,completion:completion)
-        
-    }
-    
-    
     internal func build(){
         base = BaseDialog()
         let height = contentView.frame.height + 100

@@ -12,11 +12,6 @@ import UIKit
 
 internal class FooterView:UIView{
     
-    
-    
-    
-    weak var actionDelegate:DialogActions?
-    
     var actionButton:UIButton = {
         let butt = UIButton()
         butt.setTitleColor(.primary, for: .normal)
@@ -83,6 +78,7 @@ internal class FooterView:UIView{
     func setup(){
         addSubview(cancelbutton)
         addSubview(actionButton)
+        
         let cancelwidth = (cancelbutton.title(for: .normal) != nil) ? cancelbutton.title(for: .normal)!.width(withConstrainedHeight: 30, font: .buttons) + 10 : CGFloat(0)
         let actionwidth = (actionButton.title(for: .normal) != nil) ? actionButton.title(for: .normal)!.width(withConstrainedHeight: 30, font: .buttons) + 10 : CGFloat(0)
         actionButton.translatesAutoresizingMaskIntoConstraints = false
