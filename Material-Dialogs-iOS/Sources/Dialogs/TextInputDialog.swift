@@ -23,6 +23,7 @@ internal class TextInputDialog:UIView{
         tf.backgroundColor = .clear
         tf.textColor = .darkText
         tf.textAlignment = .left
+        
         return tf
     }()
     
