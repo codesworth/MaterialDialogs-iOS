@@ -89,3 +89,15 @@ internal class TextInputGroupDialog:UIView{
         ])
     }
 }
+
+
+
+extension TextInputGroupDialog:MessageProtocol{
+    func returnObject() -> Any {
+        let inputs = inputChildren.map{return $0.textView.text ?? ""}
+        return inputs
+    }
+    
+    
+    
+}
