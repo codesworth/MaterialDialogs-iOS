@@ -20,6 +20,7 @@ internal class FooterView:UIView{
     var actionButton:UIButton = {
         let butt = UIButton()
         butt.setTitleColor(.primary, for: .normal)
+        butt.isUserInteractionEnabled = true
         return butt
     }()
     
@@ -74,6 +75,7 @@ internal class FooterView:UIView{
         super.init(frame: .zero)
         setCancel(title: cancelTitle)
         setAction(title: actionTitle)
+        isUserInteractionEnabled = true
     }
     
     override func layoutSubviews() {

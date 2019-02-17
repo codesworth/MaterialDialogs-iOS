@@ -30,7 +30,16 @@ class ViewController: UIViewController {
             
             let body = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
             
-            let dialog = MaterialDialog.basicDialogue("This is first Test Run", body: body, cancelActionTitle: "Dismiss", actionTitle: "Save")
+            let dialog = MaterialDialog.basicDialogue("This is Test Run", body: body, cancelActionTitle: "Dismiss", actionTitle: "Confirm", completion: { (type) in
+                switch type{
+                case .cancel:
+                    print("I was Cancelled")
+                    break
+                case .affirm:
+                    print("I was affirmed")
+                    break
+                }
+            })
             dialog.show()
             
         }

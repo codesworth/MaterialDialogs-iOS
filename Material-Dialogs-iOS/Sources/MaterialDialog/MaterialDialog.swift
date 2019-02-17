@@ -16,11 +16,11 @@ extension UIColor{
 
 public class MaterialDialog{
     
-    enum ActionType{
+    public enum ActionType{
         case affirm
         case cancel
     }
-    typealias MaterialaAction = (action:ActionType) -> ()
+    public typealias MaterialAction = (_ action:ActionType) -> ()
     
     private var view:MaterialView!
     private var base:BaseDialog!
@@ -29,20 +29,21 @@ public class MaterialDialog{
         view = dialog
     }
     
-    public class func basicDialogue(_ title:String = "",body:String,cancelActionTitle:String,actionTitle:String? = nil, completion:MaterialaAction?)->MaterialDialog{
+    public class func basicDialogue(_ title:String = "",body:String,cancelActionTitle:String,actionTitle:String? = nil, completion:MaterialAction?)->MaterialDialog{
         let height = body.height(withConstrainedWidth: CGRect.nativeFrame.width, font: .body) + 100
         
         let frame = CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: height))
         let dialog = BasicDialog(frame: frame, actiontitles: (cancelActionTitle,actionTitle))
         dialog.customView.text = body
         dialog.headerlable.text = title
-        
         let mat = MaterialDialog(dialog: dialog)
         mat.completion = completion
+        dialog.footer.actionDelegate = mat
         
+        return mat
     }
     
-    var completion:MaterialaAction?
+    var completion:MaterialAction?
     
     
     
@@ -54,7 +55,7 @@ public class MaterialDialog{
         base.bringSubviewToFront(view)
         
         OperationQueue.main.addOperation {
-            UIApplication.shared.keyWindow?.addSubview(base)
+            UIApplication.shared.keyWindow?.addSubview(self.base)
         }
     }
     
@@ -72,14 +73,14 @@ extension MaterialDialog:DialogActions{
     func didPressAffirmative() {
         completion?(.affirm)
         defer {
-            OperationQueue.main.addOperation {animateOut()}
+            OperationQueue.main.addOperation {self.animateOut()}
         }
     }
     
     func didPressCancel() {
         completion?(.cancel)
         defer {
-            OperationQueue.main.addOperation {animateOut()}
+            OperationQueue.main.addOperation {self.animateOut()}
         }
     }
 }
