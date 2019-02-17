@@ -14,7 +14,7 @@ internal class Builder{
     class func basicDialogue(_ title:String,body:String,cancelActionTitle:String,actionTitle:String? = nil, completion:MaterialDialog.MaterialAction?)->MaterialDialog{
         let height = body.height(withConstrainedWidth: CGRect.nativeFrame.width, font: .body)
         let frame = CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: height))
-        let dialog = BasicDialog(frame: frame)
+        let dialog = BasicDialog(frame: frame, text:body)
         let mat = MaterialDialog(dialog: dialog)
         mat.header.text = title
         let footer = FooterView(cancelTitle: cancelActionTitle, actionTitle: actionTitle)

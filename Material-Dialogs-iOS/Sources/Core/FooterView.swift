@@ -30,22 +30,14 @@ internal class FooterView:UIView{
             cancelbutton.setTitle(title, for: .normal)
             cancelbutton.isHidden = false
             cancelbutton.isEnabled = true
-            cancelbutton.addTarget(self, action: #selector(cancelPressed), for: .touchUpInside)
+
             return
         }
         cancelbutton.isHidden = true
         cancelbutton.isEnabled = false
     }
     
-    @objc func cancelPressed(){
-        
-        actionDelegate?.didPressCancel()
-    }
-    
-    
-    @objc func didPressAffirm(){
-        actionDelegate?.didPressAffirmative()
-    }
+
     
     
     private func setAction(title:String?){
@@ -53,7 +45,7 @@ internal class FooterView:UIView{
             actionButton.setTitle(title, for: .normal)
             actionButton.isHidden = false
             actionButton.isEnabled = true
-            cancelbutton.addTarget(self, action: #selector(didPressAffirm), for: .touchUpInside)
+            
             return
         }
         cancelbutton.isHidden = true

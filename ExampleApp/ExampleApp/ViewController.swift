@@ -24,23 +24,41 @@ class ViewController: UIViewController {
     
     
     
+    var dialog:MaterialDialog = {
+        let text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+        let dialog = MaterialDialog.basicDialogue("This is Test Run", body: text, cancelActionTitle: "Dismiss", actionTitle: "Confirm", completion: { (type) in
+            switch type{
+            case .cancel:
+                print("I was Cancelled")
+                break
+            case .affirm:
+                print("I was affirmed")
+                break
+            }
+        })
+        return dialog
+    }()
+    
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
+            self.dialog.show()
             
-            let body = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
             
-            let dialog = MaterialDialog.basicDialogue("This is Test Run", body: body, cancelActionTitle: "Dismiss", actionTitle: "Confirm", completion: { (type) in
-                switch type{
-                case .cancel:
-                    print("I was Cancelled")
-                    break
-                case .affirm:
-                    print("I was affirmed")
-                    break
-                }
-            })
-            dialog.show()
+//            let dialog = MaterialDialog.basicDialogue("This is Test Run", body: body, cancelActionTitle: "Dismiss", actionTitle: "Confirm", completion: { (type) in
+//                switch type{
+//                case .cancel:
+//                    print("I was Cancelled")
+//                    break
+//                case .affirm:
+//                    print("I was affirmed")
+//                    break
+//                }
+//            })
+            //MaterialDialog.basicDialogue("This is for Test Run", body: body, cancelActionTitle: "Dismiss", actionTitle: "Save", completion: nil).show()
+            
             
         }
     }

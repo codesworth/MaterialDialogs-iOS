@@ -11,14 +11,10 @@ import UIKit
 
 internal class BasicDialog:UIView{
     
-    typealias FooterActions = (cancel:String?,action:String?)
-    var headerlable:HeaderLabel = {
-        return HeaderLabel(frame: .zero)
-        
-    }()
     
-    var footer:FooterView!
-    var customView:UILabel = {
+    var customView:UIView!
+    
+    private var textlable:UILabel = {
         let label = UILabel(frame: .zero)
         label.textColor = .darkText
         label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
@@ -28,35 +24,45 @@ internal class BasicDialog:UIView{
         return label
     }()
     
+    var textView:UITextView = {
+        let textview = UITextView(frame: .zero)
+        textview.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        textview.textAlignment = .left
+        return textview
+    }()
+    private var text:String = ""
     
-    internal override init(frame: CGRect) {
+    internal init(frame: CGRect, text:String) {
         super.init(frame: frame)
-        
+        self.text = text
+        let height = text.height(withConstrainedWidth: CGRect.fixedWidth, font: .body)
+        if height > CGRect.allowableHeight{
+            textView.text = text
+            customView = textView
+        }else{
+            textlable.text = text
+            customView = textlable
+            
+        }
     }
+    
+    
     
     override func layoutSubviews() {
         super.layoutSubviews()
         backgroundColor = .white
-        customView.frame = frame
         addSubview(customView)
+        customView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            customView.topAnchor.constraint(equalTo: topAnchor),
+            customView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            customView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            customView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
         
-//        customView.translatesAutoresizingMaskIntoConstraints = false
-//        headerlable.translatesAutoresizingMaskIntoConstraints = false
-//        footer.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            headerlable.heightAnchor.constraint(equalToConstant: 20),
-//            headerlable.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-//            headerlable.topAnchor.constraint(equalTo: topAnchor, constant: 16),
-//            headerlable.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-//            customView.topAnchor.constraint(equalTo: headerlable.bottomAnchor, constant: 8),
-//            customView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
-//            customView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -12),
-//            footer.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8),
-//            footer.leadingAnchor.constraint(equalTo: leadingAnchor),
-//            footer.trailingAnchor.constraint(equalTo: trailingAnchor, constant:-16),
-//            footer.heightAnchor.constraint(equalToConstant: 30)
-//        ])
     }
+    
+
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

@@ -22,6 +22,7 @@ internal class MaterialView:UIView{
     
     
     func materialSetup(){
+        backgroundColor = .white
         layer.cornerRadius = 4
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize(width: 0, height: 4)

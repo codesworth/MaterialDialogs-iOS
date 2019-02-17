@@ -46,24 +46,30 @@ public class MaterialDialog{
     
     public class func basicDialogue(_ title:String,body:String,cancelActionTitle:String,actionTitle:String? = nil, completion:MaterialAction?)->MaterialDialog{
         return Builder.basicDialogue(_:title,body:body,cancelActionTitle:cancelActionTitle,actionTitle:actionTitle,completion:completion)
+        
     }
     
     
     internal func build(){
         base = BaseDialog()
-        let backbone = MaterialView()
         let height = contentView.frame.height + 100
+        let contentHeight:CGFloat
+        let backbone:MaterialView
         if  height > CGRect.allowableHeight{
-           
-            return
+           backbone = MaterialView(frame: CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: CGRect.allowableHeight)))
+            contentHeight = CGRect.allowableHeight - 100
+        }else{
+            backbone = MaterialView(frame: CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: height)))
+            contentHeight = contentView.frame.height
         }
-        backbone.frame = CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: height))
+        
         backbone.addSubview(header)
         backbone.addSubview(contentView)
         backbone.addSubview(footer)
         header.translatesAutoresizingMaskIntoConstraints = false
         footer.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
             header.heightAnchor.constraint(equalToConstant: 20),
             header.leadingAnchor.constraint(equalTo: backbone.leadingAnchor, constant: 16),
@@ -72,6 +78,7 @@ public class MaterialDialog{
             contentView.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 8),
             contentView.leadingAnchor.constraint(equalTo: backbone.leadingAnchor, constant: 12),
             contentView.trailingAnchor.constraint(equalTo: backbone.trailingAnchor, constant: -12),
+            contentView.heightAnchor.constraint(equalToConstant: contentHeight),
             footer.bottomAnchor.constraint(equalTo: backbone.bottomAnchor, constant: -8),
             footer.leadingAnchor.constraint(equalTo: backbone.leadingAnchor),
             footer.trailingAnchor.constraint(equalTo: backbone.trailingAnchor, constant:-16),
