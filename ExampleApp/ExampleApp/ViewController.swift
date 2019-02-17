@@ -39,27 +39,32 @@ class ViewController: UIViewController {
         return dialog
     }()
     
+    var newDialog:MaterialDialog = {
+        let newDialog = MaterialDialog.textInputDialog(title: "Enter Your Name", placeholder: "Your Nmae", cancelActionTitle: "Dismiss", actionTitle: "Save", completion: { (type) in
+            switch type{
+            case .affirm(let result):
+                guard let result = result as? String else {
+                    print("Wrong Result")
+                    return
+                }
+                print("This is Result: \(result)")
+                break
+            case .cancel:
+                print("I was Cancelled")
+                break
+            }
+        })
+        
+        return newDialog
+    }()
+    
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-            self.dialog.show()
-//            let newDialog = MaterialDialog.textInputDialog(title: "Enter Your Name", placeholder: "Your Nmae", cancelActionTitle: "Dismiss", actionTitle: "Save", completion: { (type) in
-//                switch type{
-//                case .affirm(let result):
-//                    guard let result = result as? String else {
-//                        print("Wrong Result")
-//                        return
-//                    }
-//                    print("This is Result: \(result)")
-//                    break
-//                case .cancel:
-//                    print("I was Cancelled")
-//                    break
-//                }
-//            })
-//            newDialog.show()
+            //self.dialog.show()
+            self.newDialog.show()
             
             
 //            let dialog = MaterialDialog.basicDialogue("This is Test Run", body: body, cancelActionTitle: "Dismiss", actionTitle: "Confirm", completion: { (type) in
