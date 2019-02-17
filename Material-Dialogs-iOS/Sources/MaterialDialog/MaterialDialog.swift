@@ -16,13 +16,20 @@ extension UIColor{
 
 public class MaterialDialog{
     
+    enum ActionType{
+        case affirm
+        case cancel
+    }
+    typealias MaterialaAction = (action:ActionType) -> ()
+    
     private var view:MaterialView!
+    private var base:BaseDialog!
     
     private init(dialog:MaterialView){
         view = dialog
     }
     
-    public class func basicDialogue(_ title:String = "",body:String,cancelActionTitle:String,actionTitle:String? = nil)->MaterialDialog{
+    public class func basicDialogue(_ title:String = "",body:String,cancelActionTitle:String,actionTitle:String? = nil, completion:MaterialaAction?)->MaterialDialog{
         let height = body.height(withConstrainedWidth: CGRect.nativeFrame.width, font: .body) + 100
         
         let frame = CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: height))
@@ -30,30 +37,51 @@ public class MaterialDialog{
         dialog.customView.text = body
         dialog.headerlable.text = title
         
-        return MaterialDialog(dialog: dialog)
+        let mat = MaterialDialog(dialog: dialog)
+        mat.completion = completion
         
     }
     
+    var completion:MaterialaAction?
+    
+    
     
     public func show(){
-        let base = BaseDialog()
+        
+        base = BaseDialog()
         base.addSubview(view)
-        view.center = base.center.offsetY(100)
+        view.center = base.center.offsetY(50)
         base.bringSubviewToFront(view)
-//        view.translatesAutoresizingMaskIntoConstraints = false
-//        NSLayoutConstraint.activate([
-//            view.centerXAnchor.constraint(equalTo: base.centerXAnchor),
-//            view.centerYAnchor.constraint(equalTo: base.centerYAnchor)
-//            view.heightAnchor.constraint(equalToConstant: view.frame.height),
-//
-//        ])
         
         OperationQueue.main.addOperation {
             UIApplication.shared.keyWindow?.addSubview(base)
         }
     }
     
+    func animateOut(){
+        base.removeFromSuperview()
+    }
     
+    
+}
+
+
+
+extension MaterialDialog:DialogActions{
+    
+    func didPressAffirmative() {
+        completion?(.affirm)
+        defer {
+            OperationQueue.main.addOperation {animateOut()}
+        }
+    }
+    
+    func didPressCancel() {
+        completion?(.cancel)
+        defer {
+            OperationQueue.main.addOperation {animateOut()}
+        }
+    }
 }
 
 

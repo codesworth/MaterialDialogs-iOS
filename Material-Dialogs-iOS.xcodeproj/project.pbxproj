@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3801AB1722194BF0007A9C70 /* DialogDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3801AB1622194BF0007A9C70 /* DialogDelegates.swift */; };
 		3873BF562216D617007FE7D2 /* Material_Dialogs_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3873BF4C2216D617007FE7D2 /* Material_Dialogs_iOS.framework */; };
 		3873BF5B2216D617007FE7D2 /* Material_Dialogs_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF5A2216D617007FE7D2 /* Material_Dialogs_iOSTests.swift */; };
 		3873BF5D2216D617007FE7D2 /* Material_Dialogs_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 3873BF4F2216D617007FE7D2 /* Material_Dialogs_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3801AB1622194BF0007A9C70 /* DialogDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogDelegates.swift; sourceTree = "<group>"; };
 		3873BF4C2216D617007FE7D2 /* Material_Dialogs_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Material_Dialogs_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3873BF4F2216D617007FE7D2 /* Material_Dialogs_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Material_Dialogs_iOS.h; sourceTree = "<group>"; };
 		3873BF502216D617007FE7D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				3873BF6F2216E1DE007FE7D2 /* BasicDialog.swift */,
 				3873BF712216E25D007FE7D2 /* HeaderLabel.swift */,
 				3873BF732216E45E007FE7D2 /* FooterView.swift */,
+				3801AB1622194BF0007A9C70 /* DialogDelegates.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				3873BF7922171237007FE7D2 /* Fonts+Extension.swift in Sources */,
 				3873BF722216E25D007FE7D2 /* HeaderLabel.swift in Sources */,
 				3873BF742216E45E007FE7D2 /* FooterView.swift in Sources */,
+				3801AB1722194BF0007A9C70 /* DialogDelegates.swift in Sources */,
 				3873BF702216E1DE007FE7D2 /* BasicDialog.swift in Sources */,
 				3873BF7722171141007FE7D2 /* Strings+Extensions.swift in Sources */,
 				3873BF6A2216DAE2007FE7D2 /* BaseDialog.swift in Sources */,

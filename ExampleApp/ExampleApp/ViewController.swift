@@ -15,7 +15,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        
+        let imgview = UIImageView(frame: view.frame)
+        imgview.image = UIImage(named: "Vampire Toucan.jpg")
+        imgview.contentMode = .scaleAspectFill
+        view.addSubview(imgview)
         
     }
     
@@ -25,7 +28,7 @@ class ViewController: UIViewController {
         super.viewDidAppear(true)
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
             
-            let body = "Helklo man Doen said he could hardd. Let him wash it out. You coipod try to nbe amore adecnet herl biy just hamen to what toy beop on man is just weakj asjk "
+            let body = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
             
             let dialog = MaterialDialog.basicDialogue("This is first Test Run", body: body, cancelActionTitle: "Dismiss", actionTitle: "Save")
             dialog.show()

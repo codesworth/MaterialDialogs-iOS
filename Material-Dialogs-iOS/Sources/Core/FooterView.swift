@@ -8,7 +8,14 @@
 
 import UIKit
 
+
+
 internal class FooterView:UIView{
+    
+    
+    
+    
+    weak var actionDelegate:DialogActions?
     
     var actionButton:UIButton = {
         let butt = UIButton()
@@ -22,18 +29,30 @@ internal class FooterView:UIView{
             cancelbutton.setTitle(title, for: .normal)
             cancelbutton.isHidden = false
             cancelbutton.isEnabled = true
+            cancelbutton.addTarget(self, action: #selector(cancelPressed), for: .touchUpInside)
             return
         }
         cancelbutton.isHidden = true
         cancelbutton.isEnabled = false
+    }
+    
+    @objc func cancelPressed(){
+        
+        actionDelegate?.didPressCancel()
+    }
+    
+    
+    @objc func didPressAffirm(){
+        actionDelegate?.didPressAffirmative()
     }
     
     
     private func setAction(title:String?){
         if let title = title{
-            cancelbutton.setTitle(title, for: .normal)
-            cancelbutton.isHidden = false
-            cancelbutton.isEnabled = true
+            actionButton.setTitle(title, for: .normal)
+            actionButton.isHidden = false
+            actionButton.isEnabled = true
+            cancelbutton.addTarget(self, action: #selector(didPressAffirm), for: .touchUpInside)
             return
         }
         cancelbutton.isHidden = true
@@ -42,10 +61,12 @@ internal class FooterView:UIView{
     
     
     
+    
+    
     var cancelbutton:UIButton = {
         let butt = UIButton()
-        butt.setTitle("Dismiss", for: .normal)
-        butt.setTitleColor(.green, for: .normal)
+        butt.setTitle("", for: .normal)
+        butt.setTitleColor(.primary, for: .normal)
         return butt
     }()
     
@@ -77,7 +98,7 @@ internal class FooterView:UIView{
             cancelbutton.bottomAnchor.constraint(equalTo: bottomAnchor),
             cancelbutton.widthAnchor.constraint(equalToConstant: cancelwidth),
             cancelbutton.heightAnchor.constraint(equalToConstant: 30),
-            actionButton.trailingAnchor.constraint(equalTo: cancelbutton.leadingAnchor),
+            actionButton.trailingAnchor.constraint(equalTo: cancelbutton.leadingAnchor, constant: -16),
             actionButton.bottomAnchor.constraint(equalTo: bottomAnchor),
             actionButton.heightAnchor.constraint(equalToConstant: 30),
             actionButton.widthAnchor.constraint(equalToConstant: actionwidth)
