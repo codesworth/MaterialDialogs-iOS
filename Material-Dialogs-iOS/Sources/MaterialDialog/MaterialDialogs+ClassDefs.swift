@@ -21,4 +21,9 @@ extension MaterialDialog{
     public class func basicDialogue(_ title:String,body:String,cancelActionTitle:String,actionTitle:String? = nil, completion:MaterialAction?)->MaterialDialog{
         return Builder.basicDialogue(_:title,body:body,cancelActionTitle:cancelActionTitle,actionTitle:actionTitle,completion:completion)
     }
+    
+    public class func textInputGroupDialog(title:String,numberOfInputs:Int,placeholders:[String?]?,inputTextContentTypes:[UITextContentType]?,cancelActionTitle:String,actionTitle:String? = nil, completion:MaterialDialog.MaterialAction?)->MaterialDialog
+    {
+        return Builder.textInputGroupDialog(title:title,numberOfInputs:numberOfInputs,placeholders:placeholders,inputTextContentTypes:inputTextContentTypes,cancelActionTitle:cancelActionTitle,actionTitle:actionTitle, completion:completion)
+    }
 }
