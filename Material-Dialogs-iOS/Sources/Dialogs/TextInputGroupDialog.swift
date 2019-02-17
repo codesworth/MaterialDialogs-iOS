@@ -17,7 +17,7 @@ internal class TextInputGroupDialog:UIView{
     var contentTypes:[UITextContentType]?
     var parentStack:UIStackView = {
         let stack = UIStackView(frame: .zero)
-        stack.alignment = .center
+        stack.alignment = .fill
         stack.axis = .vertical
         stack.distribution = .fillEqually
         stack.spacing = 0
@@ -30,6 +30,7 @@ internal class TextInputGroupDialog:UIView{
         self.placeholders = placeholders
         self.contentTypes = contentTypes
         inputChildren = []
+        setup()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -79,6 +80,7 @@ internal class TextInputGroupDialog:UIView{
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
         addSubview(parentStack)
         parentStack.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([

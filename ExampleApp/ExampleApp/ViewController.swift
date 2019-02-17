@@ -58,14 +58,32 @@ class ViewController: UIViewController {
         return newDialog
     }()
     
+    var inputGroup:MaterialDialog = {
+        let group = MaterialDialog.textInputGroupDialog(title: "Enter Credentials", numberOfInputs: 3, placeholders: ["Enter Name","Enter Email", "Enter Password"], inputTextContentTypes: [.username,.emailAddress,.password], cancelActionTitle: "Dismiss", actionTitle: "Sign In", completion: { (type) in
+            switch type{
+            case .affirm(let result):
+                guard let result = result as? [String] else {
+                    print("Wrong Result")
+                    return
+                }
+                print("This is Result: \(result)")
+                break
+            case .cancel:
+                print("I was Cancelled")
+                break
+            }
+        })
+        return group
+    }()
+    
     
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
             //self.dialog.show()
-            self.newDialog.show()
-            
+            //self.newDialog.show()
+            self.inputGroup.show()
             
 //            let dialog = MaterialDialog.basicDialogue("This is Test Run", body: body, cancelActionTitle: "Dismiss", actionTitle: "Confirm", completion: { (type) in
 //                switch type{
