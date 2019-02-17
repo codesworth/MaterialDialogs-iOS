@@ -19,5 +19,9 @@ extension CGRect{
     static var fixedWidth:CGFloat{
         return nativeFrame.width * 0.9
     }
+    
+    static var allowableHeight:CGFloat{
+        return nativeFrame.height * 0.8
+    }
 }
 
