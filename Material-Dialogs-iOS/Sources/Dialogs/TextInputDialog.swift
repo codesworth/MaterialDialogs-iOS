@@ -1,5 +1,5 @@
 //
-//  DialogDelegates.swift
+//  TextInputDialog.swift
 //  Material-Dialogs-iOS
 //
 //  Created by Shadrach Mensah on 17/02/2019.
@@ -10,7 +10,7 @@ import Foundation
 
 
 
-protocol DialogActions:class {
-    func didPressCancel()
-    func didPressAffirmative()
+internal class TextInputDialog:UIView{
+    
+    var textView:UITextField
 }

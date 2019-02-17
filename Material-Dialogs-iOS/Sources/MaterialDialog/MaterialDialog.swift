@@ -18,7 +18,7 @@ public class MaterialDialog{
     
     public typealias MaterialAction = (_ action:ActionType) -> ()
     public enum ActionType{
-        case affirm
+        case affirm(Any)
         case cancel
     }
     
@@ -112,7 +112,11 @@ public class MaterialDialog{
 extension MaterialDialog{
     
     @objc func didPressAffirmative() {
-        completion?(.affirm)
+        var message:Any = false
+        if let contentView = contentView as? MessageProtocol{
+            message = contentView.returnObject()
+        }
+        completion?(.affirm(message))
         defer {
             OperationQueue.main.addOperation {self.animateOut()}
         }
@@ -128,11 +132,6 @@ extension MaterialDialog{
 
 
 
-extension CGPoint{
-    
-    func offsetY(_ value:CGFloat)->CGPoint{
-        return CGPoint(x: x, y: y - value)
-    }
-}
+
 
 

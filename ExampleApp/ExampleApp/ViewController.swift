@@ -31,7 +31,7 @@ class ViewController: UIViewController {
             case .cancel:
                 print("I was Cancelled")
                 break
-            case .affirm:
+            case .affirm(let message):
                 print("I was affirmed")
                 break
             }

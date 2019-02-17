@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3801AB1722194BF0007A9C70 /* DialogDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3801AB1622194BF0007A9C70 /* DialogDelegates.swift */; };
 		3801AB1B22198CF6007A9C70 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3801AB1A22198CF6007A9C70 /* Builder.swift */; };
+		3801AB1F2219AED5007A9C70 /* TextInputDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3801AB1E2219AED5007A9C70 /* TextInputDialog.swift */; };
+		3801AB222219AFE1007A9C70 /* MessageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3801AB212219AFE1007A9C70 /* MessageProtocol.swift */; };
 		3873BF562216D617007FE7D2 /* Material_Dialogs_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3873BF4C2216D617007FE7D2 /* Material_Dialogs_iOS.framework */; };
 		3873BF5B2216D617007FE7D2 /* Material_Dialogs_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF5A2216D617007FE7D2 /* Material_Dialogs_iOSTests.swift */; };
 		3873BF5D2216D617007FE7D2 /* Material_Dialogs_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 3873BF4F2216D617007FE7D2 /* Material_Dialogs_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -48,8 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3801AB1622194BF0007A9C70 /* DialogDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogDelegates.swift; sourceTree = "<group>"; };
 		3801AB1A22198CF6007A9C70 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		3801AB1E2219AED5007A9C70 /* TextInputDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputDialog.swift; sourceTree = "<group>"; };
+		3801AB212219AFE1007A9C70 /* MessageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageProtocol.swift; sourceTree = "<group>"; };
 		3873BF4C2216D617007FE7D2 /* Material_Dialogs_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Material_Dialogs_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3873BF4F2216D617007FE7D2 /* Material_Dialogs_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Material_Dialogs_iOS.h; sourceTree = "<group>"; };
 		3873BF502216D617007FE7D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +89,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3801AB1C2219A739007A9C70 /* Dialogs */ = {
+			isa = PBXGroup;
+			children = (
+				3873BF6F2216E1DE007FE7D2 /* BasicDialog.swift */,
+				3801AB1E2219AED5007A9C70 /* TextInputDialog.swift */,
+			);
+			path = Dialogs;
+			sourceTree = "<group>";
+		};
+		3801AB1D2219AD6C007A9C70 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3873BF712216E25D007FE7D2 /* HeaderLabel.swift */,
+				3873BF732216E45E007FE7D2 /* FooterView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3801AB202219AFB2007A9C70 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3801AB212219AFE1007A9C70 /* MessageProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		3873BF422216D616007FE7D2 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +156,9 @@
 		3873BF662216D63C007FE7D2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				3801AB202219AFB2007A9C70 /* Protocols */,
+				3801AB1D2219AD6C007A9C70 /* Components */,
+				3801AB1C2219A739007A9C70 /* Dialogs */,
 				3873BF752217112D007FE7D2 /* Extensions */,
 				3873BF682216D69A007FE7D2 /* Core */,
 				3873BF672216D67E007FE7D2 /* MaterialDialog */,
@@ -148,10 +179,6 @@
 			children = (
 				3873BF692216DAE2007FE7D2 /* BaseDialog.swift */,
 				3873BF6D2216E028007FE7D2 /* MaterialView.swift */,
-				3873BF6F2216E1DE007FE7D2 /* BasicDialog.swift */,
-				3873BF712216E25D007FE7D2 /* HeaderLabel.swift */,
-				3873BF732216E45E007FE7D2 /* FooterView.swift */,
-				3801AB1622194BF0007A9C70 /* DialogDelegates.swift */,
 				3801AB1A22198CF6007A9C70 /* Builder.swift */,
 			);
 			path = Core;
@@ -311,11 +338,12 @@
 				3873BF7B221759F8007FE7D2 /* CGRect+Extension.swift in Sources */,
 				3873BF6E2216E028007FE7D2 /* MaterialView.swift in Sources */,
 				3873BF6C2216DB7E007FE7D2 /* MaterialDialog.swift in Sources */,
+				3801AB1F2219AED5007A9C70 /* TextInputDialog.swift in Sources */,
 				3801AB1B22198CF6007A9C70 /* Builder.swift in Sources */,
 				3873BF7922171237007FE7D2 /* Fonts+Extension.swift in Sources */,
 				3873BF722216E25D007FE7D2 /* HeaderLabel.swift in Sources */,
+				3801AB222219AFE1007A9C70 /* MessageProtocol.swift in Sources */,
 				3873BF742216E45E007FE7D2 /* FooterView.swift in Sources */,
-				3801AB1722194BF0007A9C70 /* DialogDelegates.swift in Sources */,
 				3873BF702216E1DE007FE7D2 /* BasicDialog.swift in Sources */,
 				3873BF7722171141007FE7D2 /* Strings+Extensions.swift in Sources */,
 				3873BF6A2216DAE2007FE7D2 /* BaseDialog.swift in Sources */,

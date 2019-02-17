@@ -73,3 +73,13 @@ internal class BasicDialog:UIView{
 
 
 
+extension BasicDialog:MessageProtocol{
+    
+    func returnObject() -> Any {
+        return true
+    }
+    
+    
+    
+}
+

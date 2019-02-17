@@ -25,3 +25,10 @@ extension CGRect{
     }
 }
 
+
+extension CGPoint{
+    
+    func offsetY(_ value:CGFloat)->CGPoint{
+        return CGPoint(x: x, y: y - value)
+    }
+}
