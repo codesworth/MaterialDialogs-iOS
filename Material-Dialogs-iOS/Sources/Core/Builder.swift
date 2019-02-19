@@ -51,4 +51,17 @@ internal class Builder{
         mat.build()
         return mat
     }
+    
+    class func progressiveDialog(title:String?,completion:MaterialDialog.MaterialAction?)-> ProgressiveDialog{
+        
+        let progressive = ProgressiveDialog(frame: CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: 60)))
+        let pat = ProgressDialog(dialog: progressive)
+        pat.header.text = title
+        let footer = FooterView(cancelTitle: "CANCEL", actionTitle: nil)
+        pat.footer = footer
+        pat.completion = completion
+        pat.build()
+        return pat
+        
+    }
 }

@@ -25,6 +25,7 @@
 		3873BF7922171237007FE7D2 /* Fonts+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF7822171237007FE7D2 /* Fonts+Extension.swift */; };
 		3873BF7B221759F8007FE7D2 /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF7A221759F8007FE7D2 /* CGRect+Extension.swift */; };
 		38D476D5221C7DC000FF0C77 /* ProgressiveDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D476D4221C7DC000FF0C77 /* ProgressiveDialog.swift */; };
+		38D476D7221CAA4000FF0C77 /* ProgressDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D476D6221CAA4000FF0C77 /* ProgressDialog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		3873BF7A221759F8007FE7D2 /* CGRect+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extension.swift"; sourceTree = "<group>"; };
 		3873BFA822175C93007FE7D2 /* ExampleApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ExampleApp.xcodeproj; path = ExampleApp/ExampleApp.xcodeproj; sourceTree = "<group>"; };
 		38D476D4221C7DC000FF0C77 /* ProgressiveDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressiveDialog.swift; sourceTree = "<group>"; };
+		38D476D6221CAA4000FF0C77 /* ProgressDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDialog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			children = (
 				3873BF6B2216DB7E007FE7D2 /* MaterialDialog.swift */,
 				3801AB232219BA07007A9C70 /* MaterialDialogs+ClassDefs.swift */,
+				38D476D6221CAA4000FF0C77 /* ProgressDialog.swift */,
 			);
 			path = MaterialDialog;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				3801AB262219C36E007A9C70 /* TextInputGroupDialog.swift in Sources */,
 				3873BF6E2216E028007FE7D2 /* MaterialView.swift in Sources */,
 				3873BF6C2216DB7E007FE7D2 /* MaterialDialog.swift in Sources */,
+				38D476D7221CAA4000FF0C77 /* ProgressDialog.swift in Sources */,
 				3801AB1F2219AED5007A9C70 /* TextInputDialog.swift in Sources */,
 				38D476D5221C7DC000FF0C77 /* ProgressiveDialog.swift in Sources */,
 				3801AB1B22198CF6007A9C70 /* Builder.swift in Sources */,

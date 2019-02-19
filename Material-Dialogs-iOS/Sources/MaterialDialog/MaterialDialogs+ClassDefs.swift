@@ -26,4 +26,9 @@ extension MaterialDialog{
     {
         return Builder.textInputGroupDialog(title:title,numberOfInputs:numberOfInputs,placeholders:placeholders,inputTextContentTypes:inputTextContentTypes,cancelActionTitle:cancelActionTitle,actionTitle:actionTitle, completion:completion)
     }
+    
+    
+    class func progressiveDialog(title:String?,completion:MaterialDialog.MaterialAction?)-> ProgressiveDialog{
+        return Builder.progressiveDialog(title:title,completion:completion)
+    }
 }

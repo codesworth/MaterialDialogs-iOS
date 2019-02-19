@@ -27,6 +27,14 @@ internal class ProgressiveDialog:UIView{
         return l
     }()
     
+    var progressStroke:CGFloat{
+        didSet{
+            let perc = Int(progressStroke * 100)
+            endlable.text = "\(perc)%"
+            foregroundLayer.strokeEnd = progressStroke
+        }
+    }
+    
     var endlable:UILabel = {
         var startValueLbale:UILabel = {
             let l = UILabel()
@@ -53,19 +61,35 @@ internal class ProgressiveDialog:UIView{
         progressView.layer.addSublayer(foregroundLayer)
         addSubview(progressView)
         foregroundLayer.strokeEnd = 0
+        addSubview(startValueLbale)
+        addSubview(endlable)
         
     }
+    
+    
     
     override func layoutSubviews() {
         super.layoutSubviews()
         buildLayer(layer: backgroundLayer)
-        backgroundLayer.strokeColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1).cgColor
+        backgroundLayer.strokeColor = UIColor(red: 0, green: 102/255, blue: 0, alpha: 0.5).cgColor
         buildLayer(layer: foregroundLayer)
-        foregroundLayer.strokeColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1).cgColor
+        foregroundLayer.strokeColor = UIColor.primary.cgColor
         
         progressView.translatesAutoresizingMaskIntoConstraints = false
         startValueLbale.translatesAutoresizingMaskIntoConstraints = false
         endlable.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            progressView.topAnchor.constraint(equalTo: topAnchor, constant:20),
+            progressView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            progressView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            progressView.heightAnchor.constraint(equalToConstant: 10),
+            startValueLbale.topAnchor.constraint(equalTo: progressView.topAnchor, constant: 6),
+            startValueLbale.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            endlable.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            endlable.topAnchor.constraint(equalTo: progressView.topAnchor)
+            
+        ])
     }
     
     func buildLayer(layer: CAShapeLayer) {
