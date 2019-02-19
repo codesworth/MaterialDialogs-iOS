@@ -24,6 +24,7 @@
 		3873BF7722171141007FE7D2 /* Strings+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF7622171141007FE7D2 /* Strings+Extensions.swift */; };
 		3873BF7922171237007FE7D2 /* Fonts+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF7822171237007FE7D2 /* Fonts+Extension.swift */; };
 		3873BF7B221759F8007FE7D2 /* CGRect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF7A221759F8007FE7D2 /* CGRect+Extension.swift */; };
+		38D476D5221C7DC000FF0C77 /* ProgressiveDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D476D4221C7DC000FF0C77 /* ProgressiveDialog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		3873BF7822171237007FE7D2 /* Fonts+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Fonts+Extension.swift"; sourceTree = "<group>"; };
 		3873BF7A221759F8007FE7D2 /* CGRect+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGRect+Extension.swift"; sourceTree = "<group>"; };
 		3873BFA822175C93007FE7D2 /* ExampleApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ExampleApp.xcodeproj; path = ExampleApp/ExampleApp.xcodeproj; sourceTree = "<group>"; };
+		38D476D4221C7DC000FF0C77 /* ProgressiveDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressiveDialog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 		3873BF662216D63C007FE7D2 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				38D476D1221C7D9000FF0C77 /* ProgressiveDialogs */,
 				3801AB202219AFB2007A9C70 /* Protocols */,
 				3801AB1D2219AD6C007A9C70 /* Components */,
 				3801AB1C2219A739007A9C70 /* Dialogs */,
@@ -207,6 +210,14 @@
 				3873BFB022175C95007FE7D2 /* ExampleAppTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		38D476D1221C7D9000FF0C77 /* ProgressiveDialogs */ = {
+			isa = PBXGroup;
+			children = (
+				38D476D4221C7DC000FF0C77 /* ProgressiveDialog.swift */,
+			);
+			path = ProgressiveDialogs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +357,7 @@
 				3873BF6E2216E028007FE7D2 /* MaterialView.swift in Sources */,
 				3873BF6C2216DB7E007FE7D2 /* MaterialDialog.swift in Sources */,
 				3801AB1F2219AED5007A9C70 /* TextInputDialog.swift in Sources */,
+				38D476D5221C7DC000FF0C77 /* ProgressiveDialog.swift in Sources */,
 				3801AB1B22198CF6007A9C70 /* Builder.swift in Sources */,
 				3801AB242219BA07007A9C70 /* MaterialDialogs+ClassDefs.swift in Sources */,
 				3873BF7922171237007FE7D2 /* Fonts+Extension.swift in Sources */,
