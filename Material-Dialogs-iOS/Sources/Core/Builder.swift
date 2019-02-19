@@ -52,7 +52,7 @@ internal class Builder{
         return mat
     }
     
-    class func progressiveDialog(title:String?,completion:MaterialDialog.MaterialAction?)-> ProgressiveDialog{
+    class func progressiveDialog(title:String?,completion:MaterialDialog.MaterialAction?)-> ProgressDialog{
         
         let progressive = ProgressiveDialog(frame: CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: 60)))
         let pat = ProgressDialog(dialog: progressive)

@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         view.addSubview(imgview)
         
     }
-    
+    var start:CGFloat = 0.0
     
     
     var dialog:MaterialDialog = {
@@ -77,13 +77,28 @@ class ViewController: UIViewController {
     }()
     
     
+    var proressiveDialog:ProgressDialog = {
+        let pat = MaterialDialog.progressiveDialog(title: "Downloading Video", completion: { (type) in
+            switch type{
+            case .cancel:
+                print("I was Cancelled")
+                break
+            case .affirm:
+                print("I was affirmed")
+                break
+            }
+        })
+        return pat
+    }()
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
             //self.dialog.show()
             //self.newDialog.show()
-            self.inputGroup.show()
+            //self.inputGroup.show()
+            self.proressiveDialog.show()
+            self.updateTill()
             
 //            let dialog = MaterialDialog.basicDialogue("This is Test Run", body: body, cancelActionTitle: "Dismiss", actionTitle: "Confirm", completion: { (type) in
 //                switch type{
@@ -98,6 +113,16 @@ class ViewController: UIViewController {
             //MaterialDialog.basicDialogue("This is for Test Run", body: body, cancelActionTitle: "Dismiss", actionTitle: "Save", completion: nil).show()
             
             
+        }
+    }
+    
+    func updateTill(){
+        
+        start = start + 0.05
+        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(200)) {
+            self.proressiveDialog.updateWith(progressValue: self.start)
+            self.updateTill()
+            if self.start > 1 {return}
         }
     }
     

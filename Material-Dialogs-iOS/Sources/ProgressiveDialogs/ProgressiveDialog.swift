@@ -27,33 +27,37 @@ internal class ProgressiveDialog:UIView{
         return l
     }()
     
-    var progressStroke:CGFloat{
+    var progressStroke:CGFloat = 0{
         didSet{
-            let perc = Int(progressStroke * 100)
-            endlable.text = "\(perc)%"
-            foregroundLayer.strokeEnd = progressStroke
+            let perc = min(1, progressStroke)
+            let animation = CABasicAnimation(keyPath: "strokeEnd")
+            animation.duration = 0.5
+            let percl = Int(perc * 100)
+            foregroundLayer.strokeEnd = perc
+            foregroundLayer.add(animation, forKey: nil)
+            
         }
     }
     
     var endlable:UILabel = {
-        var startValueLbale:UILabel = {
-            let l = UILabel()
-            l.textAlignment = .left
-            l.textColor = .primary
-            l.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-            l.backgroundColor = .clear
-            l.allowsDefaultTighteningForTruncation = true
-            l.minimumScaleFactor = 0.3
-            l.numberOfLines  = 1
-            return l
-        }()
-    }
+        let l = UILabel()
+        l.textAlignment = .left
+        l.textColor = .primary
+        l.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        l.backgroundColor = .clear
+        l.allowsDefaultTighteningForTruncation = true
+        l.text = "0%"
+        l.minimumScaleFactor = 0.3
+        l.numberOfLines  = 1
+        return l
+    }()
+    
     
     var progressView:UIView = {
         let v = UIView(frame: .zero)
         v.backgroundColor = .clear
-        
-    }
+        return v
+    }()
     
     internal override init(frame: CGRect) {
         super.init(frame: frame)
@@ -64,6 +68,11 @@ internal class ProgressiveDialog:UIView{
         addSubview(startValueLbale)
         addSubview(endlable)
         
+    }
+    
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     
@@ -81,24 +90,24 @@ internal class ProgressiveDialog:UIView{
         
         NSLayoutConstraint.activate([
             progressView.topAnchor.constraint(equalTo: topAnchor, constant:20),
-            progressView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            progressView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            progressView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 6),
+            progressView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             progressView.heightAnchor.constraint(equalToConstant: 10),
-            startValueLbale.topAnchor.constraint(equalTo: progressView.topAnchor, constant: 6),
+            startValueLbale.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 10),
             startValueLbale.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
             endlable.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
-            endlable.topAnchor.constraint(equalTo: progressView.topAnchor)
+            endlable.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant:10)
             
         ])
     }
     
     func buildLayer(layer: CAShapeLayer) {
         let path = UIBezierPath()
-        path.move(to: CGPoint(x: 0, y: bounds.height/3))
-        path.addLine(to: CGPoint(x: bounds.width, y: bounds.height/3))
+        path.move(to: CGPoint(x: 0, y: progressView.bounds.height/3))
+        path.addLine(to: CGPoint(x: progressView.bounds.width - 6, y: progressView.bounds.height/3))
         layer.path = path.cgPath
-        layer.lineWidth = 20
+        layer.lineWidth = 10
         layer.fillColor = nil
-        layer.lineCap = kCALineCapRound
+        layer.lineCap = .round
     }
 }
