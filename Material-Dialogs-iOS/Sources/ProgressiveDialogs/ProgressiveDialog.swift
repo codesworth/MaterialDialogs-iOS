@@ -35,7 +35,7 @@ internal class ProgressiveDialog:UIView{
             let percl = Int(perc * 100)
             foregroundLayer.strokeEnd = perc
             foregroundLayer.add(animation, forKey: nil)
-            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500), execute: {self.endlable.text = "\(percl)%"})
         }
     }
     
@@ -80,7 +80,7 @@ internal class ProgressiveDialog:UIView{
     override func layoutSubviews() {
         super.layoutSubviews()
         buildLayer(layer: backgroundLayer)
-        backgroundLayer.strokeColor = UIColor(red: 0, green: 102/255, blue: 0, alpha: 0.5).cgColor
+        backgroundLayer.strokeColor = UIColor(red: 0, green: 102/255, blue: 0, alpha: 0.30).cgColor
         buildLayer(layer: foregroundLayer)
         foregroundLayer.strokeColor = UIColor.primary.cgColor
         
@@ -91,7 +91,7 @@ internal class ProgressiveDialog:UIView{
         NSLayoutConstraint.activate([
             progressView.topAnchor.constraint(equalTo: topAnchor, constant:20),
             progressView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 6),
-            progressView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            progressView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -6),
             progressView.heightAnchor.constraint(equalToConstant: 10),
             startValueLbale.topAnchor.constraint(equalTo: progressView.bottomAnchor, constant: 10),
             startValueLbale.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),

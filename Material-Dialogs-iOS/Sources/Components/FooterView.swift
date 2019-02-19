@@ -43,8 +43,8 @@ internal class FooterView:UIView{
             
             return
         }
-        cancelbutton.isHidden = true
-        cancelbutton.isEnabled = false
+        actionButton.isHidden = true
+        actionButton.isEnabled = false
     }
     
     
