@@ -14,7 +14,7 @@ class ListDialog:UIView{
     var tableView:UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.allowsMultipleSelection = false
-        tableView.separatorStyle = .none
+        
         tableView.allowsSelection = true
         return tableView
     }()
@@ -34,7 +34,7 @@ class ListDialog:UIView{
         self.lisType = listType
         addSubview(tableView)
         tableView.register(ListCell.self, forCellReuseIdentifier: "\(ListCell.self)")
-        tableView.separatorColor = .clear
+        
         
 
     }
@@ -47,13 +47,6 @@ class ListDialog:UIView{
         tableView.translatesAutoresizingMaskIntoConstraints = false
         //let tabHeight = listSource.count * 40
         //let height:CGFloat = CGFloat(tabHeight) < CGRect.allowableHeight ? CGFloat(tabHeight) : CGRect.allowableHeight
-        if frame.height  < CGRect.allowableHeight{
-            tableView.isScrollEnabled = false
-            tableView.showsVerticalScrollIndicator = false
-        }else{
-            tableView.isScrollEnabled = true
-            tableView.showsVerticalScrollIndicator = true
-        }
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: topAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -68,6 +61,24 @@ class ListDialog:UIView{
     override func didMoveToWindow() {
         super.didMoveToWindow()
         tableView.separatorStyle = .none
+        //setScrolling()
+        if tableView.contentSize.height > CGRect.allowableHeight{
+            tableView.isScrollEnabled = false
+            tableView.showsVerticalScrollIndicator = false
+        }else{
+            tableView.isScrollEnabled = true
+            tableView.showsVerticalScrollIndicator = true
+        }
+    }
+    
+    func setScrolling(){
+        if CGFloat((listSource.count * 40))  < CGRect.allowableHeight{
+            tableView.isScrollEnabled = false
+            tableView.showsVerticalScrollIndicator = false
+        }else{
+            tableView.isScrollEnabled = true
+            tableView.showsVerticalScrollIndicator = true
+        }
     }
     
 }

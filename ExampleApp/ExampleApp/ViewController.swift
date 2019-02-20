@@ -106,7 +106,7 @@ class ViewController: UIViewController {
     }()
     
     var singleList:MaterialDialog = {
-        let list = ["Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest"]
+        let list = ["Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest"]
         let dialog = MaterialDialog.listDialog(title: "Best Social Network", list: .singleChoice, choices: list, cancelActionTitle: "CANCEL", actionTitle: "CONFIRM", completion: { (type) in
             switch type{
             case .cancel:
@@ -114,6 +114,25 @@ class ViewController: UIViewController {
                 break
             case .affirm(let result):
                 print("I was affirmed with data: \(result)")
+                break
+            }
+        })
+        return dialog
+    }()
+    
+    var multiList:MaterialDialog = {
+        let list = ["Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest"]
+        let dialog = MaterialDialog.listDialog(title: "Best Social Network", list: .multipleChoice, choices: list, cancelActionTitle: "CANCEL", actionTitle: "CONFIRM", completion: { (type) in
+            switch type{
+            case .cancel:
+                print("I was Cancelled")
+                break
+            case .affirm(let result):
+                if let result  = result as? IndexSet{
+                    let all = result.map{$0}
+                   print("I was affirmed with data: \(all)")
+                }
+                
                 break
             }
         })
@@ -129,7 +148,8 @@ class ViewController: UIViewController {
             //self.proressiveDialog.show()
             //self.updateTill()
             //self.infiniteProgress.show()
-            self.singleList.show()
+            //self.singleList.show()
+            self.multiList.show()
             
 //            let dialog = MaterialDialog.basicDialogue("This is Test Run", body: body, cancelActionTitle: "Dismiss", actionTitle: "Confirm", completion: { (type) in
 //                switch type{
