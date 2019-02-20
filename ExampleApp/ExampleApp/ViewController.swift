@@ -105,6 +105,20 @@ class ViewController: UIViewController {
         return prog
     }()
     
+    var singleList:MaterialDialog = {
+        let list = ["Facebook", "Twitter", "Instagram", "Pinterest"]
+        let dialog = MaterialDialog.listDialog(title: "Best Social Network", list: .singleChoice, choices: list, cancelActionTitle: "CANCEL", actionTitle: "CONFIRM", completion: { (type) in
+            switch type{
+            case .cancel:
+                print("I was Cancelled")
+                break
+            case .affirm:
+                print("I was affirmed")
+                break
+            }
+        })
+    }()
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
@@ -113,7 +127,8 @@ class ViewController: UIViewController {
             //self.inputGroup.show()
             //self.proressiveDialog.show()
             //self.updateTill()
-            self.infiniteProgress.show()
+            //self.infiniteProgress.show()
+            self.singleList.show()
             
 //            let dialog = MaterialDialog.basicDialogue("This is Test Run", body: body, cancelActionTitle: "Dismiss", actionTitle: "Confirm", completion: { (type) in
 //                switch type{

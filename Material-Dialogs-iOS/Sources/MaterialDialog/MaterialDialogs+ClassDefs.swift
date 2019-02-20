@@ -36,4 +36,8 @@ extension MaterialDialog{
         
         return Builder.progressDialog(title:title,info:info,completion:completion)
     }
+    
+    public class func listDialog(title:String?,list type:MaterialDialog.ListType, choices:[String],cancelActionTitle:String = "CANCEL",actionTitle:String = "COMFIRM", completion:MaterialDialog.MaterialAction?)->MaterialDialog{
+        return Builder.listDialog(title:title,list:type,choices:choices,cancelActionTitle:cancelActionTitle,actionTitle:actionTitle,completion:completion)
+    }
 }

@@ -20,6 +20,7 @@ class ListCell:UITableViewCell{
         let lable = HeaderLabel(frame: .zero)
         lable.font = .systemFont(ofSize: 16, weight: .medium)
         lable.textColor = .darkText
+        return lable
     }()
     
     override var reuseIdentifier: String?{
