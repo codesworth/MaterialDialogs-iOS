@@ -91,14 +91,29 @@ class ViewController: UIViewController {
         return pat
     }()
     
+    var infiniteProgress:MaterialDialog = {
+        let prog = MaterialDialog.progressDialog(title: "Downloading", info: "Please wait....", completion: { (type) in
+            switch type{
+            case .cancel:
+                print("I was Cancelled")
+                break
+            case .affirm:
+                print("I was affirmed")
+                break
+            }
+        })
+        return prog
+    }()
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
             //self.dialog.show()
             //self.newDialog.show()
             //self.inputGroup.show()
-            self.proressiveDialog.show()
-            self.updateTill()
+            //self.proressiveDialog.show()
+            //self.updateTill()
+            self.infiniteProgress.show()
             
 //            let dialog = MaterialDialog.basicDialogue("This is Test Run", body: body, cancelActionTitle: "Dismiss", actionTitle: "Confirm", completion: { (type) in
 //                switch type{
