@@ -24,12 +24,21 @@ public class MaterialDialog{
     
     
     
+    public enum ListType{
+        case singleChoice
+        case multipleChoice
+    }
+    
+    
+    
+    
     internal var header:HeaderLabel = {
         return HeaderLabel(frame: .zero)
     }()
     
     var completion:MaterialAction?
     var contentView:UIView!
+    
     private var base:BaseDialog!
     
     internal var footer:FooterView!{
@@ -113,6 +122,7 @@ public class MaterialDialog{
     
     
 }
+
 
 
 

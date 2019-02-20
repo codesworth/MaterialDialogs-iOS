@@ -65,7 +65,7 @@ internal class Builder{
         
     }
     
-    class func progressDialog(title:String?, info:String?, completion:MaterialDialog.MaterialAction?, addCancel:Bool = false)->MaterialDialog{
+    class func progressDialog(title:String?, info:String?,addCancel:Bool = false, completion:MaterialDialog.MaterialAction?)->MaterialDialog{
         
         let progress = ProgressInfiniteDialog(frame: CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: 60)))
         progress.setText(text: info)
@@ -75,6 +75,21 @@ internal class Builder{
         mat.footer = footer
         mat.completion = completion
         mat.build(addCancel)
+        return mat
+    }
+    
+    class func listDialog(title:String?,list type:MaterialDialog.ListType, choices:[String],cancelActionTitle:String = "CANCEL",actionTitle:String = "COMFIRM", completion:MaterialDialog.MaterialAction?)->MaterialDialog{
+        
+        let tabHeight = choices.count * 40
+        let height:CGFloat = CGFloat(tabHeight) < CGRect.allowableHeight ? CGFloat(tabHeight) : CGRect.allowableHeight
+        let listd = ListDialog(frame: CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: height)),listType:type)
+        listd.listSource = choices
+        let mat = MaterialDialog(dialog: listd)
+        mat.header.text = title
+        let footer = FooterView(cancelTitle: actionTitle, actionTitle:actionTitle)
+        mat.footer = footer
+        mat.completion = completion
+        mat.build()
         return mat
     }
 }

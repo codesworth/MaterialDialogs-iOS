@@ -20,17 +20,24 @@ class ListDialog:UIView{
     }()
     
     
-    var listSource:[String]{
+    var listSource:[String] = []{
         didSet{
-            
+           setup()
         }
     }
+    var lisType:MaterialDialog.ListType = .singleChoice
+    var selectedObject = -1
+    var selectedIndices:IndexSet = []
     
-    override init(frame: CGRect) {
+    internal init(frame: CGRect, listType:MaterialDialog.ListType) {
         super.init(frame: frame)
+        self.lisType = listType
         addSubview(tableView)
-        tableView.delegate = self
-        tableView.dataSource = self
+
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func setup(){
@@ -47,4 +54,52 @@ class ListDialog:UIView{
         tableView.dataSource = self
     }
     
+}
+
+
+extension ListDialog:UITableViewDataSource,UITableViewDelegate{
+    
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listSource.count
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "\(ListCell.self)", for: indexPath) as? ListCell{
+            cell.lable.text = listSource[indexPath.row]
+            return cell
+        }
+        let cell = ListCell(style: .default, reuseIdentifier: "\(ListCell.self)")
+        cell.lable.text = listSource[indexPath.row]
+        return cell
+    }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch lisType {
+        case .singleChoice:
+             selectedObject = indexPath.row
+            break
+        case .multipleChoice:
+            selectedIndices.insert(indexPath.row)
+            break
+        }
+    }
+}
+
+
+extension ListDialog:MessageProtocol{
+    
+    func returnObject() -> Any {
+        switch lisType {
+        case .singleChoice:
+            return selectedObject
+            
+        case .multipleChoice:
+            return selectedIndices
+            
+        }
+    }
 }
