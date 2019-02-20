@@ -32,3 +32,12 @@ extension CGPoint{
         return CGPoint(x: x, y: y - value)
     }
 }
+
+
+
+extension CGFloat{
+    
+    static func Angle(_ degree:CGFloat)-> CGFloat{
+        return (.pi * degree) / 180
+    }
+}
