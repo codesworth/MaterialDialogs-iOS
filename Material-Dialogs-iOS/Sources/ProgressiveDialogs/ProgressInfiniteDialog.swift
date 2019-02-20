@@ -23,15 +23,51 @@ internal class ProgressInfiniteDialog:UIView{
         let lab = HeaderLabel(frame: .zero)
         lab.font = .body
         lab.textColor = .darkText
+        return lab
     }()
     override init(frame: CGRect) {
         super.init()
+        animationview.layer.addSublayer(backgroundArc)
+        animationview.layer.addSublayer(forgroundArc)
         addSubview(animationview)
+        addSubview(extradetails)
+    }
+    
+    func setText(text:String?){
+        extradetails.text = text
     }
     
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        forgroundArc.strokeEnd = 1
+        backgroundArc.strokeEnd = 1
+        animationview.translatesAutoresizingMaskIntoConstraints = false
+        extradetails.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            animationview.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
+            animationview.centerYAnchor.constraint(equalTo: centerYAnchor),
+            animationview.widthAnchor.constraint(equalTo: 45),
+            animationview.heightAnchor.constraint(equalTo: 45),
+            extradetails.leadingAnchor.constraint(equalTo: animationview.trailingAnchor, constant: 10),
+            extradetails.centerYAnchor.constraint(equalTo: centerYAnchor),
+            extradetails.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
+            extradetails.heightAnchor.constraint(equalTo: 25)
+            
+        ])
+    }
+    
+    func beginAnimation(){
+        let animation = CABasicAnimation(keyPath: "transform.rotation.z")
+        animation.duration = 1
+        animation.fromValue = 0
+        animation.toValue = CGFloat.Angle(360)
+        animation.repeatCount = .greatestFiniteMagnitude
+        forgroundArc.add(animation, forKey: nil)
+    }
+    
+    override func didMoveToWindow() {
+        super.didMoveToWindow()
     }
     
     

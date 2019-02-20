@@ -64,4 +64,17 @@ internal class Builder{
         return pat
         
     }
+    
+    class func progressDialog(title:String?, info:String?, completion:MaterialDialog.MaterialAction)->MaterialDialog{
+        
+        let progress = ProgressInfiniteDialog(frame: CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: 60)))
+        progress.setText(text: info)
+        let mat = MaterialDialog(dialog: progress)
+        mat.header.text = title
+        let footer = FooterView(cancelTitle: "CANCEL", actionTitle: nil)
+        mat.footer = footer
+        mat.completion = completion
+        mat.build()
+        return mat
+    }
 }
