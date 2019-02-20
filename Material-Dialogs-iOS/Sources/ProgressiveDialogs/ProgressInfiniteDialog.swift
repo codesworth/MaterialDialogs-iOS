@@ -60,6 +60,8 @@ internal class ProgressInfiniteDialog:UIView{
             extradetails.heightAnchor.constraint(equalToConstant: 25)
             
         ])
+        backgroundArc.bounds = animationview.bounds
+        forgroundArc.bounds = animationview.bounds
     }
     
     func beginAnimation(){
@@ -73,6 +75,7 @@ internal class ProgressInfiniteDialog:UIView{
     
     override func didMoveToWindow() {
         super.didMoveToWindow()
+        beginAnimation()
     }
     
     
@@ -85,7 +88,7 @@ fileprivate class ArchLayer:CAShapeLayer{
     init(color:UIColor,startAngle:CGFloat,endAngle:CGFloat){
         super.init()
         strokeColor = color.cgColor
-        lineWidth = 20
+        lineWidth = 5
         fillColor = nil
         lineCap = CAShapeLayerLineCap.round
         self.startAngle = startAngle
