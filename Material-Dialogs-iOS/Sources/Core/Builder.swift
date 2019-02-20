@@ -86,7 +86,7 @@ internal class Builder{
         listd.listSource = choices
         let mat = MaterialDialog(dialog: listd)
         mat.header.text = title
-        let footer = FooterView(cancelTitle: actionTitle, actionTitle:actionTitle)
+        let footer = FooterView(cancelTitle: cancelActionTitle, actionTitle:actionTitle)
         mat.footer = footer
         mat.completion = completion
         mat.build()

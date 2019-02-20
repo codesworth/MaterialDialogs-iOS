@@ -106,17 +106,18 @@ class ViewController: UIViewController {
     }()
     
     var singleList:MaterialDialog = {
-        let list = ["Facebook", "Twitter", "Instagram", "Pinterest"]
+        let list = ["Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest"]
         let dialog = MaterialDialog.listDialog(title: "Best Social Network", list: .singleChoice, choices: list, cancelActionTitle: "CANCEL", actionTitle: "CONFIRM", completion: { (type) in
             switch type{
             case .cancel:
                 print("I was Cancelled")
                 break
-            case .affirm:
-                print("I was affirmed")
+            case .affirm(let result):
+                print("I was affirmed with data: \(result)")
                 break
             }
         })
+        return dialog
     }()
     
     override func viewDidAppear(_ animated: Bool) {

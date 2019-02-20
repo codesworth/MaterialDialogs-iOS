@@ -23,6 +23,8 @@ class ListCell:UITableViewCell{
         return lable
     }()
     
+    
+    
     override var reuseIdentifier: String?{
         return "\(ListCell.self)"
     }
@@ -38,8 +40,10 @@ class ListCell:UITableViewCell{
     }
     
     override func layoutSubviews() {
+        
         super.layoutSubviews()
         addSubview(iconView)
+        iconView.backgroundColor = .primary
         addSubview(lable)
         iconView.translatesAutoresizingMaskIntoConstraints = false
         lable.translatesAutoresizingMaskIntoConstraints = false

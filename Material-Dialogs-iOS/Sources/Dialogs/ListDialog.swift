@@ -33,6 +33,9 @@ class ListDialog:UIView{
         super.init(frame: frame)
         self.lisType = listType
         addSubview(tableView)
+        tableView.register(ListCell.self, forCellReuseIdentifier: "\(ListCell.self)")
+        tableView.separatorColor = .clear
+        
 
     }
     
@@ -44,6 +47,13 @@ class ListDialog:UIView{
         tableView.translatesAutoresizingMaskIntoConstraints = false
         //let tabHeight = listSource.count * 40
         //let height:CGFloat = CGFloat(tabHeight) < CGRect.allowableHeight ? CGFloat(tabHeight) : CGRect.allowableHeight
+        if frame.height  < CGRect.allowableHeight{
+            tableView.isScrollEnabled = false
+            tableView.showsVerticalScrollIndicator = false
+        }else{
+            tableView.isScrollEnabled = true
+            tableView.showsVerticalScrollIndicator = true
+        }
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: topAnchor),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
@@ -52,6 +62,12 @@ class ListDialog:UIView{
         ])
         tableView.delegate = self
         tableView.dataSource = self
+        
+    }
+    
+    override func didMoveToWindow() {
+        super.didMoveToWindow()
+        tableView.separatorStyle = .none
     }
     
 }
@@ -86,6 +102,11 @@ extension ListDialog:UITableViewDataSource,UITableViewDelegate{
             selectedIndices.insert(indexPath.row)
             break
         }
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40
     }
 }
 
