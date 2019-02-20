@@ -87,7 +87,9 @@ public class MaterialDialog{
     
     
     public func show(){
-        
+        if let dialog = contentView as? ProgressInfiniteDialog{
+            dialog.beginAnimation()
+        }
         OperationQueue.main.addOperation {
             UIApplication.shared.keyWindow?.addSubview(self.base)
         }

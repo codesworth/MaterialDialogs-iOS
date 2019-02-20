@@ -65,7 +65,7 @@ internal class Builder{
         
     }
     
-    class func progressDialog(title:String?, info:String?, completion:MaterialDialog.MaterialAction)->MaterialDialog{
+    class func progressDialog(title:String?, info:String?, completion:MaterialDialog.MaterialAction?)->MaterialDialog{
         
         let progress = ProgressInfiniteDialog(frame: CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: 60)))
         progress.setText(text: info)

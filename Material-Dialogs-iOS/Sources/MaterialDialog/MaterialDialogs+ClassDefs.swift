@@ -32,7 +32,7 @@ extension MaterialDialog{
         return Builder.progressiveDialog(title:title,completion:completion)
     }
     
-    public class func progressDialog(title:String?, info:String?, completion:MaterialDialog.MaterialAction)->MaterialDialog{
+    public class func progressDialog(title:String?, info:String?, completion:MaterialDialog.MaterialAction?)->MaterialDialog{
         
         return Builder.progressDialog(title:title,info:info,completion:completion)
     }

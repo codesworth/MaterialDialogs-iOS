@@ -12,11 +12,12 @@ import Foundation
 internal class ProgressInfiniteDialog:UIView{
     
     
-    var backgroundArc = ArchLayer(color: UIColor(red: 0, green: 102/255, blue: 0, alpha: 0.35), startAngle: 0, endAngle: CGFloat.pi * 2)
-    var forgroundArc = ArchLayer(color: .primary, startAngle: .Angle(135), endAngle: .Angle(45))
+    fileprivate var backgroundArc = ArchLayer(color: UIColor(red: 0, green: 102/255, blue: 0, alpha: 0.35), startAngle: 0, endAngle: CGFloat.pi * 2)
+    fileprivate var forgroundArc = ArchLayer(color: .primary, startAngle: .Angle(135), endAngle: .Angle(45))
     var animationview:UIView = {
         let v = UIView(frame: .zero)
         v.backgroundColor = .white
+        return v
     }()
     
     var extradetails:HeaderLabel = {
@@ -26,11 +27,15 @@ internal class ProgressInfiniteDialog:UIView{
         return lab
     }()
     override init(frame: CGRect) {
-        super.init()
+        super.init(frame:frame)
         animationview.layer.addSublayer(backgroundArc)
         animationview.layer.addSublayer(forgroundArc)
         addSubview(animationview)
         addSubview(extradetails)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func setText(text:String?){
@@ -47,12 +52,12 @@ internal class ProgressInfiniteDialog:UIView{
         NSLayoutConstraint.activate([
             animationview.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 8),
             animationview.centerYAnchor.constraint(equalTo: centerYAnchor),
-            animationview.widthAnchor.constraint(equalTo: 45),
-            animationview.heightAnchor.constraint(equalTo: 45),
+            animationview.widthAnchor.constraint(equalToConstant: 45),
+            animationview.heightAnchor.constraint(equalToConstant: 45),
             extradetails.leadingAnchor.constraint(equalTo: animationview.trailingAnchor, constant: 10),
             extradetails.centerYAnchor.constraint(equalTo: centerYAnchor),
-            extradetails.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8)
-            extradetails.heightAnchor.constraint(equalTo: 25)
+            extradetails.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -8),
+            extradetails.heightAnchor.constraint(equalToConstant: 25)
             
         ])
     }
@@ -82,15 +87,15 @@ fileprivate class ArchLayer:CAShapeLayer{
         strokeColor = color.cgColor
         lineWidth = 20
         fillColor = nil
-        lineCap = kCALineCapRound
+        lineCap = CAShapeLayerLineCap.round
         self.startAngle = startAngle
         self.endAngle = endAngle
         
     }
     
     
-    private var startAngle:CGFloat
-    private var endAngle:CGFloat
+    private var startAngle:CGFloat = 0
+    private var endAngle:CGFloat = 0
     
     
     override var bounds: CGRect{
@@ -108,8 +113,8 @@ fileprivate class ArchLayer:CAShapeLayer{
     }
     
     func buildLayer() {
-        let startAngle = startAngle
-        let endAngle = endAngle
+        let startAngle = self.startAngle
+        let endAngle = self.endAngle
         let center = CGPoint(x: bounds.midX, y: bounds.midY)
         let radius = bounds.width * 0.35
         let path = UIBezierPath(arcCenter: center, radius: radius, startAngle: startAngle, endAngle: endAngle, clockwise: true)
