@@ -43,9 +43,9 @@ public class MaterialDialog{
        contentView = dialog
     }
     
-    internal func build(){
+    internal func build(_ withFooter:Bool = true){
         base = BaseDialog()
-        let height = contentView.frame.height + 100
+        let height = withFooter ? contentView.frame.height + 100 : contentView.frame.height + 60
         let contentHeight:CGFloat
         let backbone:MaterialView
         if  height > CGRect.allowableHeight{
@@ -62,8 +62,7 @@ public class MaterialDialog{
         header.translatesAutoresizingMaskIntoConstraints = false
         footer.translatesAutoresizingMaskIntoConstraints = false
         contentView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
+        let constraintsWF = [
             header.heightAnchor.constraint(equalToConstant: 20),
             header.leadingAnchor.constraint(equalTo: backbone.leadingAnchor, constant: 16),
             header.topAnchor.constraint(equalTo: backbone.topAnchor, constant: 16),
@@ -76,7 +75,20 @@ public class MaterialDialog{
             footer.leadingAnchor.constraint(equalTo: backbone.leadingAnchor),
             footer.trailingAnchor.constraint(equalTo: backbone.trailingAnchor, constant:-16),
             footer.heightAnchor.constraint(equalToConstant: 30)
-        ])
+        ]
+        let constraintsNF = [
+            header.heightAnchor.constraint(equalToConstant: 20),
+            header.leadingAnchor.constraint(equalTo: backbone.leadingAnchor, constant: 16),
+            header.topAnchor.constraint(equalTo: backbone.topAnchor, constant: 16),
+            header.trailingAnchor.constraint(equalTo: backbone.trailingAnchor, constant: -16),
+            contentView.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 8),
+            contentView.leadingAnchor.constraint(equalTo: backbone.leadingAnchor, constant: 12),
+            contentView.trailingAnchor.constraint(equalTo: backbone.trailingAnchor, constant: -12),
+            contentView.heightAnchor.constraint(equalToConstant: contentHeight),
+        ]
+        
+        
+        NSLayoutConstraint.activate(withFooter ? constraintsWF : constraintsNF)
         base.addSubview(backbone)
         backbone.center = base.center
         

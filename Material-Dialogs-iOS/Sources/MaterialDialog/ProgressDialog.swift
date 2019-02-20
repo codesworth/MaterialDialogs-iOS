@@ -18,8 +18,8 @@ public final class ProgressDialog:MaterialDialog{
         progressiveDialog = prog
     }
     
-    override func build() {
-        super.build()
+    override func build(_ withFooter:Bool = true) {
+        super.build(withFooter)
     }
     
     public func updateWith(progressValue:CGFloat){
