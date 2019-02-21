@@ -96,11 +96,13 @@ extension ListDialog:UITableViewDataSource,UITableViewDelegate{
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "\(ListCell.self)", for: indexPath) as? ListCell{
+            cell.radioType = .radio
             cell.lable.text = listSource[indexPath.row]
             return cell
         }
         let cell = ListCell(style: .default, reuseIdentifier: "\(ListCell.self)")
         cell.lable.text = listSource[indexPath.row]
+        cell.radioType = .radio
         return cell
     }
     

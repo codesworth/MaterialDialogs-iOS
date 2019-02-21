@@ -55,7 +55,7 @@ class ListCell:UITableViewCell{
         
         super.layoutSubviews()
         addSubview(iconView)
-        iconView.backgroundColor = .primary
+        
         addSubview(lable)
         iconView.translatesAutoresizingMaskIntoConstraints = false
         lable.translatesAutoresizingMaskIntoConstraints = false
