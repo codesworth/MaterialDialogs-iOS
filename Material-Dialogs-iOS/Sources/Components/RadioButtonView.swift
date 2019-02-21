@@ -25,7 +25,7 @@ class RadioButtonView:UIView{
     override func layoutSubviews() {
         super.layoutSubviews()
         innershapeLayer.path = UIBezierPath(ovalIn: .zero).cgPath
-        innershapeLayer.frame.size = 30
+        innershapeLayer.frame.size = 20
         innershapeLayer.position = center
         innershapeLayer.fillColor = UIColor.primary.cgColor
         layer.borderColor = UIColor.primary.cgColor

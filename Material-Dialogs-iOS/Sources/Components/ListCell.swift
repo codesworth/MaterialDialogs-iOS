@@ -16,6 +16,8 @@ class ListCell:UITableViewCell{
         
     }()
     
+    var isPressed:Bool = false
+    
     var lable:HeaderLabel = {
         let lable = HeaderLabel(frame: .zero)
         lable.font = .systemFont(ofSize: 16, weight: .medium)
@@ -49,6 +51,18 @@ class ListCell:UITableViewCell{
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func cellPressed(){
+        if let sub = iconView.subviews.last as? RadioButtonView{
+            if isPressed{
+                sub.innershapeLayer.fillColor = UIColor.clear.cgColor
+                isPressed = false
+            }else{
+                sub.innershapeLayer.fillColor = UIColor.primary.cgColor
+                isPressed = true
+            }
+        }
     }
     
     override func layoutSubviews() {

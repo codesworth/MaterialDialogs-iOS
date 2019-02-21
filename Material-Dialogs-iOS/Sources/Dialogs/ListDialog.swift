@@ -107,6 +107,9 @@ extension ListDialog:UITableViewDataSource,UITableViewDelegate{
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? ListCell{
+            cell.cellPressed()
+        }
         switch lisType {
         case .singleChoice:
              selectedObject = indexPath.row
