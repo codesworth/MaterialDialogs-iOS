@@ -30,6 +30,9 @@
 		38D476D5221C7DC000FF0C77 /* ProgressiveDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D476D4221C7DC000FF0C77 /* ProgressiveDialog.swift */; };
 		38D476D7221CAA4000FF0C77 /* ProgressDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D476D6221CAA4000FF0C77 /* ProgressDialog.swift */; };
 		38FB5B56221F65830037360F /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB5B55221F65830037360F /* RadioButtonView.swift */; };
+		38FB5B5C221F678A0037360F /* CGRect+Literals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB5B59221F678A0037360F /* CGRect+Literals.swift */; };
+		38FB5B5D221F678A0037360F /* CGSize+Literals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB5B5A221F678A0037360F /* CGSize+Literals.swift */; };
+		38FB5B5E221F678A0037360F /* CGPoint+Literals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB5B5B221F678A0037360F /* CGPoint+Literals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,9 @@
 		38D476D4221C7DC000FF0C77 /* ProgressiveDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressiveDialog.swift; sourceTree = "<group>"; };
 		38D476D6221CAA4000FF0C77 /* ProgressDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDialog.swift; sourceTree = "<group>"; };
 		38FB5B55221F65830037360F /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
+		38FB5B59221F678A0037360F /* CGRect+Literals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Literals.swift"; sourceTree = "<group>"; };
+		38FB5B5A221F678A0037360F /* CGSize+Literals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Literals.swift"; sourceTree = "<group>"; };
+		38FB5B5B221F678A0037360F /* CGPoint+Literals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Literals.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +216,9 @@
 		3873BF752217112D007FE7D2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				38FB5B5B221F678A0037360F /* CGPoint+Literals.swift */,
+				38FB5B59221F678A0037360F /* CGRect+Literals.swift */,
+				38FB5B5A221F678A0037360F /* CGSize+Literals.swift */,
 				3873BF7622171141007FE7D2 /* Strings+Extensions.swift */,
 				3873BF7822171237007FE7D2 /* Fonts+Extension.swift */,
 				3873BF7A221759F8007FE7D2 /* CGRect+Extension.swift */,
@@ -370,7 +379,9 @@
 				3873BF7B221759F8007FE7D2 /* CGRect+Extension.swift in Sources */,
 				3801AB262219C36E007A9C70 /* TextInputGroupDialog.swift in Sources */,
 				3873BF6E2216E028007FE7D2 /* MaterialView.swift in Sources */,
+				38FB5B5C221F678A0037360F /* CGRect+Literals.swift in Sources */,
 				3873BF6C2216DB7E007FE7D2 /* MaterialDialog.swift in Sources */,
+				38FB5B5E221F678A0037360F /* CGPoint+Literals.swift in Sources */,
 				38D476D7221CAA4000FF0C77 /* ProgressDialog.swift in Sources */,
 				3801AB1F2219AED5007A9C70 /* TextInputDialog.swift in Sources */,
 				38D476D5221C7DC000FF0C77 /* ProgressiveDialog.swift in Sources */,
@@ -384,6 +395,7 @@
 				38FB5B56221F65830037360F /* RadioButtonView.swift in Sources */,
 				3873BF742216E45E007FE7D2 /* FooterView.swift in Sources */,
 				3873BF702216E1DE007FE7D2 /* BasicDialog.swift in Sources */,
+				38FB5B5D221F678A0037360F /* CGSize+Literals.swift in Sources */,
 				38B19D03221DA3B500EAAC53 /* ListCell.swift in Sources */,
 				3873BF7722171141007FE7D2 /* Strings+Extensions.swift in Sources */,
 				3873BF6A2216DAE2007FE7D2 /* BaseDialog.swift in Sources */,

@@ -14,12 +14,23 @@ class RadioButtonView:UIView{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        layer.addSublayer(innershapeLayer)
         
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        innershapeLayer.path = UIBezierPath(ovalIn: .zero)
-        innershapeLayer.frame.size = CGSize(width: 30, height: 30)
+        innershapeLayer.path = UIBezierPath(ovalIn: .zero).cgPath
+        innershapeLayer.frame.size = 30
+        innershapeLayer.position = center
+        innershapeLayer.fillColor = UIColor.primary.cgColor
+        layer.borderColor = UIColor.primary.cgColor
+        layer.borderWidth = 2
+        layer.cornerRadius = frame.width / 2
+        
     }
 }

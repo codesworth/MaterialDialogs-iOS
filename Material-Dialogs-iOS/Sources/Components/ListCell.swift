@@ -29,7 +29,19 @@ class ListCell:UITableViewCell{
         return "\(ListCell.self)"
     }
     
-
+    var radioType:MaterialDialog.OptionsAccessoryType?{
+        didSet{
+            buildAccessory(type: radioType!)
+        }
+    }
+    
+    func buildAccessory(type:MaterialDialog.OptionsAccessoryType){
+        if type == .radio{
+            let view = RadioButtonView(frame: [0,30])
+            iconView.addSubview(view)
+            
+        }
+    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)

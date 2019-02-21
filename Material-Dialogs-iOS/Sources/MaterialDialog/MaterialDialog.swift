@@ -22,7 +22,10 @@ public class MaterialDialog{
         case cancel
     }
     
-    
+    public enum OptionsAccessoryType{
+        case radio
+        case checkbox
+    }
     
     public enum ListType{
         case singleChoice
