@@ -21,6 +21,7 @@ public class CustomDialog:UIView,MessageProtocol{
     
     public init(view:UIView, action:DialogAction?){
         super.init(frame: view.frame)
+        self.addSubview(view)
         self.selector  = action
     }
     

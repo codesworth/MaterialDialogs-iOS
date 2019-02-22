@@ -40,4 +40,9 @@ extension MaterialDialog{
     public class func listDialog(title:String?,list type:MaterialDialog.ListType, choices:[String],cancelActionTitle:String = "CANCEL",actionTitle:String = "COMFIRM", completion:MaterialDialog.MaterialAction?)->MaterialDialog{
         return Builder.listDialog(title:title,list:type,choices:choices,cancelActionTitle:cancelActionTitle,actionTitle:actionTitle,completion:completion)
     }
+    
+    public class func customDialog(title:String?,customview:CustomDialog,cancelActionTitle:String = "CANCEL",actionTitle:String = "COMFIRM",withFooter:Bool, completion:MaterialDialog.MaterialAction?)->MaterialDialog{
+        
+        return  Builder.customDialog(title:title,customview:customview,cancelActionTitle:cancelActionTitle,actionTitle:actionTitle,withFooter:withFooter,completion:completion)
+    }
 }

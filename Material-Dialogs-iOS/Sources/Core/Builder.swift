@@ -96,18 +96,17 @@ internal class Builder{
     }
     
     
-    class func customDialog(title:String?,customview:Cust,cancelActionTitle:String = "CANCEL",actionTitle:String = "COMFIRM", completion:MaterialDialog.MaterialAction?)->MaterialDialog{
+    class func customDialog(title:String?,customview:CustomDialog,cancelActionTitle:String = "CANCEL",actionTitle:String = "COMFIRM",withFooter:Bool, completion:MaterialDialog.MaterialAction?)->MaterialDialog{
         
-        let tabHeight = choices.count * 40
-        let height:CGFloat = CGFloat(tabHeight) < CGRect.allowableHeight ? CGFloat(tabHeight) : CGRect.allowableHeight
-        let listd = ListDialog(frame: CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: height)),listType:type)
-        listd.listSource = choices
-        let mat = MaterialDialog(dialog: listd)
+        let fullHeight = customview.frame.height
+        precondition(fullHeight + 100 < CGRect.allowableHeight, "Custom Height cannot be higher than predefined dialog height >> \(CGRect.allowableHeight)")
+        
+        let mat = MaterialDialog(dialog: customview)
         mat.header.text = title
         let footer = FooterView(cancelTitle: cancelActionTitle, actionTitle:actionTitle)
         mat.footer = footer
         mat.completion = completion
-        mat.build()
+        mat.build(withFooter)
         return mat
     }
     
