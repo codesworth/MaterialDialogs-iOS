@@ -17,6 +17,7 @@ class ListCell:UITableViewCell{
     }()
     
     var isPressed:Bool = false
+    var configured:Bool = false
     
     var lable:HeaderLabel = {
         let lable = HeaderLabel(frame: .zero)
@@ -25,7 +26,7 @@ class ListCell:UITableViewCell{
         return lable
     }()
     
-    
+
     
     override var reuseIdentifier: String?{
         return "\(ListCell.self)"
@@ -43,6 +44,7 @@ class ListCell:UITableViewCell{
             iconView.addSubview(view)
             
         }
+        
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -56,18 +58,18 @@ class ListCell:UITableViewCell{
     func cellPressed(){
         if let sub = iconView.subviews.last as? RadioButtonView{
             if isPressed{
+                
                 sub.innershapeLayer.fillColor = UIColor.clear.cgColor
                 isPressed = false
             }else{
                 sub.innershapeLayer.fillColor = UIColor.primary.cgColor
                 isPressed = true
+                
             }
         }
     }
     
-    override func layoutSubviews() {
-        
-        super.layoutSubviews()
+    func setup(){
         addSubview(iconView)
         
         addSubview(lable)
@@ -83,9 +85,19 @@ class ListCell:UITableViewCell{
             lable.centerYAnchor.constraint(equalTo: centerYAnchor),
             lable.heightAnchor.constraint(equalToConstant: 25)
             
-        ])
+            ])
         
+        configured = true
+    }
+    
+    override func layoutSubviews() {
         
+        super.layoutSubviews()
+        if configured{
+            return
+        }else {
+            setup()
+        }
         
     }
     

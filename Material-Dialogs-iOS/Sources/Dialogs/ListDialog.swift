@@ -97,17 +97,20 @@ extension ListDialog:UITableViewDataSource,UITableViewDelegate{
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "\(ListCell.self)", for: indexPath) as? ListCell{
             cell.radioType = .radio
+            cell.selectionStyle = .none
             cell.lable.text = listSource[indexPath.row]
             return cell
         }
         let cell = ListCell(style: .default, reuseIdentifier: "\(ListCell.self)")
         cell.lable.text = listSource[indexPath.row]
         cell.radioType = .radio
+        cell.selectionStyle = .none
         return cell
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) as? ListCell{
+            
             cell.cellPressed()
         }
         switch lisType {
@@ -118,7 +121,7 @@ extension ListDialog:UITableViewDataSource,UITableViewDelegate{
             selectedIndices.insert(indexPath.row)
             break
         }
-        tableView.deselectRow(at: indexPath, animated: true)
+       // tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
