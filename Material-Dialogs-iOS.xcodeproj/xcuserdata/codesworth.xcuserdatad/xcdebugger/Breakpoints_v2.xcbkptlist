@@ -298,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/MaterialDialog/MaterialDialog.swift"
-            timestampString = "572528573.085494"
+            timestampString = "572530968.649083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "140"
@@ -314,7 +314,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/MaterialDialog/MaterialDialog.swift"
-            timestampString = "572528573.085626"
+            timestampString = "572530968.649158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "141"
@@ -340,7 +340,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/MaterialDialog/MaterialDialog.swift"
-            timestampString = "572528573.085703"
+            timestampString = "572530968.649219"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "135"
@@ -356,7 +356,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/MaterialDialog/MaterialDialog.swift"
-            timestampString = "572528573.085771"
+            timestampString = "572530968.649273"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "136"
@@ -372,7 +372,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/MaterialDialog/MaterialDialog.swift"
-            timestampString = "572528573.085833"
+            timestampString = "572530968.649327"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "137"
@@ -388,7 +388,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/MaterialDialog/MaterialDialog.swift"
-            timestampString = "572528573.085893"
+            timestampString = "572530968.649379"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "138"
@@ -404,7 +404,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/MaterialDialog/MaterialDialog.swift"
-            timestampString = "572528573.085955"
+            timestampString = "572530968.649431"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "139"
@@ -420,13 +420,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.646395"
+            timestampString = "572530968.649487"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
             endingLineNumber = "34"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "dialog"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -436,13 +436,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.646878"
+            timestampString = "572530968.649551"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
             endingLineNumber = "36"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "dialog"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -452,13 +452,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.647356"
+            timestampString = "572530968.649609"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
             endingLineNumber = "32"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "dialog"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -468,13 +468,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.647701"
+            timestampString = "572530968.649664"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
             endingLineNumber = "31"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "dialog"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -484,13 +484,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.648097"
+            timestampString = "572530968.649719"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "46"
             endingLineNumber = "46"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "newDialog"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -500,13 +500,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.648433"
+            timestampString = "572530968.649773"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
             endingLineNumber = "47"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "newDialog"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -516,13 +516,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.648762"
+            timestampString = "572530968.649829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
             endingLineNumber = "52"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "newDialog"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -532,13 +532,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.649092"
+            timestampString = "572530968.649883"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
             endingLineNumber = "54"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "newDialog"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -548,13 +548,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.6494139"
+            timestampString = "572530968.64994"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "45"
             endingLineNumber = "45"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "newDialog"
+            landmarkType = "24">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
@@ -564,7 +564,7 @@
                   moduleName = "ExampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/codesworth/Development/Projects/Frameworks/Material-Dialogs-iOS/ExampleApp/ExampleApp/ViewController.swift"
-                  timestampString = "572526253.096033"
+                  timestampString = "572530968.918368"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
@@ -579,7 +579,7 @@
                   moduleName = "ExampleApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/codesworth/Development/Projects/Frameworks/Material-Dialogs-iOS/ExampleApp/ExampleApp/ViewController.swift"
-                  timestampString = "572526253.099445"
+                  timestampString = "572530968.9216059"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "45"
@@ -596,13 +596,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.649738"
+            timestampString = "572530968.649994"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
             endingLineNumber = "48"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "newDialog"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -612,13 +612,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.650061"
+            timestampString = "572530968.650048"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
             endingLineNumber = "49"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "newDialog"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -628,13 +628,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.650442"
+            timestampString = "572530968.6501009"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
             endingLineNumber = "44"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "newDialog"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -644,13 +644,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.650777"
+            timestampString = "572530968.650157"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
             endingLineNumber = "63"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "inputGroup"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -660,13 +660,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.651108"
+            timestampString = "572530968.65021"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "65"
             endingLineNumber = "65"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "inputGroup"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -676,13 +676,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.651433"
+            timestampString = "572530968.650264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "67"
             endingLineNumber = "67"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "inputGroup"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -692,13 +692,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.651796"
+            timestampString = "572530968.650318"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "69"
             endingLineNumber = "69"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "inputGroup"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -708,13 +708,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.652119"
+            timestampString = "572530968.650373"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
             endingLineNumber = "66"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "inputGroup"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -724,13 +724,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.65244"
+            timestampString = "572530968.6504281"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
             endingLineNumber = "70"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "inputGroup"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -740,13 +740,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.652761"
+            timestampString = "572530968.6504821"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
             endingLineNumber = "73"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "inputGroup"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -756,13 +756,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.653124"
+            timestampString = "572530968.6505359"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
             endingLineNumber = "71"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "inputGroup"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -772,13 +772,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572375158.653569"
+            timestampString = "572530968.650591"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
             endingLineNumber = "74"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "inputGroup"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -804,7 +804,7 @@
                   moduleName = "Material_Dialogs_iOS"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/codesworth/Development/Projects/Frameworks/Material-Dialogs-iOS/Material-Dialogs-iOS/Sources/Dialogs/TextInputGroupDialog.swift"
-                  timestampString = "572526253.683605"
+                  timestampString = "572530969.349785"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "99"
@@ -819,7 +819,7 @@
                   moduleName = "Material_Dialogs_iOS"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/codesworth/Development/Projects/Frameworks/Material-Dialogs-iOS/Material-Dialogs-iOS/Sources/Dialogs/TextInputGroupDialog.swift"
-                  timestampString = "572526253.689317"
+                  timestampString = "572530969.357215"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "99"
@@ -900,11 +900,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/Dialogs/ListDialog.swift"
-            timestampString = "572528573.086794"
+            timestampString = "572530968.650787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "setScrolling()"
             landmarkType = "7">
          </BreakpointContent>
@@ -916,11 +916,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/Dialogs/ListDialog.swift"
-            timestampString = "572528573.086879"
+            timestampString = "572530968.651269"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "setScrolling()"
             landmarkType = "7">
          </BreakpointContent>
@@ -932,11 +932,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/Dialogs/ListDialog.swift"
-            timestampString = "572528573.086948"
+            timestampString = "572530968.651605"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
             landmarkName = "setScrolling()"
             landmarkType = "7">
          </BreakpointContent>
@@ -948,11 +948,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/Dialogs/ListDialog.swift"
-            timestampString = "572528573.087015"
+            timestampString = "572530968.651924"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "setScrolling()"
             landmarkType = "7">
          </BreakpointContent>
@@ -964,11 +964,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/Dialogs/ListDialog.swift"
-            timestampString = "572528573.087083"
+            timestampString = "572530968.652241"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
+            startingLineNumber = "123"
+            endingLineNumber = "123"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -980,11 +980,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/Dialogs/ListDialog.swift"
-            timestampString = "572528573.087148"
+            timestampString = "572530968.652552"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -996,11 +996,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
-            timestampString = "572528573.0872149"
+            timestampString = "572530968.652877"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
             landmarkName = "cellPressed()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1012,140 +1012,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
-            timestampString = "572528573.0872869"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "cellPressed()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
-            timestampString = "572528573.087351"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "cellPressed()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Material-Dialogs-iOS/Sources/Dialogs/ListDialog.swift"
-            timestampString = "572528573.087417"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "tableView(_:didSelectRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
-            timestampString = "572528573.087479"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "cellPressed()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
-            timestampString = "572528573.087543"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "cellPressed()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
-            timestampString = "572528573.087608"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "cellPressed()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
-            timestampString = "572528573.087672"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "layoutSubviews()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
-            timestampString = "572528573.0877351"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "layoutSubviews()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
-            timestampString = "572528573.0878021"
+            timestampString = "572530968.652945"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "81"
             endingLineNumber = "81"
-            landmarkName = "setup()"
+            landmarkName = "cellPressed()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1156,11 +1028,123 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
-            timestampString = "572528573.087881"
+            timestampString = "572530968.653006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "cellPressed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Material-Dialogs-iOS/Sources/Dialogs/ListDialog.swift"
+            timestampString = "572530968.653066"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
+            timestampString = "572530968.653407"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "cellPressed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
+            timestampString = "572530968.653483"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "cellPressed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
+            timestampString = "572530968.653547"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "cellPressed()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
+            timestampString = "572530968.65361"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "layoutSubviews()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
+            timestampString = "572530968.653674"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "layoutSubviews()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
+            timestampString = "572530968.653738"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
             landmarkName = "setup()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1172,7 +1156,39 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
-            timestampString = "572528573.087944"
+            timestampString = "572530968.6538"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "setup()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
+            timestampString = "572530968.653865"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "setup()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
+            timestampString = "572530968.653927"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
@@ -1188,11 +1204,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
-            timestampString = "572528573.088008"
+            timestampString = "572530968.653989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "setup()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1204,27 +1220,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
-            timestampString = "572528573.088071"
+            timestampString = "572530968.654053"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "setup()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Material-Dialogs-iOS/Sources/Components/ListCell.swift"
-            timestampString = "572528573.088135"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "layoutSubviews()"
             landmarkType = "7">
          </BreakpointContent>

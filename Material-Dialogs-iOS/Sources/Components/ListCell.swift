@@ -16,6 +16,8 @@ class ListCell:UITableViewCell{
         
     }()
     
+    
+    
     var isPressed:Bool = false
     var configured:Bool = false
     
@@ -26,6 +28,18 @@ class ListCell:UITableViewCell{
         return lable
     }()
     
+    func deselct(){
+        if let sub = iconView.subviews.last as? RadioButtonView{
+            sub.innershapeLayer.fillColor = UIColor.clear.cgColor
+            isPressed = false
+        }
+        
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        deselct()
+    }
 
     
     override var reuseIdentifier: String?{

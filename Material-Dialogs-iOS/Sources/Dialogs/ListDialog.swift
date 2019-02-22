@@ -26,7 +26,16 @@ class ListDialog:UIView{
         }
     }
     var lisType:MaterialDialog.ListType = .singleChoice
-    var selectedObject = -1
+    var selectedObject = -1{
+        didSet{
+            if oldValue > -1{
+                let indexPath = IndexPath(row: oldValue, section: 0)
+                if let cell = tableView.cellForRow(at: indexPath) as? ListCell{
+                  cell.deselct()
+                }
+            }
+        }
+    }
     var selectedIndices:IndexSet = []
     
     internal init(frame: CGRect, listType:MaterialDialog.ListType) {
@@ -118,7 +127,7 @@ extension ListDialog:UITableViewDataSource,UITableViewDelegate{
              selectedObject = indexPath.row
             break
         case .multipleChoice:
-            selectedIndices.insert(indexPath.row)
+            willInsertIndex(indexPath.row)
             break
         }
        // tableView.deselectRow(at: indexPath, animated: true)
@@ -126,6 +135,14 @@ extension ListDialog:UITableViewDataSource,UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 40
+    }
+    
+    func willInsertIndex(_ index:Int){
+        if selectedIndices.contains(index){
+            selectedIndices.remove(index)
+        }else{
+            selectedIndices.insert(index)
+        }
     }
 }
 
