@@ -13,7 +13,7 @@ class ListCell:UITableViewCell{
     
     var iconView:UIView = {
         return UIView(frame: .zero)
-        
+         
     }()
     
     
