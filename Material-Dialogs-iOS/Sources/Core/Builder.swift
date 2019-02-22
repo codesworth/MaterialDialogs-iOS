@@ -9,6 +9,8 @@
 import Foundation
 
 
+
+
 internal class Builder{
     
     class func basicDialogue(_ title:String,body:String,cancelActionTitle:String,actionTitle:String? = nil, completion:MaterialDialog.MaterialAction?)->MaterialDialog{
@@ -92,4 +94,22 @@ internal class Builder{
         mat.build()
         return mat
     }
+    
+    
+    class func customDialog(title:String?,customview:Cust,cancelActionTitle:String = "CANCEL",actionTitle:String = "COMFIRM", completion:MaterialDialog.MaterialAction?)->MaterialDialog{
+        
+        let tabHeight = choices.count * 40
+        let height:CGFloat = CGFloat(tabHeight) < CGRect.allowableHeight ? CGFloat(tabHeight) : CGRect.allowableHeight
+        let listd = ListDialog(frame: CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: height)),listType:type)
+        listd.listSource = choices
+        let mat = MaterialDialog(dialog: listd)
+        mat.header.text = title
+        let footer = FooterView(cancelTitle: cancelActionTitle, actionTitle:actionTitle)
+        mat.footer = footer
+        mat.completion = completion
+        mat.build()
+        return mat
+    }
+    
+    
 }

@@ -12,3 +12,4 @@ protocol MessageProtocol:class {
     
     func returnObject()->Any
 }
+
