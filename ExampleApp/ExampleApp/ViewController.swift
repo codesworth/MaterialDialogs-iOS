@@ -148,9 +148,9 @@ class ViewController: UIViewController {
             //self.proressiveDialog.show()
             //self.updateTill()
             //self.infiniteProgress.show()
-            //self.singleList.show()
+            self.singleList.show()
             //self.multiList.show()
-            self.createView()
+            //self.createView()
             
 //            let dialog = MaterialDialog.basicDialogue("This is Test Run", body: body, cancelActionTitle: "Dismiss", actionTitle: "Confirm", completion: { (type) in
 //                switch type{

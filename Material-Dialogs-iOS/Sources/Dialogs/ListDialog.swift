@@ -6,7 +6,7 @@
 //  Copyright © 2019 Shadrach Mensah. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 class ListDialog:UIView{
@@ -105,7 +105,7 @@ extension ListDialog:UITableViewDataSource,UITableViewDelegate{
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "\(ListCell.self)", for: indexPath) as? ListCell{
-            cell.radioType = .radio
+            cell.radioType = .checkbox
             cell.selectionStyle = .none
             cell.lable.text = listSource[indexPath.row]
             return cell

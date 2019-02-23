@@ -32,6 +32,9 @@ class ListCell:UITableViewCell{
         if let sub = iconView.subviews.last as? RadioButtonView{
             sub.innershapeLayer.fillColor = UIColor.clear.cgColor
             isPressed = false
+        }else if let sub = iconView.subviews.last as? CheckMark{
+            sub.layer.backgroundColor = UIColor.white.cgColor
+            isPressed = false
         }
         
     }
@@ -57,6 +60,9 @@ class ListCell:UITableViewCell{
             let view = RadioButtonView(frame: [0,30])
             iconView.addSubview(view)
             
+        }else if type == .checkbox{
+            let view = CheckMark(frame: [0,30])
+            iconView.addSubview(view)
         }
         
     }
@@ -77,6 +83,18 @@ class ListCell:UITableViewCell{
                 isPressed = false
             }else{
                 sub.innershapeLayer.fillColor = UIColor.primary.cgColor
+                isPressed = true
+                
+            }
+        }else if let sub = iconView.subviews.last as? CheckMark{
+            if isPressed{
+
+                sub.layer.backgroundColor = UIColor.white.cgColor
+                
+                isPressed = false
+            }else{
+                sub.layer.backgroundColor = UIColor.primary.cgColor
+                
                 isPressed = true
                 
             }
