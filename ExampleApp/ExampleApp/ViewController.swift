@@ -148,9 +148,9 @@ class ViewController: UIViewController {
             //self.proressiveDialog.show()
             //self.updateTill()
             //self.infiniteProgress.show()
-            self.singleList.show()
+            //self.singleList.show()
             //self.multiList.show()
-            //self.createView()
+            self.createView()
             
 //            let dialog = MaterialDialog.basicDialogue("This is Test Run", body: body, cancelActionTitle: "Dismiss", actionTitle: "Confirm", completion: { (type) in
 //                switch type{
@@ -180,7 +180,7 @@ class ViewController: UIViewController {
     
     
     func createView(){
-        let cview = UIView(frame: CGRect(origin: .zero, size: CGSize(width: view.frame.width
+        let cview = UIView(frame: CGRect(origin: .zero, size: CGSize(width:view.frame.width * 0.9
             , height:400)))
         let imageView = UIImageView(frame: .zero)
         imageView.image = UIImage(named: "Vampire Toucan.jpg")
@@ -196,7 +196,7 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: cview.topAnchor),
             imageView.leadingAnchor.constraint(equalTo: cview.leadingAnchor, constant: 8),
-            imageView.trailingAnchor.constraint(equalTo: cview.trailingAnchor, constant: 8),
+            imageView.trailingAnchor.constraint(equalTo: cview.trailingAnchor, constant: -20),
             imageView.heightAnchor.constraint(equalToConstant: 200),
             lable.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
             lable.centerXAnchor.constraint(equalTo: cview.centerXAnchor),

@@ -123,7 +123,9 @@ public class MaterialDialog{
         base.removeFromSuperview()
     }
     
-    
+    public static var fixedWidth:CGFloat{
+        return CGRect.fixedWidth
+    }
 }
 
 

@@ -35,6 +35,7 @@ internal final class CheckMark:UIView{
         check.lineWidth = 3
         check.lineCap = .round
         
+        
     }
     
     override func layoutSubviews() {

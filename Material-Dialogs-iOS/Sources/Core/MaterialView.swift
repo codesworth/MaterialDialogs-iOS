@@ -28,6 +28,7 @@ internal class MaterialView:UIView{
         layer.shadowOffset = CGSize(width: 0, height: 4)
         layer.shadowRadius = 4
         layer.shadowOpacity = 0.7
+        clipsToBounds = true
         
     }
     
