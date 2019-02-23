@@ -27,6 +27,7 @@
 		38A32BCF221DA8E9005AE71E /* ListDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A32BCE221DA8E9005AE71E /* ListDialog.swift */; };
 		38B19CFF221D7D6D00EAAC53 /* ProgressInfiniteDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B19CFE221D7D6D00EAAC53 /* ProgressInfiniteDialog.swift */; };
 		38B19D03221DA3B500EAAC53 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B19D02221DA3B500EAAC53 /* ListCell.swift */; };
+		38B88B902221CE6E00707685 /* CheckMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B88B8F2221CE6E00707685 /* CheckMark.swift */; };
 		38D476D5221C7DC000FF0C77 /* ProgressiveDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D476D4221C7DC000FF0C77 /* ProgressiveDialog.swift */; };
 		38D476D7221CAA4000FF0C77 /* ProgressDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D476D6221CAA4000FF0C77 /* ProgressDialog.swift */; };
 		38FB5B56221F65830037360F /* RadioButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FB5B55221F65830037360F /* RadioButtonView.swift */; };
@@ -85,6 +86,7 @@
 		38A32BCE221DA8E9005AE71E /* ListDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDialog.swift; sourceTree = "<group>"; };
 		38B19CFE221D7D6D00EAAC53 /* ProgressInfiniteDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressInfiniteDialog.swift; sourceTree = "<group>"; };
 		38B19D02221DA3B500EAAC53 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		38B88B8F2221CE6E00707685 /* CheckMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckMark.swift; sourceTree = "<group>"; };
 		38D476D4221C7DC000FF0C77 /* ProgressiveDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressiveDialog.swift; sourceTree = "<group>"; };
 		38D476D6221CAA4000FF0C77 /* ProgressDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressDialog.swift; sourceTree = "<group>"; };
 		38FB5B55221F65830037360F /* RadioButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButtonView.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				3873BF732216E45E007FE7D2 /* FooterView.swift */,
 				38B19D02221DA3B500EAAC53 /* ListCell.swift */,
 				38FB5B55221F65830037360F /* RadioButtonView.swift */,
+				38B88B8F2221CE6E00707685 /* CheckMark.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				38B19D03221DA3B500EAAC53 /* ListCell.swift in Sources */,
 				3873BF7722171141007FE7D2 /* Strings+Extensions.swift in Sources */,
 				3873BF6A2216DAE2007FE7D2 /* BaseDialog.swift in Sources */,
+				38B88B902221CE6E00707685 /* CheckMark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

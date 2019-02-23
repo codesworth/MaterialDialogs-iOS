@@ -184,7 +184,7 @@ class ViewController: UIViewController {
             , height:400)))
         let imageView = UIImageView(frame: .zero)
         imageView.image = UIImage(named: "Vampire Toucan.jpg")
-        imageView.clipsToBounds = true
+        imageView.clipsToBounds = true 
         imageView.contentMode = .scaleAspectFill
         let lable = UILabel(frame: .zero)
         lable.text = "Boring Boring ha"
