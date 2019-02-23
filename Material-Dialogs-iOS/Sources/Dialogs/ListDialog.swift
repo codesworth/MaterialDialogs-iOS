@@ -29,6 +29,7 @@ class ListDialog:UIView{
     var selectedObject = -1{
         didSet{
             if oldValue > -1{
+                if oldValue == selectedObject { selectedObject = -1; return}
                 let indexPath = IndexPath(row: oldValue, section: 0)
                 if let cell = tableView.cellForRow(at: indexPath) as? ListCell{
                   cell.deselct()
