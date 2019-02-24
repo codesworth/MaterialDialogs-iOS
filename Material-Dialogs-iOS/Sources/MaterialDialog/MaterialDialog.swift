@@ -8,15 +8,19 @@
 
 import UIKit
 
-extension UIColor{
-    class var primary:UIColor{
-        return UIColor(red: 0, green: 102/255, blue: 0, alpha: 1)
-    }
-}
 
+/**
+ 
+ MaterialDialogs-ios is a library of dialogs using material design
+ * All dialogs are created with a specified class method.
+ * Dialog method show() has to be called in order for dialog to appear on the screen
+ * All dialogs return an object upon dismissal Check output object type depending on the class init method used
+ * **Do** not subclass MaterialDialog: Use MaterialDialog.customView instead**
+ */
 public class MaterialDialog{
     
     public typealias MaterialAction = (_ action:ActionType) -> ()
+    
     public enum ActionType{
         case affirm(Any)
         case cancel

@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         imgview.image = UIImage(named: "Vampire Toucan.jpg")
         imgview.contentMode = .scaleAspectFill
         view.addSubview(imgview)
-        
+        MaterialDialog.textInputDialog(title: <#T##String#>, placeholder: <#T##String?#>, cancelActionTitle: <#T##String#>, completion: <#T##MaterialDialog.MaterialAction?##MaterialDialog.MaterialAction?##(MaterialDialog.ActionType) -> ()#>)
     }
     var start:CGFloat = 0.0
     

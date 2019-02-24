@@ -19,3 +19,9 @@ extension UIFont{
         return .systemFont(ofSize: 16, weight: .medium)
     }
 }
+
+extension UIColor{
+    class var primary:UIColor{
+        return UIColor(red: 0, green: 102/255, blue: 0, alpha: 1)
+    }
+}

@@ -11,7 +11,14 @@ import Foundation
 
 
 extension MaterialDialog{
-    
+    /* Create a simple textInput Dialog that takes in text.
+     * Parameter : title - Title of the alert
+     * Paremter: placeholder: - A placeholder String for the textField
+     * Parameter: cancelActionTitle: - A title to display for cancelling Action. Defaults to "DISMISS"
+     * Parameter: actionTitle: - title to display uppon affirming the action. nil action title removes affirmative action option from the dialog.
+     * Parameter: completion: a completion block that supplies an argument of ActionType undertakedn upon dismissal of the dialog.  MaterialAction completion ((_ action:ActionType)->())
+     * ActionType includes two cases 1. An Affim case that returns a value of Any, 2. A cancel case that returns no Action
+     * */
     public class func textInputDialog(title:String,placeholder:String?,cancelActionTitle:String,actionTitle:String? = nil, completion:MaterialAction?)->MaterialDialog{
         
         return Builder.textInputDialog(title:title,placeholder:placeholder,cancelActionTitle:cancelActionTitle,actionTitle:actionTitle,completion:completion)
