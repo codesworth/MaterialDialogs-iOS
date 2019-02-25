@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3801AB1522194965007A9C70 /* Vampire Toucan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3801AB1422194965007A9C70 /* Vampire Toucan.jpg */; };
+		383BA53322241D0F00EEE454 /* Material_Dialogs_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 383BA53222241D0F00EEE454 /* Material_Dialogs_iOS.framework */; };
+		383BA53422241D0F00EEE454 /* Material_Dialogs_iOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 383BA53222241D0F00EEE454 /* Material_Dialogs_iOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3873BF8922175C92007FE7D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF8822175C92007FE7D2 /* AppDelegate.swift */; };
 		3873BF8B22175C92007FE7D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF8A22175C92007FE7D2 /* ViewController.swift */; };
 		3873BF8E22175C92007FE7D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3873BF8C22175C92007FE7D2 /* Main.storyboard */; };
@@ -29,8 +31,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		383BA53522241D0F00EEE454 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				383BA53422241D0F00EEE454 /* Material_Dialogs_iOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3801AB1422194965007A9C70 /* Vampire Toucan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Vampire Toucan.jpg"; sourceTree = "<group>"; };
+		383BA53222241D0F00EEE454 /* Material_Dialogs_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Material_Dialogs_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3873BF8522175C92007FE7D2 /* ExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3873BF8822175C92007FE7D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3873BF8A22175C92007FE7D2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383BA53322241D0F00EEE454 /* Material_Dialogs_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +85,7 @@
 		3873BF7C22175C92007FE7D2 = {
 			isa = PBXGroup;
 			children = (
+				383BA53222241D0F00EEE454 /* Material_Dialogs_iOS.framework */,
 				3873BF8722175C92007FE7D2 /* ExampleApp */,
 				3873BF9C22175C93007FE7D2 /* ExampleAppTests */,
 				3873BF8622175C92007FE7D2 /* Products */,
@@ -118,6 +137,7 @@
 				3873BF8122175C92007FE7D2 /* Sources */,
 				3873BF8222175C92007FE7D2 /* Frameworks */,
 				3873BF8322175C92007FE7D2 /* Resources */,
+				383BA53522241D0F00EEE454 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

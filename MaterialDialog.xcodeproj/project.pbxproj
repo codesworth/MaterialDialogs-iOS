@@ -319,7 +319,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3873BF462216D616007FE7D2 /* Build configuration list for PBXProject "Material-Dialogs-iOS" */;
+			buildConfigurationList = 3873BF462216D616007FE7D2 /* Build configuration list for PBXProject "MaterialDialog" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -641,7 +641,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3873BF462216D616007FE7D2 /* Build configuration list for PBXProject "Material-Dialogs-iOS" */ = {
+		3873BF462216D616007FE7D2 /* Build configuration list for PBXProject "MaterialDialog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3873BF5E2216D617007FE7D2 /* Debug */,

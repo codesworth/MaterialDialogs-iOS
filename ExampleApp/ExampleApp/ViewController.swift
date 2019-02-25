@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     
     var dialog:MaterialDialog!
     var autoDismiss = false
-
+    var start:CGFloat = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
         }
         updateTill()
         if autoDismiss{
-            dialog
+            dialog.cancel()
         }
     }
     

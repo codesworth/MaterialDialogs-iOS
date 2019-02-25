@@ -79,7 +79,7 @@ class Dialogs{
     }()
     
     private var infiniteProgress:MaterialDialog = {
-        let prog = MaterialDialog.progressDialog(title: "Downloading", info: "Please wait....", completion: { (type) in
+        let prog = MaterialDialog.progressDialog(title: "Downloading", info: "Please wait....", addCancel: true, completion: { (type) in
             switch type{
             case .cancel:
                 print("I was Cancelled")
@@ -94,7 +94,7 @@ class Dialogs{
     
     private var singleList:MaterialDialog = {
         let list = ["Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest"]
-        let dialog = MaterialDialog.listDialog(title: "Best Social Network", list: .singleChoice, choices: list, cancelActionTitle: "CANCEL", actionTitle: "CONFIRM", completion: { (type) in
+        let dialog = MaterialDialog.listDialog(title: "Best Social Network", list: .singleChoice, accessoryType: .radio, choices: list, cancelActionTitle: "CANCEL", actionTitle: "CONFIRM", completion: { (type) in
             switch type{
             case .cancel:
                 print("I was Cancelled")
@@ -109,7 +109,7 @@ class Dialogs{
     
     private var multiList:MaterialDialog = {
         let list = ["Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest"]
-        let dialog = MaterialDialog.listDialog(title: "Best Social Network", list: .multipleChoice, choices: list, cancelActionTitle: "CANCEL", actionTitle: "CONFIRM", completion: { (type) in
+        let dialog = MaterialDialog.listDialog(title: "Best Social Network", list: .multipleChoice, accessoryType: .checkbox, choices: list, cancelActionTitle: "CANCEL", actionTitle: "CONFIRM", completion: { (type) in
             switch type{
             case .cancel:
                 print("I was Cancelled")
