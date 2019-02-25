@@ -11,10 +11,10 @@ import UIKit
 class HomeVC: UIViewController {
     
     var tableView:UITableView = {
-        let table = UITableView(frame: .zero)
+        let table = UITableView(frame: .zero, style: .grouped)
         table.allowsMultipleSelection = false
-        table.style = .grouped
         table.backgroundColor = UIColor.groupTableViewBackground
+        return table
     }()
     
     var dilaogs = Dialogs()
@@ -33,7 +33,7 @@ class HomeVC: UIViewController {
             tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
             tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor.safeAreaLayoutGuide)
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
             
         ])
     }
@@ -63,6 +63,21 @@ extension HomeVC:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let name = dilaogs.names[indexPath.row]
+        let cell = DialogCells(name: name)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 40
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let dialog = dilaogs.dialogs[indexPath.row]
+        if let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(ViewController.self)") as? ViewController{
+            vc.dialog = dialog
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
 }

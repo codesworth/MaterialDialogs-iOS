@@ -16,6 +16,7 @@
 		3873BF9E22175C93007FE7D2 /* ExampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF9D22175C93007FE7D2 /* ExampleAppTests.swift */; };
 		38FEDC0F222371840005EB60 /* Dialogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FEDC0E222371840005EB60 /* Dialogs.swift */; };
 		38FEDC11222373CE0005EB60 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FEDC10222373CE0005EB60 /* HomeVC.swift */; };
+		38FEDC13222376220005EB60 /* DialogCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FEDC12222376220005EB60 /* DialogCells.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		3873BF9F22175C93007FE7D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38FEDC0E222371840005EB60 /* Dialogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialogs.swift; sourceTree = "<group>"; };
 		38FEDC10222373CE0005EB60 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		38FEDC12222376220005EB60 /* DialogCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogCells.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				3873BF9422175C93007FE7D2 /* Info.plist */,
 				38FEDC0E222371840005EB60 /* Dialogs.swift */,
 				38FEDC10222373CE0005EB60 /* HomeVC.swift */,
+				38FEDC12222376220005EB60 /* DialogCells.swift */,
 			);
 			path = ExampleApp;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3873BF8B22175C92007FE7D2 /* ViewController.swift in Sources */,
+				38FEDC13222376220005EB60 /* DialogCells.swift in Sources */,
 				38FEDC11222373CE0005EB60 /* HomeVC.swift in Sources */,
 				3873BF8922175C92007FE7D2 /* AppDelegate.swift in Sources */,
 				38FEDC0F222371840005EB60 /* Dialogs.swift in Sources */,
