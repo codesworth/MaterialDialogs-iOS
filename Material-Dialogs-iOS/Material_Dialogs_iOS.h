@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 //! Project version number for Material_Dialogs_iOS.
-FOUNDATION_EXPORT double Material_Dialogs_iOSVersionNumber;
+FOUNDATION_EXPORT double MaterialDialogVersionNumber;
 
 //! Project version string for Material_Dialogs_iOS.
-FOUNDATION_EXPORT const unsigned char Material_Dialogs_iOSVersionString[];
+FOUNDATION_EXPORT const unsigned char MaterialDialogVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Material_Dialogs_iOS/PublicHeader.h>
 

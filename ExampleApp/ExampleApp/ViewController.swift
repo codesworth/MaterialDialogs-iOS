@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Material_Dialogs_iOS
+import MaterialDialog
 
 class ViewController: UIViewController {
     

@@ -6,7 +6,7 @@
 //  Copyright © 2019 Shadrach Mensah. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 /**
  * Simple UIView subclass for creating custom views for materialDialogs. This offers ability to introduce user content and handle dialogs differently as you see fit. This class only takes over the contentView of the MaterialDialog and not the whole MaterialDialog. Therefore the dialog header and Footer will still be smae as Default dialog
