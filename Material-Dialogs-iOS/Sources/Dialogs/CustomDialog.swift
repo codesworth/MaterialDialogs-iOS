@@ -12,6 +12,7 @@ import Foundation
 public class CustomDialog:UIView,MessageProtocol{
     
     public typealias DialogAction = () -> Any
+    
     var selector:DialogAction?
     func returnObject() -> Any {
         return selector?() ?? true

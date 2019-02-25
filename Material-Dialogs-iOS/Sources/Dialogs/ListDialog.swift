@@ -26,6 +26,7 @@ class ListDialog:UIView{
         }
     }
     var lisType:MaterialDialog.ListType = .singleChoice
+    var accesType:MaterialDialog.OptionsAccessoryType = .radio
     var selectedObject = -1{
         didSet{
             if oldValue > -1{
@@ -39,7 +40,7 @@ class ListDialog:UIView{
     }
     var selectedIndices:IndexSet = []
     
-    internal init(frame: CGRect, listType:MaterialDialog.ListType) {
+    internal init(frame: CGRect, listType:MaterialDialog.ListType,accessoryType:MaterialDialog.OptionsAccessoryType) {
         super.init(frame: frame)
         self.lisType = listType
         addSubview(tableView)
@@ -106,7 +107,7 @@ extension ListDialog:UITableViewDataSource,UITableViewDelegate{
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "\(ListCell.self)", for: indexPath) as? ListCell{
-            cell.radioType = .checkbox
+            cell.radioType = accesType
             cell.selectionStyle = .none
             cell.lable.text = listSource[indexPath.row]
             return cell

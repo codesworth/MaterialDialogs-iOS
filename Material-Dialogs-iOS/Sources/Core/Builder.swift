@@ -80,11 +80,11 @@ internal class Builder{
         return mat
     }
     
-    class func listDialog(title:String?,list type:MaterialDialog.ListType, choices:[String],cancelActionTitle:String = "CANCEL",actionTitle:String = "COMFIRM", completion:MaterialDialog.MaterialAction?)->MaterialDialog{
+    class func listDialog(title:String?,list type:MaterialDialog.ListType, choices:[String],accessoryType:MaterialDialog.OptionsAccessoryType = .radio,cancelActionTitle:String = "CANCEL",actionTitle:String = "COMFIRM", completion:MaterialDialog.MaterialAction?)->MaterialDialog{
         
         let tabHeight = choices.count * 40
         let height:CGFloat = CGFloat(tabHeight) < CGRect.allowableHeight ? CGFloat(tabHeight) : CGRect.allowableHeight
-        let listd = ListDialog(frame: CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: height)),listType:type)
+        let listd = ListDialog(frame: CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: height)),listType:type, accessoryType:accessoryType)
         listd.listSource = choices
         let mat = MaterialDialog(dialog: listd)
         mat.header.text = title
