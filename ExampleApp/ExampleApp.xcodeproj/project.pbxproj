@@ -14,6 +14,8 @@
 		3873BF9022175C93007FE7D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3873BF8F22175C93007FE7D2 /* Assets.xcassets */; };
 		3873BF9322175C93007FE7D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3873BF9122175C93007FE7D2 /* LaunchScreen.storyboard */; };
 		3873BF9E22175C93007FE7D2 /* ExampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3873BF9D22175C93007FE7D2 /* ExampleAppTests.swift */; };
+		38FEDC0F222371840005EB60 /* Dialogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FEDC0E222371840005EB60 /* Dialogs.swift */; };
+		38FEDC11222373CE0005EB60 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FEDC10222373CE0005EB60 /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		3873BF9922175C93007FE7D2 /* ExampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3873BF9D22175C93007FE7D2 /* ExampleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleAppTests.swift; sourceTree = "<group>"; };
 		3873BF9F22175C93007FE7D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38FEDC0E222371840005EB60 /* Dialogs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dialogs.swift; sourceTree = "<group>"; };
+		38FEDC10222373CE0005EB60 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				3801AB1422194965007A9C70 /* Vampire Toucan.jpg */,
 				3873BF9122175C93007FE7D2 /* LaunchScreen.storyboard */,
 				3873BF9422175C93007FE7D2 /* Info.plist */,
+				38FEDC0E222371840005EB60 /* Dialogs.swift */,
+				38FEDC10222373CE0005EB60 /* HomeVC.swift */,
 			);
 			path = ExampleApp;
 			sourceTree = "<group>";
@@ -202,7 +208,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3873BF8B22175C92007FE7D2 /* ViewController.swift in Sources */,
+				38FEDC11222373CE0005EB60 /* HomeVC.swift in Sources */,
 				3873BF8922175C92007FE7D2 /* AppDelegate.swift in Sources */,
+				38FEDC0F222371840005EB60 /* Dialogs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
