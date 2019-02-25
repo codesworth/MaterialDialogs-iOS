@@ -9,9 +9,7 @@
 import UIKit
 
 
-/**
- 
- MaterialDialogs-ios is a library of dialogs using material design
+/** MaterialDialogs-ios is a library of dialogs using material design
  * All dialogs are created with a specified class method.
  * Dialog method show() has to be called in order for dialog to appear on the screen
  * All dialogs return an object upon dismissal Check output object type depending on the class init method used
@@ -21,15 +19,33 @@ public class MaterialDialog{
     
     public typealias MaterialAction = (_ action:ActionType) -> ()
     
+    /** Action types denoted by two buttons in the footer of a dialog.
+     Cases Includes :
+     - affirm(Any) - When a confirm or affirmative button is presssed, passes in a value of Any. Each dialog type is responsible for its return value and does so by conforming to MessageProtocol and implementing MessageProtocol.returnObject
+     - cancel - When a Cancel or Dismiss button is pressed, this notifies the user the dialog was removed from view
+    */
+    
     public enum ActionType{
         case affirm(Any)
         case cancel
     }
     
+    /** OptionsAccessoryType denotes icon types used by ListDialogs.
+     Cases Includes :
+     - radio - Uses a radio button to identify list selections
+     - checkbox - Uses checkbox to identify list selections
+     */
+    
     public enum OptionsAccessoryType{
         case radio
         case checkbox
     }
+    
+    /** ListType denotes ListDialogs selections type.
+     Cases Includes :
+     - singleChoice - only one item can be selected
+     - multipleChoice - allows selection of multiple items
+     */
     
     public enum ListType{
         case singleChoice
@@ -114,6 +130,9 @@ public class MaterialDialog{
     
     
     
+    /**
+     Displays the referenced dialog in the apps keyWindow
+     */
     public func show(){
         if let dialog = contentView as? ProgressInfiniteDialog{
             dialog.beginAnimation()
@@ -126,7 +145,9 @@ public class MaterialDialog{
     func animateOut(){
         base.removeFromSuperview()
     }
-    
+    /**
+     *Fixed width for all dialogs. value = 80% of the UIScreen.bounds.width
+     */
     public static var fixedWidth:CGFloat{
         return CGRect.fixedWidth
     }
