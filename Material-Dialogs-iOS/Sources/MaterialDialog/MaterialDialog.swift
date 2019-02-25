@@ -142,6 +142,13 @@ public class MaterialDialog{
         }
     }
     
+    /**
+     Removes the referenced dialog in the apps keyWindow. this is automatically called in either action buttons. This should only be called in the use of footerless Infinite Progress Dialogs
+     */
+    public func cancel(){
+        didPressCancel()
+    }
+    
     func animateOut(){
         base.removeFromSuperview()
     }

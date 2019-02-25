@@ -12,6 +12,7 @@ import Material_Dialogs_iOS
 class ViewController: UIViewController {
     
     var dialog:MaterialDialog!
+    var autoDismiss = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,17 +33,23 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
             self.dialog.show()
         }
+        updateTill()
+        if autoDismiss{
+            dialog
+        }
     }
     
-//    func updateTill(){
-//
-//        start = start + 0.05
-//        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(200)) {
-//            self.proressiveDialog.updateWith(progressValue: self.start)
-//            self.updateTill()
-//            if self.start > 1 {return}
-//        }
-//    }
+    func updateTill(){
+        if let dialog = dialog as? ProgressDialog{
+            start = start + 0.05
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(200)) {
+                dialog.updateWith(progressValue: self.start)
+                self.updateTill()
+                if self.start > 1 {return}
+            }
+        }
+        
+    }
     
     
     func createView(){

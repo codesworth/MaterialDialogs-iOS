@@ -53,14 +53,41 @@ extension MaterialDialog{
     }
     
     
+    /* Create a Progressive Dialog that shows a continous progress.
+     * Parameter title - Title of the alert
+     * Parameter completion: a completion block that supplies an argument of ActionType undertaken upon dismissal of the dialog.  MaterialAction.completion ((_ action:ActionType)->())
+     * ActionType returned in this instance is the .cancel case as there is no affirm button.
+     * The dialog will show progress only when triggered. Therefore you must call the ProgressDialog.updateWith(progressValue: CGFloat) repeatedly with updated progressValue.
+     * ProgressValue should be a CGFloat between 0 and 1
+     * */
+    
     public class func progressiveDialog(title:String?,completion:MaterialDialog.MaterialAction?)-> ProgressDialog{
         return Builder.progressiveDialog(title:title,completion:completion)
     }
     
-    public class func progressDialog(title:String?, info:String?, completion:MaterialDialog.MaterialAction?)->MaterialDialog{
+    /* Create an Infinite Progress Dialog that shows a continous progress.
+     * Parameter title - Title of the alert
+     * Paramter info - short info message to display concerning the progress
+     * Paramter addCancel - A boolean indicating if a Cancel or dismissal button is shown. Default is false. A false flag removes the cancel and as well the footerView of a dialog.
+     * Parameter completion: a completion block that supplies an argument of ActionType undertaken upon dismissal of the dialog.  MaterialAction.completion ((_ action:ActionType)->())
+     * ActionType returned in this instance is the .cancel case as there is no affirm button.
+     * If addCancel is set to false then use must call the MaterialDialog.cancel method inorder to remove dialog from view
+     * */
+    
+    public class func progressDialog(title:String?, info:String?,addCancel:Bool, completion:MaterialDialog.MaterialAction?)->MaterialDialog{
         
-        return Builder.progressDialog(title:title,info:info,completion:completion)
+        return Builder.progressDialog(title:title,info:info,addCancel:addCancel,completion:completion)
     }
+    
+    /* Create a List Dialog with options to choose from.
+     * Parameter title - Title of the alert
+     * Paramter listType:MaterialDialog.ListType - denotes the type of the list, can only be of two: .singlChoice or .multiChoice  See MaterialDialog.ListType for more info
+     * Paramter choices:[String] - An array of the option titles to be displayed in the dialog
+     * Paramter addCancel - A boolean indicating if a Cancel or dismissal button is shown. Default is false. A false flag removes the cancel and as well the footerView of a dialog.
+     * Parameter completion: a completion block that supplies an argument of ActionType undertaken upon dismissal of the dialog.  MaterialAction.completion ((_ action:ActionType)->())
+     * ActionType returned in this instance is the .cancel case as there is no affirm button.
+     * If addCancel is set to false then use must call the MaterialDialog.cancel method inorder to remove dialog from view
+     * */
     
     public class func listDialog(title:String?,list type:MaterialDialog.ListType, choices:[String],cancelActionTitle:String = "CANCEL",actionTitle:String = "COMFIRM", completion:MaterialDialog.MaterialAction?)->MaterialDialog{
         return Builder.listDialog(title:title,list:type,choices:choices,cancelActionTitle:cancelActionTitle,actionTitle:actionTitle,completion:completion)
