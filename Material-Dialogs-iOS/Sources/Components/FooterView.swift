@@ -84,14 +84,15 @@ internal class FooterView:UIView{
         actionButton.translatesAutoresizingMaskIntoConstraints = false
         cancelbutton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-           cancelbutton.trailingAnchor.constraint(equalTo: trailingAnchor),
+            actionButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
+            actionButton.bottomAnchor.constraint(equalTo: bottomAnchor),
+            actionButton.heightAnchor.constraint(equalToConstant: 30),
+            actionButton.widthAnchor.constraint(equalToConstant: actionwidth),
+            cancelbutton.trailingAnchor.constraint(equalTo: actionButton.isHidden ? trailingAnchor : actionButton.leadingAnchor, constant: -20),
             cancelbutton.bottomAnchor.constraint(equalTo: bottomAnchor),
             cancelbutton.widthAnchor.constraint(equalToConstant: cancelwidth),
             cancelbutton.heightAnchor.constraint(equalToConstant: 30),
-            actionButton.trailingAnchor.constraint(equalTo: cancelbutton.leadingAnchor, constant: -16),
-            actionButton.bottomAnchor.constraint(equalTo: bottomAnchor),
-            actionButton.heightAnchor.constraint(equalToConstant: 30),
-            actionButton.widthAnchor.constraint(equalToConstant: actionwidth)
+            
             
         ])
     }

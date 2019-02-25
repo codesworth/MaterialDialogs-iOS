@@ -45,7 +45,7 @@ class ListDialog:UIView{
         self.lisType = listType
         addSubview(tableView)
         tableView.register(ListCell.self, forCellReuseIdentifier: "\(ListCell.self)")
-        
+        self.accesType = accessoryType
         
 
     }
@@ -73,12 +73,12 @@ class ListDialog:UIView{
         super.didMoveToWindow()
         tableView.separatorStyle = .none
         //setScrolling()
-        if tableView.contentSize.height > CGRect.allowableHeight{
+        if tableView.contentSize.height < CGRect.allowableHeight{
             tableView.isScrollEnabled = false
             tableView.showsVerticalScrollIndicator = false
         }else{
             tableView.isScrollEnabled = true
-            tableView.showsVerticalScrollIndicator = true
+            tableView.showsVerticalScrollIndicator = false
         }
     }
     
