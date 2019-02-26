@@ -22,6 +22,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
+        title = "Material Dialogs"
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
