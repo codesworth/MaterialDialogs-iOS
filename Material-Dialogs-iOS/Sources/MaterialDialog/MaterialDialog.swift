@@ -127,13 +127,24 @@ public class MaterialDialog{
     }
     
     
+    func watchForKeyBoardNotifications(){
+        NotificationCenter.default.addObserver(self, selector: #selector(respondtoKeyBoard), name: NSNotification.Name("\(MaterialDialog.self)"), object: nil)
+    }
+    
+    func deregisterNotification(){
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("\(MaterialDialog.self)"), object: nil)
+    }
     
     
+    @objc func respondtoKeyBoard(){
+        
+    }
     
     /**
      Displays the referenced dialog in the apps keyWindow
      */
     public func show(){
+        watchForKeyBoardNotifications()
         if let dialog = contentView as? ProgressInfiniteDialog{
             dialog.beginAnimation()
         }
@@ -151,6 +162,7 @@ public class MaterialDialog{
     
     func animateOut(){
         base.removeFromSuperview()
+        deregisterNotification()
     }
     /**
      *Fixed width for all dialogs. value = 80% of the UIScreen.bounds.width
