@@ -132,8 +132,55 @@ class Dialogs{
     
     
     init() {
-       dialogs = [basicdialog,textInputDialog,inputGroup,proressiveDialog,infiniteProgress,singleList,multiList]
-        names = ["Basic Dialog", "Text Input Dialog", "Text Input Group Dialog","Progressive Dialog", "Infinite Progress Dialog", "Single List Dialog", "Multiple List Dialog"]
+       dialogs = [basicdialog,textInputDialog,inputGroup,proressiveDialog,infiniteProgress,singleList,multiList,createView()]
+        names = ["Basic Dialog", "Text Input Dialog", "Text Input Group Dialog","Progressive Dialog", "Infinite Progress Dialog", "Single List Dialog", "Multiple List Dialog", "Custom View"]
+    }
+    
+    func createView()->MaterialDialog{
+        let cview = UIView(frame: CGRect(origin: .zero, size: CGSize(width:UIScreen.main.bounds.width * 0.9
+            , height:400)))
+        let imageView = UIImageView(frame: .zero)
+        imageView.image = UIImage(named: "Vampire Toucan.jpg")
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFill
+        let lable = UILabel(frame: .zero)
+        lable.text = "Boring Boring ha"
+        lable.textColor = .blue
+        cview.addSubview(imageView)
+        cview.addSubview(lable)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        lable.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            imageView.topAnchor.constraint(equalTo: cview.topAnchor),
+            imageView.leadingAnchor.constraint(equalTo: cview.leadingAnchor, constant: 8),
+            imageView.trailingAnchor.constraint(equalTo: cview.trailingAnchor, constant: -20),
+            imageView.heightAnchor.constraint(equalToConstant: 200),
+            lable.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
+            lable.centerXAnchor.constraint(equalTo: cview.centerXAnchor),
+            lable.heightAnchor.constraint(equalToConstant: 30)
+            
+            ])
+        
+        let custom = CustomDialog(view: cview) { () -> Any in
+            return lable.text ?? ""
+        }
+        
+        let dialog = MaterialDialog.customDialog(title: "Custommyy", customview: custom, withFooter: true) { (type) in
+            switch type{
+            case .affirm(let result):
+                guard let result = result as? String else {
+                    print("Wrong Result")
+                    return
+                }
+                print("This is Result: \(result)")
+                break
+            case .cancel:
+                print("I was Cancelled")
+                break
+            }
+        
+        }
+        return dialog
     }
     
     
