@@ -16,6 +16,7 @@ internal class FooterView:UIView{
         let butt = UIButton()
         butt.setTitleColor(.primary, for: .normal)
         butt.isUserInteractionEnabled = true
+        butt.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         return butt
     }()
     
@@ -55,6 +56,7 @@ internal class FooterView:UIView{
         let butt = UIButton()
         butt.setTitle("", for: .normal)
         butt.setTitleColor(.primary, for: .normal)
+        butt.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         return butt
     }()
     

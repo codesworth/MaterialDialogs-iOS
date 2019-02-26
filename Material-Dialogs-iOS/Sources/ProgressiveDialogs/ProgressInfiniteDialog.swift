@@ -70,7 +70,7 @@ internal class ProgressInfiniteDialog:UIView{
         animation.fromValue = 0
         animation.toValue = CGFloat.Angle(360)
         animation.repeatCount = .greatestFiniteMagnitude
-        forgroundArc.add(animation, forKey: nil)
+        forgroundArc.add(animation, forKey: "progress")
     }
     
     override func didMoveToWindow() {
