@@ -41,6 +41,8 @@ public class MaterialDialog{
         case checkbox
     }
     
+    var backbone:MaterialView!
+    
     /** ListType denotes ListDialogs selections type.
      Cases Includes :
      - singleChoice - only one item can be selected
@@ -79,7 +81,7 @@ public class MaterialDialog{
         base = BaseDialog()
         let height = withFooter ? contentView.frame.height + 100 : contentView.frame.height + 60
         let contentHeight:CGFloat
-        let backbone:MaterialView
+        
         if  height > CGRect.allowableHeight{
            backbone = MaterialView(frame: CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: CGRect.allowableHeight)))
             contentHeight = CGRect.allowableHeight - 100
@@ -128,16 +130,21 @@ public class MaterialDialog{
     
     
     func watchForKeyBoardNotifications(){
-        NotificationCenter.default.addObserver(self, selector: #selector(respondtoKeyBoard), name: NSNotification.Name("\(MaterialDialog.self)"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(respondtoKeyBoard), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
     func deregisterNotification(){
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name("\(MaterialDialog.self)"), object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
     
-    @objc func respondtoKeyBoard(){
-        
+    @objc func respondtoKeyBoard(_ notification: Notification){
+        //Calculate lenght to bottom of screen
+        let lengthToBottom = (UIScreen.main.bounds.height / 2) - ((backbone.bounds.height / 2) + 10)
+        let keyBoardFrame = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        if keyBoardFrame.height > lengthToBottom{
+            backbone.center = backbone.center.offsetY((keyBoardFrame.height - lengthToBottom) + 10)
+        }
     }
     
     /**
