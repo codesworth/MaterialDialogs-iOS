@@ -157,18 +157,18 @@ class Dialogs{
     }
     
     func createView()->MaterialDialog{
-        let equal width = (UIScreen.main.bounds * 0.9) / 5
-        let cview = UIView(frame: CGRect(origin: .zero, size: CGSize(width:UIScreen.main.bounds.width * 0.9
-            , height:200)))
+        
+        let cview = UIView(frame: CGRect(origin: .zero, size: CGSize(width:MaterialDialog.fixedCustomViewWidth, height:200)))
+        let colorSize = (MaterialDialog.fixedCustomViewWidth - 40) / 5
         let colorStck = UIStackView()
         cview.addSubview(colorStck)
         colorStck.distribution = .fillEqually
         colorStck.alignment = .center
         colorStck.axis = .horizontal
-        colorStck.spacing =
+        colorStck.spacing = 10
         for i in 1...5{
             let color = UIColor.getRandom()
-            let spot = ColorButtons(frame: CGRect(origin: .zero, size: CGSize(width: 60, height: 60)), color: color, position: i)
+            let spot = ColorButtons(frame: CGRect(origin: .zero, size: CGSize(width:colorSize, height: colorSize)), color: color, position: i)
             spot.addTarget(self, action: #selector(colorThis(_:)), for: .touchUpInside)
             colorStck.addArrangedSubview(spot)
         }
