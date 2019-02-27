@@ -157,22 +157,26 @@ class Dialogs{
     }
     
     func createView()->MaterialDialog{
+        let equal width = (UIScreen.main.bounds * 0.9) / 5
         let cview = UIView(frame: CGRect(origin: .zero, size: CGSize(width:UIScreen.main.bounds.width * 0.9
             , height:200)))
-        let colorStck = UIStackView(frame: CGRect(origin: .zero, size: CGSize(width: UIScreen.main.bounds.width * 0.9, height: 100)))
+        let colorStck = UIStackView()
+        cview.addSubview(colorStck)
         colorStck.distribution = .fillEqually
         colorStck.alignment = .center
         colorStck.axis = .horizontal
-        for i in 1...4{
+        colorStck.spacing =
+        for i in 1...5{
             let color = UIColor.getRandom()
-            let spot = ColorButtons(frame: CGRect(origin: .zero, size: CGSize(width: 40, height: 40)), color: color, position: i)
+            let spot = ColorButtons(frame: CGRect(origin: .zero, size: CGSize(width: 60, height: 60)), color: color, position: i)
             spot.addTarget(self, action: #selector(colorThis(_:)), for: .touchUpInside)
-            colorStck.addSubview(spot)
+            colorStck.addArrangedSubview(spot)
         }
+        colorStck.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             colorStck.leadingAnchor.constraint(equalTo: cview.leadingAnchor, constant: 16),
             colorStck.trailingAnchor.constraint(equalTo: cview.trailingAnchor, constant: -16),
-            colorStck.heightAnchor.constraint(equalToConstant: 50),
+            colorStck.heightAnchor.constraint(equalToConstant: 70),
             colorStck.topAnchor.constraint(equalTo: cview.topAnchor, constant: 20)
         ])
         
@@ -183,7 +187,7 @@ class Dialogs{
         let dialog = MaterialDialog.customDialog(title: "Pick A Color", customview: custom, withFooter: true) { (type) in
             switch type{
             case .affirm(let result):
-                guard let result = result as? String else {
+                guard let result = result as? (UIColor,Int) else {
                     print("Wrong Result")
                     return
                 }

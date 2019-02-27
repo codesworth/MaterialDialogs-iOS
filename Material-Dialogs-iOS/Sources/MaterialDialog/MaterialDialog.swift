@@ -172,10 +172,17 @@ public class MaterialDialog{
         deregisterNotification()
     }
     /**
-     *Fixed width for all dialogs. value = 80% of the UIScreen.bounds.width
+     *Fixed width for the entire Material Dialog. See MaterialDialog.fixedCustomWidth if you are making a custom dialog. value = 90% of the UIScreen.bounds.width
      */
     public static var fixedWidth:CGFloat{
         return CGRect.fixedWidth
+    }
+    
+    /**
+    *Fixed width for the entire Content View of dialog. All Custom dialogs must use this width to prevent misalignments.
+    */
+    public static var fixedCustomViewWidth:CGFloat{
+        return fixedWidth - 24
     }
 }
 

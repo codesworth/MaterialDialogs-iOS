@@ -324,7 +324,7 @@
                   moduleName = "MaterialDialog"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/codesworth/Development/Projects/Frameworks/Material-DialogsiOS/Material-Dialogs-iOS/Sources/Dialogs/TextInputGroupDialog.swift"
-                  timestampString = "572912620.8242379"
+                  timestampString = "572967181.152185"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "99"
@@ -339,7 +339,7 @@
                   moduleName = "MaterialDialog"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/codesworth/Development/Projects/Frameworks/Material-DialogsiOS/Material-Dialogs-iOS/Sources/Dialogs/TextInputGroupDialog.swift"
-                  timestampString = "572912620.830686"
+                  timestampString = "572967181.1569231"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "99"
@@ -548,7 +548,7 @@
                   moduleName = "MaterialDialog"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/codesworth/Development/Projects/Frameworks/Material-DialogsiOS/Material-Dialogs-iOS/Sources/Components/ListCell.swift"
-                  timestampString = "572912620.953963"
+                  timestampString = "572967181.242103"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "89"
@@ -563,7 +563,7 @@
                   moduleName = "MaterialDialog"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/codesworth/Development/Projects/Frameworks/Material-DialogsiOS/Material-Dialogs-iOS/Sources/Components/ListCell.swift"
-                  timestampString = "572912620.9600101"
+                  timestampString = "572967181.246924"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "89"
@@ -804,7 +804,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExampleApp/ExampleApp/ViewController.swift"
-            timestampString = "572963283.352103"
+            timestampString = "572967180.554649"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -1012,7 +1012,7 @@
                   moduleName = "MaterialDialog"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/codesworth/Development/Projects/Frameworks/Material-DialogsiOS/Material-Dialogs-iOS/Sources/MaterialDialog/MaterialDialog.swift"
-                  timestampString = "572912621.367467"
+                  timestampString = "572967181.417302"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "144"
@@ -1027,7 +1027,7 @@
                   moduleName = "MaterialDialog"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/codesworth/Development/Projects/Frameworks/Material-DialogsiOS/Material-Dialogs-iOS/Sources/MaterialDialog/MaterialDialog.swift"
-                  timestampString = "572912621.3732229"
+                  timestampString = "572967181.4217629"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "144"
@@ -1082,6 +1082,54 @@
             startingLineNumber = "147"
             endingLineNumber = "147"
             landmarkName = "respondtoKeyBoard(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ExampleApp/ExampleApp/Dialogs.swift"
+            timestampString = "572967180.556145"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "colorThis(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ExampleApp/ExampleApp/Dialogs.swift"
+            timestampString = "572967180.556893"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
+            landmarkName = "colorThis(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ExampleApp/ExampleApp/Dialogs.swift"
+            timestampString = "572967180.5573829"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "colorThis(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
