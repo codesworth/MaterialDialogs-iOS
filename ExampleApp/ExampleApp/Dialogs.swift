@@ -92,6 +92,20 @@ class Dialogs{
         return prog
     }()
     
+    private var infiniteFooterlessProgress:MaterialDialog = {
+        let prog = MaterialDialog.progressDialog(title: "Downloading", info: "Please wait....", addCancel: false, completion: { (type) in
+            switch type{
+            case .cancel:
+                print("I was Cancelled")
+                break
+            case .affirm:
+                print("I was affirmed")
+                break
+            }
+        })
+        return prog
+    }()
+    
     private var singleList:MaterialDialog = {
         let list = ["Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest"]
         let dialog = MaterialDialog.listDialog(title: "Best Social Network", list: .singleChoice, accessoryType: .radio, choices: list, cancelActionTitle: "CANCEL", actionTitle: "CONFIRM", completion: { (type) in
@@ -132,8 +146,8 @@ class Dialogs{
     
     
     init() {
-       dialogs = [basicdialog,textInputDialog,inputGroup,proressiveDialog,infiniteProgress,singleList,multiList,createView()]
-        names = ["Basic Dialog", "Text Input Dialog", "Text Input Group Dialog","Progressive Dialog", "Infinite Progress Dialog", "Single List Dialog", "Multiple List Dialog", "Custom View"]
+       dialogs = [basicdialog,textInputDialog,inputGroup,proressiveDialog,infiniteProgress,infiniteFooterlessProgress,singleList,multiList,createView()]
+        names = ["Basic Dialog", "Text Input Dialog", "Text Input Group Dialog","Progressive Dialog", "Infinite Progress Dialog","Infinite Progress Dialog (No Footer)", "Single List Dialog", "Multiple List Dialog", "Custom View"]
     }
     
     func createView()->MaterialDialog{

@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         let imgview = UIImageView(frame: view.frame)
-        imgview.image = UIImage(named: "Vampire Toucan.jpg")
+        imgview.image = UIImage(named: "sample.jpg")
         imgview.contentMode = .scaleAspectFill
         view.addSubview(imgview)
        
@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
+        start = 0
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
             self.dialog.show()
         }
