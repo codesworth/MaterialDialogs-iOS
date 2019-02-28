@@ -17,6 +17,11 @@ import UIKit
  */
 public class MaterialDialog{
     
+    public func setGlobalTint(_ color:UIColor)->MaterialDialog{
+        footer.actionButton.setTitleColor(color, for: .normal)
+        
+    }
+    
     public typealias MaterialAction = (_ action:ActionType) -> ()
     
     /** Action types denoted by two buttons in the footer of a dialog.

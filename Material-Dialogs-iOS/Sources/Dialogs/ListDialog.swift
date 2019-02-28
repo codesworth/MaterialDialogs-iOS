@@ -162,3 +162,13 @@ extension ListDialog:MessageProtocol{
         }
     }
 }
+
+extension ListDialog:ColorAdaptable{
+    
+    func mutateColor(color: UIColor) {
+        for i in 0..<listSource.count{
+            let cell = tableView.cellForRow(at: IndexPath(row: i, section: 0))
+            if let cell  = cell as? ListCell{cell.itemColor = color}
+        }
+    }
+}

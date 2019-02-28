@@ -16,7 +16,7 @@ class ListCell:UITableViewCell{
          
     }()
     
-    
+    var itemColor:UIColor = .primary
     
     var isPressed:Bool = false
     var configured:Bool = false
@@ -82,7 +82,7 @@ class ListCell:UITableViewCell{
                 sub.innershapeLayer.fillColor = UIColor.clear.cgColor
                 isPressed = false
             }else{
-                sub.innershapeLayer.fillColor = UIColor.primary.cgColor
+                sub.innershapeLayer.fillColor = itemColor.cgColor
                 isPressed = true
                 
             }
@@ -93,7 +93,7 @@ class ListCell:UITableViewCell{
                 
                 isPressed = false
             }else{
-                sub.layer.backgroundColor = UIColor.primary.cgColor
+                sub.layer.backgroundColor = itemColor.cgColor
                 
                 isPressed = true
                 

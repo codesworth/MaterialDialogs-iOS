@@ -101,3 +101,12 @@ class TextView:UITextField{
         super.drawText(in: rect.inset(by: insets))
     }
 }
+
+
+extension TextInputDialog: ColorAdaptable{
+
+    func mutateColor(color: UIColor) {
+        underline.backgroundColor = color
+    }
+    
+}

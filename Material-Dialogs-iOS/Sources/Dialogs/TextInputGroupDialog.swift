@@ -100,6 +100,12 @@ extension TextInputGroupDialog:MessageProtocol{
         return inputs
     }
     
+}
+
+
+extension TextInputGroupDialog:ColorAdaptable{
     
-    
+    func mutateColor(color: UIColor) {
+        inputChildren.forEach{($0 as ColorAdaptable).mutateColor(color: color)}
+    }
 }

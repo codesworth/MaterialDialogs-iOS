@@ -6,10 +6,15 @@
 //  Copyright © 2019 Shadrach Mensah. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol MessageProtocol:class {
     
     func returnObject()->Any
 }
 
+
+protocol ColorAdaptable:class{
+    
+    func mutateColor(color:UIColor)
+}
