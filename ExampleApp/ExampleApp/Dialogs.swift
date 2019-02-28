@@ -23,6 +23,7 @@ class Dialogs{
                 break
             }
         })
+        dialog.setGlobalTint(UIColor.magenta)
         return dialog
     }()
     
@@ -41,7 +42,7 @@ class Dialogs{
                 break
             }
         })
-        
+        newDialog.setGlobalTint(.orange)
         return newDialog
     }()
     
@@ -75,6 +76,7 @@ class Dialogs{
                 break
             }
         })
+        pat.setGlobalTint(.yellow)
         return pat
     }()
     
@@ -89,6 +91,7 @@ class Dialogs{
                 break
             }
         })
+        prog.setGlobalTint(.brown)
         return prog
     }()
     
@@ -136,7 +139,9 @@ class Dialogs{
                 
                 break
             }
+            
         })
+        dialog.setGlobalTint(.purple)
         return dialog
     }()
     

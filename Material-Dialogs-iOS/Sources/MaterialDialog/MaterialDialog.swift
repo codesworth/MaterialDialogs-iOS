@@ -23,8 +23,13 @@ public class MaterialDialog{
      */
     public func setGlobalTint(_ color:UIColor){
         footer.actionButton.setTitleColor(color, for: .normal)
+        footer.cancelbutton.setTitleColor(color, for: .normal)
         if let contentView  = contentView as? ColorAdaptable{
             contentView.mutateColor(color: color)
+            if let list = self.contentView as? ListDialog{
+                list.tableView.reloadData()
+            }
+            
         }
     }
     
