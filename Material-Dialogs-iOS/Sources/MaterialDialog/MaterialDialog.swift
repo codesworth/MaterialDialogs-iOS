@@ -17,9 +17,15 @@ import UIKit
  */
 public class MaterialDialog{
     
-    public func setGlobalTint(_ color:UIColor)->MaterialDialog{
+    /**
+     * Sets A global Color Tint for All Dialogs.
+     * Paramter color: UIColor - color to set default tint to
+     */
+    public func setGlobalTint(_ color:UIColor){
         footer.actionButton.setTitleColor(color, for: .normal)
-        
+        if let contentView  = contentView as? ColorAdaptable{
+            contentView.mutateColor(color: color)
+        }
     }
     
     public typealias MaterialAction = (_ action:ActionType) -> ()
