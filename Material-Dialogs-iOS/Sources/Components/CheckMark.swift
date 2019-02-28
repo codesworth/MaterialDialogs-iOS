@@ -52,3 +52,12 @@ internal final class CheckMark:UIView{
     
     
 }
+
+
+extension CheckMark:ColorAdaptable{
+    
+    func mutateColor(color: UIColor) {
+        layer.borderColor = color.cgColor
+       
+    }
+}

@@ -133,4 +133,13 @@ class ListCell:UITableViewCell{
         
     }
     
+    func recolor(color:UIColor = .primary){
+        if let sub = iconView.subviews.last as? RadioButtonView{
+           sub.mutateColor(color: color)
+
+        }else if let sub = iconView.subviews.last as? CheckMark{
+            sub.mutateColor(color: color)
+        }
+    }
+    
 }

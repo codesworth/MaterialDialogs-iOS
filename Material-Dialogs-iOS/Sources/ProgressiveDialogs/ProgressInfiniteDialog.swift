@@ -81,6 +81,14 @@ internal class ProgressInfiniteDialog:UIView{
     
 }
 
+extension ProgressInfiniteDialog:ColorAdaptable{
+    
+    func mutateColor(color: UIColor) {
+        forgroundArc.strokeColor = color.cgColor
+        backgroundArc.strokeColor = color.withAlphaComponent(0.35).cgColor
+    }
+}
+
 
 fileprivate class ArchLayer:CAShapeLayer{
     

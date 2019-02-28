@@ -19,7 +19,7 @@ class ListDialog:UIView{
         return tableView
     }()
     
-    
+    var customColor:UIColor?
     var listSource:[String] = []{
         didSet{
            setup()
@@ -110,11 +110,13 @@ extension ListDialog:UITableViewDataSource,UITableViewDelegate{
             cell.radioType = accesType
             cell.selectionStyle = .none
             cell.lable.text = listSource[indexPath.row]
+            cell.recolor(color: customColor ?? .primary)
             return cell
         }
         let cell = ListCell(style: .default, reuseIdentifier: "\(ListCell.self)")
         cell.lable.text = listSource[indexPath.row]
         cell.radioType = .radio
+        cell.recolor(color: customColor ?? .primary)
         cell.selectionStyle = .none
         return cell
     }
@@ -166,9 +168,7 @@ extension ListDialog:MessageProtocol{
 extension ListDialog:ColorAdaptable{
     
     func mutateColor(color: UIColor) {
-        for i in 0..<listSource.count{
-            let cell = tableView.cellForRow(at: IndexPath(row: i, section: 0))
-            if let cell  = cell as? ListCell{cell.itemColor = color}
-        }
+        customColor = color
+        tableView.reloadData()
     }
 }

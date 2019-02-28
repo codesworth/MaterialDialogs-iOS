@@ -61,6 +61,7 @@ class Dialogs{
                 break
             }
         })
+        group.setGlobalTint(.black)
         return group
     }()
     

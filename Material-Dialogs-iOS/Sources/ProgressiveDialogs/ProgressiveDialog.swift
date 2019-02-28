@@ -111,3 +111,13 @@ internal class ProgressiveDialog:UIView{
         layer.lineCap = .round
     }
 }
+
+
+extension ProgressiveDialog:ColorAdaptable{
+    
+    func mutateColor(color: UIColor) {
+        endlable.textColor = color
+        startValueLbale.textColor = color
+        foregroundLayer.strokeColor = color.cgColor
+    }
+}
