@@ -73,7 +73,7 @@ class ListDialog:UIView{
         super.didMoveToWindow()
         tableView.separatorStyle = .none
         //setScrolling()
-        if tableView.contentSize.height < CGRect.allowableHeight{
+        if tableView.contentSize.height < (CGRect.allowableHeight - 60){
             tableView.isScrollEnabled = false
             tableView.showsVerticalScrollIndicator = false
         }else{

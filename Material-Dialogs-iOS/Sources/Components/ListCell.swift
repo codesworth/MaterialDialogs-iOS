@@ -55,13 +55,14 @@ class ListCell:UITableViewCell{
         }
     }
     
-    func buildAccessory(type:MaterialDialog.OptionsAccessoryType){
-        if type == .radio{
-            let view = RadioButtonView(frame: [0,30])
+    func buildAccessory(type:MaterialDialog.OptionsAccessoryType, color:UIColor? = nil){
+        let color = color ?? itemColor
+         if type == .radio{
+            let view = RadioButtonView(frame: [0,30],color: color)
             iconView.addSubview(view)
             
         }else if type == .checkbox{
-            let view = CheckMark(frame: [0,30])
+            let view = CheckMark(frame: [0,30],color: color)
             iconView.addSubview(view)
         }
         
@@ -135,14 +136,7 @@ class ListCell:UITableViewCell{
     
     func recolor(color:UIColor = .primary){
         itemColor = color
-        if let sub = iconView.subviews.last as? RadioButtonView{
-            sub.layer.borderColor = color.cgColor
-           sub.mutateColor(color: color)
-
-        }else if let sub = iconView.subviews.last as? CheckMark{
-            sub.layer.borderColor = color.cgColor
-            sub.mutateColor(color: color)
-        }
+        buildAccessory(type: radioType!, color: color)
     }
     
 }

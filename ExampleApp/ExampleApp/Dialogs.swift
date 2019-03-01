@@ -122,6 +122,7 @@ class Dialogs{
                 break
             }
         })
+        dialog.setGlobalTint(.black)
         return dialog
     }()
     

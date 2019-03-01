@@ -49,8 +49,5 @@ internal final class CheckMark:UIView{
         
     }
     
-    
-    
-    
 }
 
