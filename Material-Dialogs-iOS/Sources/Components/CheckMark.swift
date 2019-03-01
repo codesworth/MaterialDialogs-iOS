@@ -12,10 +12,11 @@ internal final class CheckMark:UIView{
     
     let bezierPath = UIBezierPath()
     let check = CAShapeLayer()
-    override init(frame: CGRect) {
+    var gColor:CGColor!
+    init(frame: CGRect, color:UIColor) {
         super.init(frame: frame)
         layer.addSublayer(check)
-        
+        self.gColor = color.cgColor
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -42,7 +43,7 @@ internal final class CheckMark:UIView{
         super.layoutSubviews()
         drawCheck()
         layer.borderWidth = 1
-        layer.borderColor = UIColor.primary.cgColor
+        layer.borderColor = gColor
         check.backgroundColor = UIColor.white.cgColor
         layer.backgroundColor = UIColor.white.cgColor
         
@@ -53,11 +54,3 @@ internal final class CheckMark:UIView{
     
 }
 
-
-extension CheckMark:ColorAdaptable{
-    
-    func mutateColor(color: UIColor) {
-        layer.borderColor = color.cgColor
-       
-    }
-}

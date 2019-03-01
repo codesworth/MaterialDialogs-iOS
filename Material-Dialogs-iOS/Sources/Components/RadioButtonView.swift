@@ -11,11 +11,11 @@ import UIKit
 class RadioButtonView:UIView{
     
     var innershapeLayer = CAShapeLayer()
-    
-    override init(frame: CGRect) {
+    var gcolor:CGColor!
+    init(frame: CGRect, color:UIColor) {
         super.init(frame: frame)
         layer.addSublayer(innershapeLayer)
-        
+       self.gcolor = color.cgColor
     }
     
     
@@ -30,17 +30,9 @@ class RadioButtonView:UIView{
         //innershapeLayer.frame.size = 20
         innershapeLayer.position = [bounds.midX / 3,bounds.midY / 3]
         innershapeLayer.fillColor = UIColor.clear.cgColor
-        layer.borderColor = UIColor.primary.cgColor
+        layer.borderColor = gcolor
         layer.borderWidth = 2
         layer.cornerRadius = frame.width / 2
         
-    }
-}
-
-
-extension RadioButtonView:ColorAdaptable{
-    
-    func mutateColor(color: UIColor) {
-        layer.borderColor = color.cgColor
     }
 }

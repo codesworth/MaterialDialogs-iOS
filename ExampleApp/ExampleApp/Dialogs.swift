@@ -126,7 +126,7 @@ class Dialogs{
     }()
     
     private var multiList:MaterialDialog = {
-        let list = ["Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest","Facebook", "Twitter", "Instagram", "Pinterest"]
+        let list = ["Facebook", "Twitter", "Instagram", "Pinterest"]
         let dialog = MaterialDialog.listDialog(title: "Best Social Network", list: .multipleChoice, accessoryType: .checkbox, choices: list, cancelActionTitle: "CANCEL", actionTitle: "CONFIRM", completion: { (type) in
             switch type{
             case .cancel:
