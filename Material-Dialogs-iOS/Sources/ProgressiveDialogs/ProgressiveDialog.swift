@@ -14,6 +14,7 @@ internal class ProgressiveDialog:UIView{
     
     private var backgroundLayer = CAShapeLayer()
     private var foregroundLayer = CAShapeLayer()
+    private var strokeColor:UIColor = .primary
     var startValueLbale:UILabel = {
         let l = UILabel()
         l.textAlignment = .left
@@ -80,9 +81,9 @@ internal class ProgressiveDialog:UIView{
     override func layoutSubviews() {
         super.layoutSubviews()
         buildLayer(layer: backgroundLayer)
-        backgroundLayer.strokeColor = UIColor(red: 0, green: 102/255, blue: 0, alpha: 0.30).cgColor
+        backgroundLayer.strokeColor = strokeColor.withAlphaComponent(0.30).cgColor
         buildLayer(layer: foregroundLayer)
-        foregroundLayer.strokeColor = UIColor.primary.cgColor
+        foregroundLayer.strokeColor = strokeColor.cgColor
         
         progressView.translatesAutoresizingMaskIntoConstraints = false
         startValueLbale.translatesAutoresizingMaskIntoConstraints = false
@@ -110,6 +111,7 @@ internal class ProgressiveDialog:UIView{
         layer.fillColor = nil
         layer.lineCap = .round
     }
+    
 }
 
 
@@ -118,6 +120,6 @@ extension ProgressiveDialog:ColorAdaptable{
     func mutateColor(color: UIColor) {
         endlable.textColor = color
         startValueLbale.textColor = color
-        foregroundLayer.strokeColor = color.cgColor
+        strokeColor = color
     }
 }
