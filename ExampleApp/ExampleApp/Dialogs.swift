@@ -77,7 +77,7 @@ class Dialogs{
                 break
             }
         })
-        pat.setGlobalTint(.yellow)
+        pat.setGlobalTint(.orange)
         return pat
     }()
     

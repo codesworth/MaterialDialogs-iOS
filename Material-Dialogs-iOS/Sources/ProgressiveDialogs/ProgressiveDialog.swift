@@ -81,7 +81,7 @@ internal class ProgressiveDialog:UIView{
     override func layoutSubviews() {
         super.layoutSubviews()
         buildLayer(layer: backgroundLayer)
-        backgroundLayer.strokeColor = strokeColor.withAlphaComponent(0.30).cgColor
+        backgroundLayer.strokeColor = strokeColor.withAlphaComponent(0.20).cgColor
         buildLayer(layer: foregroundLayer)
         foregroundLayer.strokeColor = strokeColor.cgColor
         

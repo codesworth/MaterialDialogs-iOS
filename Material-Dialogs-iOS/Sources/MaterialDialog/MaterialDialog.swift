@@ -26,9 +26,6 @@ public class MaterialDialog{
         footer.cancelbutton.setTitleColor(color, for: .normal)
         if let contentView  = contentView as? ColorAdaptable{
             contentView.mutateColor(color: color)
-            if let list = self.contentView as? ListDialog{
-                list.tableView.reloadData()
-            }
             
         }
     }
