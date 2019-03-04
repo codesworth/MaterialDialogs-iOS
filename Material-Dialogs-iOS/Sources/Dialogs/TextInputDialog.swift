@@ -14,7 +14,7 @@ internal class TextInputDialog:UIView{
     
     var textView:TextView = {
         let tf = TextView(frame: .zero)
-        tf.adjustsFontForContentSizeCategory = true
+        
         tf.adjustsFontSizeToFitWidth = true
         tf.enablesReturnKeyAutomatically = true
         tf.font = .body
