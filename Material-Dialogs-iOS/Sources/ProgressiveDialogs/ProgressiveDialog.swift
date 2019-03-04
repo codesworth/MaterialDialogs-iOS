@@ -114,6 +114,13 @@ internal class ProgressiveDialog:UIView{
     
 }
 
+extension ProgressiveDialog:MessageProtocol{
+    
+    func returnObject() -> Any {
+        return true
+    }
+}
+
 
 extension ProgressiveDialog:ColorAdaptable{
     

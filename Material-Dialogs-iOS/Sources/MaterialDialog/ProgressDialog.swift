@@ -22,8 +22,8 @@ public final class ProgressDialog:MaterialDialog{
         super.build(withFooter)
     }
     
-    public func updateWith(progressValue:CGFloat){
+    public func updateWith(progress value:CGFloat){
         
-        progressiveDialog?.progressStroke = progressValue
+        progressiveDialog?.progressStroke = value
     }
 }

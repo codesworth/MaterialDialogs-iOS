@@ -81,6 +81,13 @@ internal class ProgressInfiniteDialog:UIView{
     
 }
 
+extension ProgressInfiniteDialog:MessageProtocol{
+    
+    func returnObject() -> Any {
+        return true
+    }
+}
+
 extension ProgressInfiniteDialog:ColorAdaptable{
     
     func mutateColor(color: UIColor) {

@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         if let dialog = dialog as? ProgressDialog{
             start = start + 0.05
             DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(200)) {
-                dialog.updateWith(progressValue: self.start)
+                dialog.updateWith(progress: self.start)
                 self.updateTill()
                 if self.start > 1 {return}
             }
