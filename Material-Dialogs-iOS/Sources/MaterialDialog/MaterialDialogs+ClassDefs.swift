@@ -11,32 +11,35 @@ import UIKit
 
 
 extension MaterialDialog{
-    /* Create a simple textInput Dialog that takes in text.
+    /** Create a simple textInput Dialog that takes in text.
      * Parameter title - Title of the alert
      * Paremter placeholder: - A placeholder String for the textField
      * Parameter cancelActionTitle: - A title to display for cancelling Action. Defaults to "DISMISS"
      * Paramter  actionTitle: - title to display uppon affirming the action. nil action title removes affirmative action option from the dialog.
      * Parameter completion: a completion block that supplies an argument of ActionType undertakedn upon dismissal of the dialog.  MaterialAction completion ((_ action:ActionType)->())
      * ActionType includes two cases 1. An Affim case that returns the text the user typed into the input (String), 2. A cancel case that returns no Action
-     * */
+     *
+     */
     public class func textInputDialog(title:String,placeholder:String?,cancelActionTitle:String,actionTitle:String? = nil, completion:MaterialAction?)->MaterialDialog{
         
         return Builder.textInputDialog(title:title,placeholder:placeholder,cancelActionTitle:cancelActionTitle,actionTitle:actionTitle,completion:completion)
     }
     
-    /* Create a basic Dialog. Displays text and receives an action.
+    /** Create a basic Dialog. Displays text and receives an action.
      * Parameter title - Title of the alert
      * Paremter body: - The message to be diplayed to user
      * Parameter cancelActionTitle: - A title to display for cancelling Action. Defaults to "DISMISS"
      * Paramter  actionTitle: - title to display uppon affirming the action. nil action title removes affirmative action option from the dialog.
      * Parameter completion: a completion block that supplies an argument of ActionType undertakedn upon dismissal of the dialog.  MaterialAction completion ((_ action:ActionType)->())
      * ActionType includes two cases 1. An Affim case that returns true (Bool) indicating user confirmed, 2. A cancel case that returns no Action
-     * */
+     *
+     */
+    
     public class func basicDialogue(_ title:String,body:String,cancelActionTitle:String,actionTitle:String? = nil, completion:MaterialAction?)->MaterialDialog{
         return Builder.basicDialogue(_:title,body:body,cancelActionTitle:cancelActionTitle,actionTitle:actionTitle,completion:completion)
     }
     
-    /* Create a textInput Group. Input Group Stacked vertically.
+    /** Create a textInput Group. Input Group Stacked vertically.
      * Parameter title - Title of the alert
      * Paremter numberOfInputs: - The number of input textFields to display
      * Paramter placeholders: An array of placeholders to diplay in corresponding textDialog
@@ -45,7 +48,8 @@ extension MaterialDialog{
      * Paramter  actionTitle: - title to display uppon affirming the action. nil action title removes affirmative action option from the dialog.
      * Parameter completion: a completion block that supplies an argument of ActionType undertaken upon dismissal of the dialog.  MaterialAction completion ((_ action:ActionType)->())
      * ActionType includes two cases 1. An Affim case that returns an Array of the text in each input Array<String>, 2. A cancel case that returns no Action
-     * */
+     *
+     */
     
     public class func textInputGroupDialog(title:String,numberOfInputs:Int,placeholders:[String?]?,cancelActionTitle:String,actionTitle:String? = nil, completion:MaterialDialog.MaterialAction?)->MaterialDialog
     {
@@ -53,33 +57,35 @@ extension MaterialDialog{
     }
     
     
-    /* Create a Progressive Dialog that shows a continous progress.
+    /** Create a Progressive Dialog that shows a continous progress.
      * Parameter title - Title of the alert
      * Parameter completion: a completion block that supplies an argument of ActionType undertaken upon dismissal of the dialog.  MaterialAction.completion ((_ action:ActionType)->())
      * ActionType returned in this instance is the .cancel case as there is no affirm button.
      * The dialog will show progress only when triggered. Therefore you must call the ProgressDialog.updateWith(progressValue: CGFloat) repeatedly with updated progressValue.
      * ProgressValue should be a CGFloat between 0 and 1
-     * */
+     *
+     */
     
     public class func progressiveDialog(title:String?,completion:MaterialDialog.MaterialAction?)-> ProgressDialog{
         return Builder.progressiveDialog(title:title,completion:completion)
     }
     
-    /* Create an Infinite Progress Dialog that shows a continous progress.
+    /** Create an Infinite Progress Dialog that shows a continous progress.
      * Parameter title - Title of the alert
      * Paramter info - short info message to display concerning the progress
      * Paramter addCancel - A boolean indicating if a Cancel or dismissal button is shown. Default is false. A false flag removes the cancel and as well the footerView of a dialog.
      * Parameter completion: a completion block that supplies an argument of ActionType undertaken upon dismissal of the dialog.  MaterialAction.completion ((_ action:ActionType)->())
      * ActionType returned in this instance is the .cancel case as there is no affirm button.
      * If addCancel is set to false then use must call the MaterialDialog.cancel method inorder to remove dialog from view
-     * */
+     *
+     */
     
     public class func progressDialog(title:String?, info:String?,addCancel:Bool, completion:MaterialDialog.MaterialAction?)->MaterialDialog{
         
         return Builder.progressDialog(title:title,info:info,addCancel:addCancel,completion:completion)
     }
     
-    /* Create a List Dialog with options to choose from.
+    /** Create a List Dialog with options to choose from.
      * Parameter title - Title of the alert
      * Paramter listType:MaterialDialog.ListType - denotes the type of the list, can only be of two: .singlChoice or .multiChoice  See MaterialDialog.ListType for more info
      * Paramter choices:[String] - An array of the option titles to be displayed in the dialog
@@ -88,14 +94,15 @@ extension MaterialDialog{
      Paramter  actionTitle: - title to display uppon affirming the action. nil action title removes affirmative action option from the dialog.
      * Parameter completion: a completion block that supplies an argument of ActionType undertaken upon dismissal of the dialog.  MaterialAction.completion ((_ action:ActionType)->())
      * ActionType includes depends of the MaterialDialog.ListType of the referenced dialog. .singleChoice return an .affirm case that passes in the index (Int) of the selected choice in the choice Array. A .multiChoice returns an .affirm case that passes in  the indexSet (IndexSet) of all seleceted options in the choices array,. A cancel case returns no Action
-     * */
+     *
+     */
     
     public class func listDialog(title:String?,list type:MaterialDialog.ListType,accessoryType:MaterialDialog.OptionsAccessoryType, choices:[String],cancelActionTitle:String = "CANCEL",actionTitle:String = "COMFIRM", completion:MaterialDialog.MaterialAction?)->MaterialDialog{
         return Builder.listDialog(title:title,list:type,choices:choices, accessoryType:accessoryType,cancelActionTitle:cancelActionTitle,actionTitle:actionTitle,completion:completion)
     }
     
     
-    /* Create a MaterialDialog with supplied Custom View
+    /** Create a MaterialDialog with supplied Custom View
      * Parameter title - Title of the alert
      * Paramter customView:CustomDialog - custom View should be of type CustomDialog. CustomDialog class is a UIView that implements the Message Protocol for MaterialDialogs.
      * See CustomDialog class for more info.
@@ -103,7 +110,8 @@ extension MaterialDialog{
      Paramter  actionTitle: - title to display uppon affirming the action. nil action title removes affirmative action option from the dialog.
      * Parameter completion: a completion block that supplies an argument of ActionType undertaken upon dismissal of the dialog.  MaterialAction.completion ((_ action:ActionType)->())
      * ActionType supplies two cases a .affirm(value:Any), vlaue depends on return type of the selector passed into the CutomDialog initializer
-     * */
+     *
+     */
     
     public class func customDialog(title:String?,customview:CustomDialog,cancelActionTitle:String = "CANCEL",actionTitle:String = "COMFIRM",withFooter:Bool, completion:MaterialDialog.MaterialAction?)->MaterialDialog{
         
