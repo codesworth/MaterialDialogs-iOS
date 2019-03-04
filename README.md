@@ -4,11 +4,11 @@ This library was inspired by [Material-dialogs for Android](https://github.com/a
 
 ![Material Dialog Image](https://github.com/codesworth/MaterialDialogs-iOS/blob/master/Material-Dialogs-iOS/Screenshots/materialDialogSnapshot.jpg)
 
-#Requirements
+# Requirements
 * Xcode 8+
 * iOS 9.0+
 
-#Installation
+# Installation
 * MaterialDialogs can be to an Xcode Project manually by adding the Sources folder to the project or
 * Via [Cocoapods](https://cocoapods.org/)
 ```ruby
@@ -130,5 +130,71 @@ let prog = MaterialDialog.progressDialog(title: "Downloading", info: "Please wai
         return prog
     }()
     
-    prog.show()
+prog.show()
 ```
+Shows a progress dialog with a continuous spinning wheel. Option for a Footerless progress dialog by setting addCancel param to `false`. Setting addCancel to `true` will add a footer with Cancel action Button. If addCancel is set to `false`, then you will be responsible for dismissing the dialog from screen. Do this by calling cancel() i.e `prog.cancel()`
+
+
+## Single Choice List Dialog
+```swift
+let dialog = MaterialDialog.listDialog(title: "Best Social Network", list: .singleChoice, accessoryType: .radio, choices: list, cancelActionTitle: "CANCEL", actionTitle: "CONFIRM", completion: { (type) in
+            switch type{
+            case .cancel:
+                print("I was Cancelled")
+                break
+            case .affirm(let result):
+                print("I was affirmed with data: \(result)")
+                break
+            }
+        })
+dialog.show()
+```
+A List Dialog that allows only single selection. Parameter `accessoryType:` gives the option to choose between Radio buttons and checkmarks as the designated icons for selction.
+
+
+## Multiple Choice List Dialog
+```swift
+let dialog = MaterialDialog.listDialog(title: "Best Social Network", list: .multipleChoice, accessoryType: .checkbox, choices: list, cancelActionTitle: "CANCEL", actionTitle: "CONFIRM", completion: { (type) in
+            switch type{
+            case .cancel:
+                print("I was Cancelled")
+                break
+            case .affirm(let result):
+                if let result  = result as? IndexSet{
+                    let all = result.map{$0}
+                    print("I was affirmed with data: \(all)")
+                }
+                
+                break
+            }
+            
+        })
+dialog.show()
+```
+A List Dialog that allows multiple selection. Parameter `accessoryType:` gives the option to choose between Radio buttons and checkmarks as the designated icons for selction.
+
+## Custom View Dialogs
+Custom View dialogs are special Material dialogs that allows you to explicitly set the contents view of the dialog. It however comes with some constraints. This is an example of a how to create a custom view Dialog
+```swift
+let custom = CustomDialog(view: myCutomUIView) { () -> Any in
+            return someOperationInThisCustomView()
+ }
+ 
+ let dialog = MaterialDialog.customDialog(title: "Pick A Color", customview: custom, withFooter: true) { (type) in
+            switch type{
+            case .affirm(let result):
+                guard let result = result  else {
+                    print("Wrong Result")
+                    return
+                }
+                print("This is Result: \(result)")
+                break
+            case .cancel:
+                print("I was Cancelled")
+                break
+            }
+        
+        }
+        
+```
+The custom view must be wrapped in a CustomDialog class which takes a UIView and a closure that returns a value when the affirm action button is triggered. You are responsible for implementing the return value in the closure. Refer to Sample Example For more Info.
