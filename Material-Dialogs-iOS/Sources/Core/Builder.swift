@@ -40,11 +40,11 @@ internal class Builder{
         return mat
     }
     
-    class func textInputGroupDialog(title:String,numberOfInputs:Int,placeholders:[String?]?,inputTextContentTypes:[UITextContentType]?,cancelActionTitle:String,actionTitle:String? = nil, completion:MaterialDialog.MaterialAction?)->MaterialDialog
+    class func textInputGroupDialog(title:String,numberOfInputs:Int,placeholders:[String?]?,cancelActionTitle:String,actionTitle:String? = nil, completion:MaterialDialog.MaterialAction?)->MaterialDialog
     {
         let height:CGFloat = 40 * CGFloat(numberOfInputs)
         let frame = CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: height))
-        let group = TextInputGroupDialog(frame: frame, inputNumber: numberOfInputs, placeholders: placeholders, contentTypes: inputTextContentTypes)
+        let group = TextInputGroupDialog(frame: frame, inputNumber: numberOfInputs, placeholders: placeholders)
         let mat = MaterialDialog(dialog: group)
         mat.header.text = title
         let footer = FooterView(cancelTitle: cancelActionTitle, actionTitle: actionTitle)

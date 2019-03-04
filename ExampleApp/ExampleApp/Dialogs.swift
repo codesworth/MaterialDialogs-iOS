@@ -47,7 +47,7 @@ class Dialogs{
     }()
     
     private var inputGroup:MaterialDialog = {
-        let group = MaterialDialog.textInputGroupDialog(title: "Enter Credentials", numberOfInputs: 3, placeholders: ["Enter Name","Enter Email", "Enter Password"], inputTextContentTypes: [.username,.emailAddress,.password], cancelActionTitle: "Dismiss", actionTitle: "Sign In", completion: { (type) in
+        let group = MaterialDialog.textInputGroupDialog(title: "Enter Credentials", numberOfInputs: 3, placeholders: ["Enter Name","Enter Email", "Enter Password"], cancelActionTitle: "Dismiss", actionTitle: "Sign In", completion: { (type) in
             switch type{
             case .affirm(let result):
                 guard let result = result as? [String] else {

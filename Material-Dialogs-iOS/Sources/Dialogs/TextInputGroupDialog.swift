@@ -14,7 +14,6 @@ internal class TextInputGroupDialog:UIView{
     var inputChildren:[TextInputDialog]!
     var placeholders:[String?]?
     var inputCount:Int = 0
-    var contentTypes:[UITextContentType]?
     var parentStack:UIStackView = {
         let stack = UIStackView(frame: .zero)
         stack.alignment = .fill
@@ -24,11 +23,11 @@ internal class TextInputGroupDialog:UIView{
         return stack
     }()
     
-    internal init(frame: CGRect, inputNumber:Int, placeholders:[String?]?, contentTypes:[UITextContentType]?) {
+    internal init(frame: CGRect, inputNumber:Int, placeholders:[String?]?) {
         super.init(frame: frame)
         inputCount = inputNumber
         self.placeholders = placeholders
-        self.contentTypes = contentTypes
+        
         inputChildren = []
         setup()
     }
@@ -48,26 +47,17 @@ internal class TextInputGroupDialog:UIView{
                     let placeholder = placeholders![i]
                     let frame = CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: 40))
                     ipg = TextInputDialog(frame: frame, placeholder: placeholder)
-                    if let styles = contentTypes, i < styles.count{
-                        let style = styles[i]
-                        ipg.textView.textContentType = style
-                    }
+                    
                 }else{
                     let placeholder = placeholders![i]
                     let frame = CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: 40))
                     ipg = TextInputDialog(frame: frame, placeholder: placeholder)
-                    if let styles = contentTypes, i < styles.count{
-                        let style = styles[i]
-                        ipg.textView.textContentType = style
-                    }
+        
                 }
             }else{
                 let frame = CGRect(origin: .zero, size: CGSize(width: CGRect.fixedWidth, height: 40))
                 ipg = TextInputDialog(frame: frame, placeholder: nil)
-                if let styles = contentTypes, i < styles.count{
-                    let style = styles[i]
-                    ipg.textView.textContentType = style
-                }
+                
             }
             inputChildren.append(ipg)
             i += 1
