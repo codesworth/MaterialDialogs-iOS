@@ -198,3 +198,24 @@ let custom = CustomDialog(view: myCutomUIView) { () -> Any in
         
 ```
 The custom view must be wrapped in a CustomDialog class which takes a UIView and a closure that returns a value when the affirm action button is triggered. You are responsible for implementing the return value in the closure. Refer to Sample Example For more Info.
+
+
+## Customizations
+MaterialDialogs abstracts away all the chores of having to build UI for the dialogs. However you can change the tint color for the dialog by calling the `setGlobalTint(color:UIColor)` method on a dialog before calling the `show` method.
+```swift
+let dialog = MaterialDialog.basicDialogue("This is Test Run", body: text, cancelActionTitle: "Dismiss", actionTitle: "Confirm", completion: { (type) in
+            switch type{
+            case .cancel:
+                print("I was Cancelled")
+                break
+            case .affirm(let message):
+                print("I was affirmed")
+                break
+            }
+ })
+dialog.setGlobalTint(UIColor.magenta)
+dialog.show()   
+```
+
+## Contribution
+MaterialDialog is open to contibutions. Submit all Pull requests on the branch develop. Feel free to add more dialogs and functionality. The theme of the dialogs should however still maintain the material look and users should not be required to do much configuration in order to get a dialog setup. 
